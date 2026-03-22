@@ -30,6 +30,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "onBoarding1TitlePrefix": MessageLookupByLibrary.simpleMessage(
       "Welcome to ",
     ),
+    "onBoarding2ButtonText": MessageLookupByLibrary.simpleMessage(
+      "Get Started",
+    ),
     "onBoarding2Subtitle": MessageLookupByLibrary.simpleMessage(
       "We provide you with the best selected fruits. Take a look at the details, images, and reviews to ensure you choose the perfect fruit.",
     ),

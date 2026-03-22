@@ -108,6 +108,16 @@ class S {
   String get skip {
     return Intl.message('Skip', name: 'skip', desc: '', args: []);
   }
+
+  /// `Get Started`
+  String get onBoarding2ButtonText {
+    return Intl.message(
+      'Get Started',
+      name: 'onBoarding2ButtonText',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

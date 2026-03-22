@@ -30,6 +30,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "onBoarding1TitlePrefix": MessageLookupByLibrary.simpleMessage(
       "مرحبًا بك في ",
     ),
+    "onBoarding2ButtonText": MessageLookupByLibrary.simpleMessage("ابدأ الان"),
     "onBoarding2Subtitle": MessageLookupByLibrary.simpleMessage(
       "نقدم لك أفضل الفواكه المختارة بعناية. اطلع على التفاصيل والصور والتقييمات لتتأكد من اختيار الفاكهة المثالية",
     ),
