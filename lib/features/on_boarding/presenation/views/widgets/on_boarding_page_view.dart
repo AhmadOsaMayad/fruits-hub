@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_hub/core/utils/app_images.dart';
 import 'package:fruit_hub/features/on_boarding/presenation/views/widgets/page_view_item.dart';
+import 'package:fruit_hub/generated/l10n.dart';
 
 class OnBoardingPageView extends StatelessWidget {
   const OnBoardingPageView({super.key});
@@ -12,11 +13,21 @@ class OnBoardingPageView extends StatelessWidget {
         PageViewItem(
           image: Assets.imagesPageViewItem1Image,
           backgroundImage: Assets.imagesPageViewItem1BackgroundImage,
-          subtitle:
-              'اكتشف تجربة تسوق فريدة مع FruitHUB. استكشف مجموعتنا الواسعة من الفواكه الطازجة الممتازة واحصل على أفضل العروض والجودة العالية.',
+          subtitle: S.of(context).onBoarding1Subtitle,
           title: Row(
-            children: [Text('مرحبًا بك في'), Text('Fruit'), Text('HUB')],
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(S.of(context).onBoarding1TitlePrefix),
+              Text(S.of(context).onBoarding1Title1),
+              Text(S.of(context).onBoarding1Title2),
+            ],
           ),
+        ),
+        PageViewItem(
+          image: Assets.imagesPageViewItem2Image,
+          backgroundImage: Assets.imagesPageViewItem2BackgroundImage,
+          subtitle: S.of(context).onBoarding2Subtitle,
+          title: Text(S.of(context).onBoarding2Title),
         ),
       ],
     );

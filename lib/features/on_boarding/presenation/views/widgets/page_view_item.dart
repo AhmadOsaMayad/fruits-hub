@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fruit_hub/generated/l10n.dart';
 import 'package:svg_flutter/svg.dart';
 
 class PageViewItem extends StatelessWidget {
@@ -30,9 +31,19 @@ class PageViewItem extends StatelessWidget {
                 right: 0,
                 child: SvgPicture.asset(image),
               ),
-              Text('تخط'),
+              Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Text(S.of(context).skip, textAlign: TextAlign.center),
+              ),
             ],
           ),
+        ),
+        const SizedBox(height: 64),
+        title,
+        const SizedBox(height: 24),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16.0),
+          child: Text(subtitle),
         ),
       ],
     );
