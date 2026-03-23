@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_hub/core/utils/app_text_styles.dart';
+import 'package:fruit_hub/features/auth/presentation/views/login_view.dart';
 import 'package:fruit_hub/generated/l10n.dart';
 import 'package:svg_flutter/svg.dart';
 
@@ -38,11 +39,18 @@ class PageViewItem extends StatelessWidget {
                 visible: isVisible,
                 child: Padding(
                   padding: const EdgeInsets.all(16.0),
-                  child: Text(
-                    S.of(context).skip,
-                    textAlign: TextAlign.center,
-                    style: AppTextStyles.regular13.copyWith(
-                      color: Color(0xFF949D9D),
+                  child: TextButton(
+                    onPressed: () {
+                      Navigator.of(
+                        context,
+                      ).pushReplacementNamed(LoginView.routeName);
+                    },
+                    child: Text(
+                      S.of(context).skip,
+                      textAlign: TextAlign.center,
+                      style: AppTextStyles.regular13.copyWith(
+                        color: Color(0xFF949D9D),
+                      ),
                     ),
                   ),
                 ),
