@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_hub/core/utils/app_images.dart';
+import 'package:fruit_hub/core/utils/app_text_styles.dart';
+import 'package:fruit_hub/features/on_boarding/presenation/views/widgets/on_boarding1_title.dart';
 import 'package:fruit_hub/features/on_boarding/presenation/views/widgets/page_view_item.dart';
 import 'package:fruit_hub/generated/l10n.dart';
 
@@ -19,14 +21,7 @@ class OnBoardingPageView extends StatelessWidget {
           image: Assets.imagesPageViewItem1Image,
           backgroundImage: Assets.imagesPageViewItem1BackgroundImage,
           subtitle: S.of(context).onBoarding1Subtitle,
-          title: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(S.of(context).onBoarding1TitlePrefix),
-              Text(S.of(context).onBoarding1Title1),
-              Text(S.of(context).onBoarding1Title2),
-            ],
-          ),
+          title: OnBoarding1Title(),
         ),
         PageViewItem(
           isVisible:
@@ -35,7 +30,10 @@ class OnBoardingPageView extends StatelessWidget {
           image: Assets.imagesPageViewItem2Image,
           backgroundImage: Assets.imagesPageViewItem2BackgroundImage,
           subtitle: S.of(context).onBoarding2Subtitle,
-          title: Text(S.of(context).onBoarding2Title),
+          title: Text(
+            S.of(context).onBoarding2Title,
+            style: AppTextStyles.bold23.copyWith(color: Color(0xFF0C0D0D)),
+          ),
         ),
       ],
     );

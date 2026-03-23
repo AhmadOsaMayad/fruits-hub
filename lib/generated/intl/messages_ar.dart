@@ -25,8 +25,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "onBoarding1Subtitle": MessageLookupByLibrary.simpleMessage(
       "اكتشف تجربة تسوق فريدة مع FruitHUB. استكشف مجموعتنا الواسعة من الفواكه الطازجة الممتازة واحصل على أفضل العروض والجودة العالية.",
     ),
-    "onBoarding1Title1": MessageLookupByLibrary.simpleMessage("HUB"),
-    "onBoarding1Title2": MessageLookupByLibrary.simpleMessage("Fruit"),
+    "onBoarding1Title1": MessageLookupByLibrary.simpleMessage("Fruit"),
+    "onBoarding1Title2": MessageLookupByLibrary.simpleMessage("HUB"),
     "onBoarding1TitlePrefix": MessageLookupByLibrary.simpleMessage(
       "مرحبًا بك في ",
     ),

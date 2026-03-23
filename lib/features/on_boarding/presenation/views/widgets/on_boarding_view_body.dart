@@ -46,7 +46,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
           dotsCount: 2,
           decorator: DotsDecorator(
             activeColor: AppColors.primary,
-            color: //AppColors.primary.withAlpha(112),
+            color:
                 _currentPage == 0
                     ? AppColors.primary.withAlpha(112)
                     : AppColors.primary,
@@ -66,16 +66,6 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
             ),
           ),
         ),
-        // Visibility(
-        //   visible: _currentPage == 1,
-        //   child: Padding(
-        //     padding: const EdgeInsets.symmetric(horizontal: kHPadding),
-        //     child: CustomButton(
-        //       text: S.of(context).onBoarding2ButtonText,
-        //       onPressed: () {},
-        //     ),
-        //   ),
-        // ),
         const SizedBox(height: 46),
       ],
     );
