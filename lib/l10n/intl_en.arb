@@ -7,5 +7,10 @@
     "onBoarding2Title": "Search and Shop",
     "skip": "Skip",
     "onBoarding2ButtonText":"Get Started",
-    "login": "Login"
+    "login": "Login",
+    "email": "Email",
+    "password": "Password",
+    "forgotPassword": "Forgot Password?",
+    "dontHaveAccount": "Don't have an account? ",
+    "createAccount": "Create Account"
 }

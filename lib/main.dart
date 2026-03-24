@@ -17,7 +17,10 @@ class FruitHub extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(fontFamily: 'Cairo'),
+      theme: ThemeData(
+        fontFamily: 'Cairo',
+        scaffoldBackgroundColor: Color(0xFFFFFFFF),
+      ),
       onGenerateRoute: onGenerateRoutes,
       initialRoute: SplashView.routeName,
       debugShowCheckedModeBanner: false,

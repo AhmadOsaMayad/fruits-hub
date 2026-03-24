@@ -7,5 +7,10 @@
     "skip": "تخط",
     "onBoarding2Title":"ابحث وتسوق",
     "onBoarding2ButtonText":"ابدأ الان",
-    "login": "تسجيل الدخول"
+    "login": "تسجيل الدخول",
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "forgotPassword": "هل نسيت كلمة المرور؟",
+    "dontHaveAccount": "لا تمتلك حساب؟ ",
+    "createAccount": "قم بإنشاء حساب"
 }
