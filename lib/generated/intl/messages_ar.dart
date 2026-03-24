@@ -42,6 +42,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "نقدم لك أفضل الفواكه المختارة بعناية. اطلع على التفاصيل والصور والتقييمات لتتأكد من اختيار الفاكهة المثالية",
     ),
     "onBoarding2Title": MessageLookupByLibrary.simpleMessage("ابحث وتسوق"),
+    "or": MessageLookupByLibrary.simpleMessage("أو"),
     "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
     "skip": MessageLookupByLibrary.simpleMessage("تخط"),
   };

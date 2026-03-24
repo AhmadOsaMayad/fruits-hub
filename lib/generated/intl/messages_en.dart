@@ -44,6 +44,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "We provide you with the best selected fruits. Take a look at the details, images, and reviews to ensure you choose the perfect fruit.",
     ),
     "onBoarding2Title": MessageLookupByLibrary.simpleMessage("Search and Shop"),
+    "or": MessageLookupByLibrary.simpleMessage("Or"),
     "password": MessageLookupByLibrary.simpleMessage("Password"),
     "skip": MessageLookupByLibrary.simpleMessage("Skip"),
   };
