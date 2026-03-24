@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_hub/core/helpers/is_arabic.dart';
+import 'package:fruit_hub/core/services/shared_preference_singleton.dart';
 import 'package:fruit_hub/core/utils/app_images.dart';
+import 'package:fruit_hub/core/utils/constants.dart';
+import 'package:fruit_hub/features/auth/presentation/views/login_view.dart';
+import 'package:fruit_hub/features/on_boarding/presenation/views/on_boarding_view.dart';
 import 'package:svg_flutter/svg.dart';
 
 class SplashViewBody extends StatefulWidget {
@@ -29,16 +33,27 @@ class _SplashViewBodyState extends State<SplashViewBody> {
               isArabic() ? MainAxisAlignment.end : MainAxisAlignment.start,
           children: [SvgPicture.asset(Assets.imagesPlant)],
         ),
-        SvgPicture.asset(Assets.imagesLogo),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [SvgPicture.asset(Assets.imagesLogo)],
+        ),
+        // SvgPicture.asset(Assets.imagesLogo, height: 173, width: 178),
         SvgPicture.asset(Assets.imagesSplashBottom, fit: BoxFit.fill),
+
+        // SvgPicture.asset(Assets.imagesLogo),
       ],
     );
   }
 
   void executeNavigation() {
+    bool isOnBoardingSeen = Prefs.getBool(kIsOnBoardingSeen);
     Future.delayed(const Duration(seconds: 3), () {
       if (mounted) {
-        Navigator.pushReplacementNamed(context, 'on_boarding');
+        if (isOnBoardingSeen) {
+          Navigator.pushReplacementNamed(context, LoginView.routeName);
+        } else {
+          Navigator.pushReplacementNamed(context, OnBoardingView.routeName);
+        }
       }
     });
   }

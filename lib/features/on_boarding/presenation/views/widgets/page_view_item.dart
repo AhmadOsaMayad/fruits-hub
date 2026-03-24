@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:fruit_hub/core/services/shared_preference_singleton.dart';
 import 'package:fruit_hub/core/utils/app_text_styles.dart';
+import 'package:fruit_hub/core/utils/constants.dart';
 import 'package:fruit_hub/features/auth/presentation/views/login_view.dart';
 import 'package:fruit_hub/generated/l10n.dart';
 import 'package:svg_flutter/svg.dart';
@@ -33,7 +35,10 @@ class PageViewItem extends StatelessWidget {
                 bottom: 0,
                 left: 0,
                 right: 0,
-                child: SvgPicture.asset(image),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [SvgPicture.asset(image)],
+                ),
               ),
               Visibility(
                 visible: isVisible,
@@ -41,6 +46,7 @@ class PageViewItem extends StatelessWidget {
                   padding: const EdgeInsets.all(16.0),
                   child: TextButton(
                     onPressed: () {
+                      Prefs.setBool(kIsOnBoardingSeen, true);
                       Navigator.of(
                         context,
                       ).pushReplacementNamed(LoginView.routeName);

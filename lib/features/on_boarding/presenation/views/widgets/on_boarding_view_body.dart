@@ -1,5 +1,6 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
+import 'package:fruit_hub/core/services/shared_preference_singleton.dart';
 import 'package:fruit_hub/core/utils/app_colors.dart';
 import 'package:fruit_hub/core/utils/constants.dart';
 import 'package:fruit_hub/core/widgets/custom_button.dart';
@@ -64,6 +65,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
             child: CustomButton(
               text: S.of(context).onBoarding2ButtonText,
               onPressed: () {
+                Prefs.setBool(kIsOnBoardingSeen, true);
                 Navigator.of(context).pushReplacementNamed(LoginView.routeName);
               },
             ),
