@@ -12,9 +12,15 @@
     "password": "Password",
     "forgotPassword": "Forgot Password?",
     "dontHaveAccount": "Don't have an account? ",
-    "createAccount": "Create Account",
+    "alreadyHaveAccount": "Already have an account? ",
+    "letsCreateAccount": "Create Account",
     "or": "Or",
     "logInWithGoogle": "Sign in with Google",
     "logInWithFacebook": "Sign in with Facebook",
-    "logInWithApple": "Sign in with Apple"
+    "logInWithApple": "Sign in with Apple",
+    "createNewAccount": "Create New Account",
+    "createAccount": "Create Account",
+    "fullName": "Full Name",
+    "byCreatingAccount":"By creating an account, you agree to ",
+    "termsAndConditions":"our Terms and Conditions"
 }

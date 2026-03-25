@@ -22,7 +22,7 @@ AppBar buildAppBar(
       visible: showBackButton,
       child: GestureDetector(
         onTap: () {
-          // Navigator.pop(context);
+          Navigator.pop(context);
         },
         child: const Icon(Icons.arrow_back_ios_new),
       ),

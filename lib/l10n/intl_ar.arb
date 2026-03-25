@@ -12,9 +12,15 @@
     "password": "كلمة المرور",
     "forgotPassword": "نسيت كلمة المرور؟",
     "dontHaveAccount": "لا تمتلك حساب؟ ",
-    "createAccount": "قم بإنشاء حساب",
+    "alreadyHaveAccount": "لديك حساب بالفعل؟ ",
+    "letsCreateAccount": "قم بإنشاء حساب",
     "or": "أو",
     "logInWithGoogle": "تسجيل بواسطة جوجل",
     "logInWithFacebook": "تسجيل بواسطة فيسبوك",
-    "logInWithApple": "تسجيل بواسطة أبل"
+    "logInWithApple": "تسجيل بواسطة أبل",
+    "createNewAccount": "إنشاء حساب جديد",
+    "createAccount": "إنشاء حساب",
+    "fullName": "الاسم الكامل",
+    "byCreatingAccount":"من خلال إنشاء حساب، فإنك توافق على ",
+    "termsAndConditions":"الشروط والأحكام الخاصة بنا"
 }

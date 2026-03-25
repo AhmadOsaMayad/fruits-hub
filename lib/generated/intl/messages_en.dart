@@ -22,12 +22,23 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "alreadyHaveAccount": MessageLookupByLibrary.simpleMessage(
+      "Already have an account? ",
+    ),
+    "byCreatingAccount": MessageLookupByLibrary.simpleMessage(
+      "By creating an account, you agree to ",
+    ),
     "createAccount": MessageLookupByLibrary.simpleMessage("Create Account"),
+    "createNewAccount": MessageLookupByLibrary.simpleMessage(
+      "Create New Account",
+    ),
     "dontHaveAccount": MessageLookupByLibrary.simpleMessage(
       "Don\'t have an account? ",
     ),
     "email": MessageLookupByLibrary.simpleMessage("Email"),
     "forgotPassword": MessageLookupByLibrary.simpleMessage("Forgot Password?"),
+    "fullName": MessageLookupByLibrary.simpleMessage("Full Name"),
+    "letsCreateAccount": MessageLookupByLibrary.simpleMessage("Create Account"),
     "logInWithApple": MessageLookupByLibrary.simpleMessage(
       "Sign in with Apple",
     ),
@@ -56,5 +67,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "or": MessageLookupByLibrary.simpleMessage("Or"),
     "password": MessageLookupByLibrary.simpleMessage("Password"),
     "skip": MessageLookupByLibrary.simpleMessage("Skip"),
+    "termsAndConditions": MessageLookupByLibrary.simpleMessage(
+      "our Terms and Conditions",
+    ),
   };
 }

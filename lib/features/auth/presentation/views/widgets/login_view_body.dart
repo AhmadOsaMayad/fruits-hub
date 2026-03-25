@@ -4,7 +4,8 @@ import 'package:fruit_hub/core/utils/app_text_styles.dart';
 import 'package:fruit_hub/core/utils/constants.dart';
 import 'package:fruit_hub/core/widgets/custom_button.dart';
 import 'package:fruit_hub/core/widgets/custom_text_form_field.dart';
-import 'package:fruit_hub/features/auth/presentation/views/widgets/dont_have_account_widget.dart';
+import 'package:fruit_hub/features/auth/presentation/views/sign_up_view.dart';
+import 'package:fruit_hub/features/auth/presentation/views/widgets/tappable_suffix_text.dart';
 import 'package:fruit_hub/features/auth/presentation/views/widgets/or_divider_widget.dart';
 import 'package:fruit_hub/features/auth/presentation/views/widgets/social_login_button.dart';
 import 'package:fruit_hub/generated/l10n.dart';
@@ -52,7 +53,12 @@ class LoginViewBody extends StatelessWidget {
               SizedBox(height: 33),
               CustomButton(text: S.of(context).login, onPressed: () {}),
               SizedBox(height: 33),
-              DontHaveAccWidget(),
+
+              TappableSuffixText(
+                prefix: S.of(context).dontHaveAccount,
+                suffix: S.of(context).createAccount,
+                onTapRoute: SignUpView.routeName,
+              ),
               SizedBox(height: 33),
               OrDividerWidget(text: S.of(context).or),
               SizedBox(height: 32),
