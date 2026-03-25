@@ -30,14 +30,5 @@ class FirebaseAuthService {
         message: 'An unexpected error occurred. Please try again.',
       );
     }
-    // try {
-    //   UserCredential userCredential = await FirebaseAuth.instance.createUserWithEmailAndPassword(
-    //     email: email,
-    //     password: password,
-    //   );
-    //   return userCredential.user!;
-    // } on FirebaseAuthException catch (e) {
-    //   throw Exception(e.message);
-    // }
   }
 }
