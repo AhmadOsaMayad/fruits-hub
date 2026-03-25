@@ -25,6 +25,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "alreadyHaveAccount": MessageLookupByLibrary.simpleMessage(
       "Already have an account? ",
     ),
+    "anUnexpectedError": MessageLookupByLibrary.simpleMessage(
+      "An unexpected error occurred.",
+    ),
+    "anUnknownError": MessageLookupByLibrary.simpleMessage(
+      "An unknown error occurred.",
+    ),
     "byCreatingAccount": MessageLookupByLibrary.simpleMessage(
       "By creating an account, you agree to ",
     ),
@@ -36,6 +42,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Don\'t have an account? ",
     ),
     "email": MessageLookupByLibrary.simpleMessage("Email"),
+    "emailAlreadyInUse": MessageLookupByLibrary.simpleMessage(
+      "The account already exists for that email.",
+    ),
     "forgotPassword": MessageLookupByLibrary.simpleMessage("Forgot Password?"),
     "fullName": MessageLookupByLibrary.simpleMessage("Full Name"),
     "letsCreateAccount": MessageLookupByLibrary.simpleMessage("Create Account"),
@@ -69,6 +78,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "skip": MessageLookupByLibrary.simpleMessage("Skip"),
     "termsAndConditions": MessageLookupByLibrary.simpleMessage(
       "our Terms and Conditions",
+    ),
+    "tooWeakPassword": MessageLookupByLibrary.simpleMessage(
+      "The password provided is too weak.",
     ),
   };
 }

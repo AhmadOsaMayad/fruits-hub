@@ -22,5 +22,9 @@
     "createAccount": "Create Account",
     "fullName": "Full Name",
     "byCreatingAccount":"By creating an account, you agree to ",
-    "termsAndConditions":"our Terms and Conditions"
+    "termsAndConditions":"our Terms and Conditions",
+    "tooWeakPassword":"The password provided is too weak.",
+    "emailAlreadyInUse":"The account already exists for that email.",
+    "anUnknownError":"An unknown error occurred.",
+    "anUnexpectedError":"An unexpected error occurred."
 }

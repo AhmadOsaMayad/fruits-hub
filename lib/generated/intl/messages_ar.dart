@@ -25,6 +25,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "alreadyHaveAccount": MessageLookupByLibrary.simpleMessage(
       "لديك حساب بالفعل؟ ",
     ),
+    "anUnexpectedError": MessageLookupByLibrary.simpleMessage(
+      "حدث خطأ غير متوقع.",
+    ),
+    "anUnknownError": MessageLookupByLibrary.simpleMessage(
+      "حدث خطأ غير معروف.",
+    ),
     "byCreatingAccount": MessageLookupByLibrary.simpleMessage(
       "من خلال إنشاء حساب، فإنك توافق على ",
     ),
@@ -32,6 +38,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "createNewAccount": MessageLookupByLibrary.simpleMessage("إنشاء حساب جديد"),
     "dontHaveAccount": MessageLookupByLibrary.simpleMessage("لا تمتلك حساب؟ "),
     "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
+    "emailAlreadyInUse": MessageLookupByLibrary.simpleMessage(
+      "الحساب الذي يحمل هذا البريد الإلكتروني موجود بالفعل.",
+    ),
     "forgotPassword": MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
     "fullName": MessageLookupByLibrary.simpleMessage("الاسم الكامل"),
     "letsCreateAccount": MessageLookupByLibrary.simpleMessage("قم بإنشاء حساب"),
@@ -61,6 +70,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "skip": MessageLookupByLibrary.simpleMessage("تخط"),
     "termsAndConditions": MessageLookupByLibrary.simpleMessage(
       "الشروط والأحكام الخاصة بنا",
+    ),
+    "tooWeakPassword": MessageLookupByLibrary.simpleMessage(
+      "كلمة المرور ضعيفة جدًا.",
     ),
   };
 }

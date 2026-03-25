@@ -253,6 +253,46 @@ class S {
       args: [],
     );
   }
+
+  /// `The password provided is too weak.`
+  String get tooWeakPassword {
+    return Intl.message(
+      'The password provided is too weak.',
+      name: 'tooWeakPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The account already exists for that email.`
+  String get emailAlreadyInUse {
+    return Intl.message(
+      'The account already exists for that email.',
+      name: 'emailAlreadyInUse',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `An unknown error occurred.`
+  String get anUnknownError {
+    return Intl.message(
+      'An unknown error occurred.',
+      name: 'anUnknownError',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `An unexpected error occurred.`
+  String get anUnexpectedError {
+    return Intl.message(
+      'An unexpected error occurred.',
+      name: 'anUnexpectedError',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
