@@ -28,6 +28,15 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "email": MessageLookupByLibrary.simpleMessage("Email"),
     "forgotPassword": MessageLookupByLibrary.simpleMessage("Forgot Password?"),
+    "logInWithApple": MessageLookupByLibrary.simpleMessage(
+      "Sign in with Apple",
+    ),
+    "logInWithFacebook": MessageLookupByLibrary.simpleMessage(
+      "Sign in with Facebook",
+    ),
+    "logInWithGoogle": MessageLookupByLibrary.simpleMessage(
+      "Sign in with Google",
+    ),
     "login": MessageLookupByLibrary.simpleMessage("Login"),
     "onBoarding1Subtitle": MessageLookupByLibrary.simpleMessage(
       "Discover a unique shopping experience with FruitHUB. Explore our wide selection of fresh and excellent fruits and get the best deals and high quality.",

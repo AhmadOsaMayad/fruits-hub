@@ -13,5 +13,8 @@
     "forgotPassword": "Forgot Password?",
     "dontHaveAccount": "Don't have an account? ",
     "createAccount": "Create Account",
-    "or": "Or"
+    "or": "Or",
+    "logInWithGoogle": "Sign in with Google",
+    "logInWithFacebook": "Sign in with Facebook",
+    "logInWithApple": "Sign in with Apple"
 }

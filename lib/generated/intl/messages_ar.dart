@@ -25,8 +25,13 @@ class MessageLookup extends MessageLookupByLibrary {
     "createAccount": MessageLookupByLibrary.simpleMessage("قم بإنشاء حساب"),
     "dontHaveAccount": MessageLookupByLibrary.simpleMessage("لا تمتلك حساب؟ "),
     "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
-    "forgotPassword": MessageLookupByLibrary.simpleMessage(
-      "هل نسيت كلمة المرور؟",
+    "forgotPassword": MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
+    "logInWithApple": MessageLookupByLibrary.simpleMessage("تسجيل بواسطة أبل"),
+    "logInWithFacebook": MessageLookupByLibrary.simpleMessage(
+      "تسجيل بواسطة فيسبوك",
+    ),
+    "logInWithGoogle": MessageLookupByLibrary.simpleMessage(
+      "تسجيل بواسطة جوجل",
     ),
     "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
     "onBoarding1Subtitle": MessageLookupByLibrary.simpleMessage(
