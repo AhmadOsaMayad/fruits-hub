@@ -7,12 +7,14 @@ class TappableSuffixText extends StatelessWidget {
     super.key,
     required this.prefix,
     required this.suffix,
-    required this.onTapRoute,
+    this.onTapRoute,
     this.textAlign,
+    this.justPop = false,
   });
   final String prefix;
   final String suffix;
-  final String onTapRoute;
+  final String? onTapRoute;
+  final bool justPop;
   final TextAlign? textAlign;
   @override
   Widget build(BuildContext context) {
@@ -28,7 +30,13 @@ class TappableSuffixText extends StatelessWidget {
           TextSpan(
             recognizer:
                 TapGestureRecognizer()
-                  ..onTap = () => Navigator.pushNamed(context, onTapRoute),
+                  ..onTap =
+                      () =>
+                          onTapRoute != null
+                              ? Navigator.pushNamed(context, onTapRoute!)
+                              : justPop
+                              ? Navigator.pop(context)
+                              : null,
             text: suffix,
             style: AppTextStyles.bold13.copyWith(
               color: const Color(0xFF2D9F5D),

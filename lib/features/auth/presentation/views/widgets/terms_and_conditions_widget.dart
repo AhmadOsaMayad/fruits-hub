@@ -1,10 +1,38 @@
 import 'package:flutter/material.dart';
+import 'package:fruit_hub/features/auth/presentation/views/widgets/custom_checkbox.dart';
+import 'package:fruit_hub/features/auth/presentation/views/widgets/tappable_suffix_text.dart';
+import 'package:fruit_hub/generated/l10n.dart';
 
-class TermsAndConditionsWidget extends StatelessWidget {
+class TermsAndConditionsWidget extends StatefulWidget {
   const TermsAndConditionsWidget({super.key});
 
   @override
+  State<TermsAndConditionsWidget> createState() =>
+      _TermsAndConditionsWidgetState();
+}
+
+class _TermsAndConditionsWidgetState extends State<TermsAndConditionsWidget> {
+  bool isTermsAccepted = false;
+  @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Row(
+      children: [
+        CustomCheckbox(
+          onChecked: (value) {
+            isTermsAccepted = value;
+            setState(() {});
+          },
+          isChecked: isTermsAccepted,
+        ),
+        SizedBox(width: 16),
+        Expanded(
+          child: TappableSuffixText(
+            textAlign: TextAlign.start,
+            prefix: S.of(context).byCreatingAccount,
+            suffix: S.of(context).termsAndConditions,
+          ),
+        ),
+      ],
+    );
   }
 }
