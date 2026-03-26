@@ -7,6 +7,20 @@ const kWeakPasswordV = 'The password provided is too weak.';
 const kEmailAlreadyInUseK = 'email-already-in-use';
 const kEmailAlreadyInUseV = 'The account already exists for that email.';
 
+const kInvalidEmailK = 'invalid-email';
+const kInvalidEmailV = 'The email address is badly formatted';
+
+const kUserNotFoundK = 'user-not-found';
+const kUserNotFoundV = 'No user found for that email.';
+
+const kPasswordOrEmailAreIncorrect = 'Password or Email are Incorrect';
+
+const kWrongPasswordK = 'wrong-password';
+const kWrongPasswordV = 'The password is incorrect.';
+
+const kNetworkRequestFailedK = 'network-request-failed';
+const kNetworkRequestFailedV = 'The network request failed. Please try again.';
+
 // const kUnknownErrorK = 'unknown-error';
 const kUnknownErrorV = 'An unknown error occurred.';
 

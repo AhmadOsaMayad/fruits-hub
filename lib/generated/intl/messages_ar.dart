@@ -43,6 +43,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "forgotPassword": MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
     "fullName": MessageLookupByLibrary.simpleMessage("الاسم الكامل"),
+    "invalidEmail": MessageLookupByLibrary.simpleMessage(
+      "عنوان البريد الإلكتروني غير صالح.",
+    ),
     "letsCreateAccount": MessageLookupByLibrary.simpleMessage("قم بإنشاء حساب"),
     "logInWithApple": MessageLookupByLibrary.simpleMessage("تسجيل بواسطة أبل"),
     "logInWithFacebook": MessageLookupByLibrary.simpleMessage(
@@ -52,6 +55,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "تسجيل بواسطة جوجل",
     ),
     "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
+    "networkRequestFailed": MessageLookupByLibrary.simpleMessage(
+      "حدث خطأ في الشبكة (مثل انتهاء المهلة، انقطاع الاتصال أو عدم الوصول إلى المضيف).",
+    ),
     "onBoarding1Subtitle": MessageLookupByLibrary.simpleMessage(
       "اكتشف تجربة تسوق فريدة مع FruitHUB. استكشف مجموعتنا الواسعة من الفواكه الطازجة الممتازة واحصل على أفضل العروض والجودة العالية.",
     ),
@@ -67,6 +73,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "onBoarding2Title": MessageLookupByLibrary.simpleMessage("ابحث وتسوق"),
     "or": MessageLookupByLibrary.simpleMessage("أو"),
     "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+    "passwordOrEmailAreIncorrect": MessageLookupByLibrary.simpleMessage(
+      "كلمة المرور أو البريد الإلكتروني غير صحيحة.",
+    ),
+    "pleaseAcceptTerms": MessageLookupByLibrary.simpleMessage(
+      "يرجى قبول الشروط والأحكام.",
+    ),
     "pleaseFillThisField": MessageLookupByLibrary.simpleMessage(
       "يرجى ملء هذا الحقل.",
     ),
@@ -76,6 +88,12 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "tooWeakPassword": MessageLookupByLibrary.simpleMessage(
       "كلمة المرور ضعيفة جدًا.",
+    ),
+    "userNotFound": MessageLookupByLibrary.simpleMessage(
+      "لم يتم العثور على مستخدم لهذا البريد الإلكتروني.",
+    ),
+    "wrongPassword": MessageLookupByLibrary.simpleMessage(
+      "كلمة المرور المقدمة خاطئة لهذا المستخدم.",
     ),
   };
 }

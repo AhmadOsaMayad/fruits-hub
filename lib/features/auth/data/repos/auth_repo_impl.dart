@@ -1,7 +1,10 @@
+import 'dart:developer';
+
 import 'package:dartz/dartz.dart';
 import 'package:fruit_hub/core/errors/exceptions.dart';
 import 'package:fruit_hub/core/errors/failures.dart';
 import 'package:fruit_hub/core/services/firebase_auth_service.dart';
+import 'package:fruit_hub/core/utils/constants.dart';
 import 'package:fruit_hub/features/auth/data/models/user_model.dart';
 import 'package:fruit_hub/features/auth/domain/entities/user_entity.dart';
 import 'package:fruit_hub/features/auth/domain/repos/auth_repo.dart';
@@ -25,9 +28,31 @@ class AuthRepoImpl extends AuthRepo {
     } on CustomExceptions catch (e) {
       return left(ServerFailure(e.toString()));
     } catch (e) {
-      return left(
-        ServerFailure('An unexpected error occurred. Please try again.'),
+      log(
+        'Exception in AuthRepoImpl.createUserWithEmailAndPassword: ${e.toString()}',
       );
+      return left(ServerFailure(kUnexpectedErrorV));
+    }
+  }
+
+  @override
+  Future<Either<Failure, UserEntity>> loginWithEmailAndPassword({
+    required String email,
+    required String password,
+  }) async {
+    try {
+      var user = await firebaseAuthService.loginWithEmailAndPassword(
+        email: email,
+        password: password,
+      );
+      return right(UserModel.fromFireBaseUser(user));
+    } on CustomExceptions catch (e) {
+      return left(ServerFailure(e.toString()));
+    } catch (e) {
+      log(
+        'Exception in AuthRepoImpl.loginWithEmailAndPassword: ${e.toString()}',
+      );
+      return left(ServerFailure(kUnexpectedErrorV));
     }
   }
 }

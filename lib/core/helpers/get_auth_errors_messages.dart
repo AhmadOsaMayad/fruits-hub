@@ -10,6 +10,14 @@ String getAuthErrorMessage(BuildContext context, String code) {
       return S.of(context).emailAlreadyInUse;
     case kUnexpectedErrorV:
       return S.of(context).anUnexpectedError;
+    case kInvalidEmailV:
+      return S.of(context).invalidEmail;
+    case kNetworkRequestFailedV:
+      return S.of(context).networkRequestFailed;
+    case kUserNotFoundV:
+      return S.of(context).passwordOrEmailAreIncorrect;
+    case kWrongPasswordV:
+      return S.of(context).passwordOrEmailAreIncorrect;
     default:
       return code; //S.of(context).anUnknownError;
   }

@@ -4,7 +4,8 @@ import 'package:fruit_hub/features/auth/presentation/views/widgets/tappable_suff
 import 'package:fruit_hub/generated/l10n.dart';
 
 class TermsAndConditionsWidget extends StatefulWidget {
-  const TermsAndConditionsWidget({super.key});
+  const TermsAndConditionsWidget({super.key, required this.onChanged});
+  final ValueChanged onChanged;
 
   @override
   State<TermsAndConditionsWidget> createState() =>
@@ -20,6 +21,7 @@ class _TermsAndConditionsWidgetState extends State<TermsAndConditionsWidget> {
         CustomCheckbox(
           onChecked: (value) {
             isTermsAccepted = value;
+            widget.onChanged(value);
             setState(() {});
           },
           isChecked: isTermsAccepted,

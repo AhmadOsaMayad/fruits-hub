@@ -47,6 +47,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "forgotPassword": MessageLookupByLibrary.simpleMessage("Forgot Password?"),
     "fullName": MessageLookupByLibrary.simpleMessage("Full Name"),
+    "invalidEmail": MessageLookupByLibrary.simpleMessage(
+      "The email address is badly formatted.",
+    ),
     "letsCreateAccount": MessageLookupByLibrary.simpleMessage("Create Account"),
     "logInWithApple": MessageLookupByLibrary.simpleMessage(
       "Sign in with Apple",
@@ -58,6 +61,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Sign in with Google",
     ),
     "login": MessageLookupByLibrary.simpleMessage("Login"),
+    "networkRequestFailed": MessageLookupByLibrary.simpleMessage(
+      "A network error (such as timeout, interrupted connection or unreachable host) has occurred.",
+    ),
     "onBoarding1Subtitle": MessageLookupByLibrary.simpleMessage(
       "Discover a unique shopping experience with FruitHUB. Explore our wide selection of fresh and excellent fruits and get the best deals and high quality.",
     ),
@@ -75,6 +81,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "onBoarding2Title": MessageLookupByLibrary.simpleMessage("Search and Shop"),
     "or": MessageLookupByLibrary.simpleMessage("Or"),
     "password": MessageLookupByLibrary.simpleMessage("Password"),
+    "passwordOrEmailAreIncorrect": MessageLookupByLibrary.simpleMessage(
+      "The password or email is incorrect.",
+    ),
+    "pleaseAcceptTerms": MessageLookupByLibrary.simpleMessage(
+      "Please accept the terms and conditions.",
+    ),
     "pleaseFillThisField": MessageLookupByLibrary.simpleMessage(
       "Please fill this field.",
     ),
@@ -84,6 +96,12 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "tooWeakPassword": MessageLookupByLibrary.simpleMessage(
       "The password provided is too weak.",
+    ),
+    "userNotFound": MessageLookupByLibrary.simpleMessage(
+      "No user found for that email.",
+    ),
+    "wrongPassword": MessageLookupByLibrary.simpleMessage(
+      "Wrong password provided for that user.",
     ),
   };
 }

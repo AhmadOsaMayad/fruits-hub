@@ -27,5 +27,11 @@
     "emailAlreadyInUse":"الحساب الذي يحمل هذا البريد الإلكتروني موجود بالفعل.",
     "anUnknownError":"حدث خطأ غير معروف.",
     "anUnexpectedError":"حدث خطأ غير متوقع.",
-    "pleaseFillThisField":"يرجى ملء هذا الحقل."
+    "pleaseFillThisField":"يرجى ملء هذا الحقل.",
+    "pleaseAcceptTerms":"يرجى قبول الشروط والأحكام.",
+    "invalidEmail":"عنوان البريد الإلكتروني غير صالح.",
+    "networkRequestFailed":"حدث خطأ في الشبكة (مثل انتهاء المهلة، انقطاع الاتصال أو عدم الوصول إلى المضيف).",
+    "userNotFound": "لم يتم العثور على مستخدم لهذا البريد الإلكتروني.",
+    "wrongPassword": "كلمة المرور المقدمة خاطئة لهذا المستخدم.",
+    "passwordOrEmailAreIncorrect": "كلمة المرور أو البريد الإلكتروني غير صحيحة."
 }

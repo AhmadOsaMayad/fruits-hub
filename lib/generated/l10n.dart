@@ -303,6 +303,66 @@ class S {
       args: [],
     );
   }
+
+  /// `Please accept the terms and conditions.`
+  String get pleaseAcceptTerms {
+    return Intl.message(
+      'Please accept the terms and conditions.',
+      name: 'pleaseAcceptTerms',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The email address is badly formatted.`
+  String get invalidEmail {
+    return Intl.message(
+      'The email address is badly formatted.',
+      name: 'invalidEmail',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `A network error (such as timeout, interrupted connection or unreachable host) has occurred.`
+  String get networkRequestFailed {
+    return Intl.message(
+      'A network error (such as timeout, interrupted connection or unreachable host) has occurred.',
+      name: 'networkRequestFailed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No user found for that email.`
+  String get userNotFound {
+    return Intl.message(
+      'No user found for that email.',
+      name: 'userNotFound',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Wrong password provided for that user.`
+  String get wrongPassword {
+    return Intl.message(
+      'Wrong password provided for that user.',
+      name: 'wrongPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The password or email is incorrect.`
+  String get passwordOrEmailAreIncorrect {
+    return Intl.message(
+      'The password or email is incorrect.',
+      name: 'passwordOrEmailAreIncorrect',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

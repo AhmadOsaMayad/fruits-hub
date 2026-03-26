@@ -27,5 +27,11 @@
     "emailAlreadyInUse":"The account already exists for that email.",
     "anUnknownError":"An unknown error occurred.",
     "anUnexpectedError":"An unexpected error occurred.",
-    "pleaseFillThisField":"Please fill this field."
+    "pleaseFillThisField":"Please fill this field.",
+    "pleaseAcceptTerms":"Please accept the terms and conditions.",
+    "invalidEmail":"The email address is badly formatted.",
+    "networkRequestFailed":"A network error (such as timeout, interrupted connection or unreachable host) has occurred.",
+    "userNotFound": "No user found for that email.",
+    "wrongPassword": "Wrong password provided for that user.",
+    "passwordOrEmailAreIncorrect": "The password or email is incorrect."
 }

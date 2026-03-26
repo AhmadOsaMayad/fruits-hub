@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:fruit_hub/core/helpers/build_snack_bar.dart';
 import 'package:fruit_hub/core/utils/constants.dart';
 import 'package:fruit_hub/core/widgets/custom_button.dart';
 import 'package:fruit_hub/core/widgets/custom_text_form_field.dart';
@@ -20,6 +21,7 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
   AutovalidateMode autoValidateMode = AutovalidateMode.disabled;
   late String userName, email, password;
+  late bool isTermsAccepted = false;
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -45,18 +47,29 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
               SizedBox(height: 16),
               PasswordField(onSaved: (value) => password = value!),
               SizedBox(height: 16),
-              TermsAndConditionsWidget(),
+              TermsAndConditionsWidget(
+                onChanged: (value) {
+                  isTermsAccepted = value;
+                  // setState(() {});
+                },
+              ),
               SizedBox(height: 30),
               CustomButton(
                 text: S.of(context).createAccount,
                 onPressed: () {
                   if (formKey.currentState!.validate()) {
                     formKey.currentState!.save();
-                    context.read<SignupCubit>().createUserWithEmailAndPassword(
-                      email: email,
-                      password: password,
-                      name: userName,
-                    );
+                    if (isTermsAccepted) {
+                      context
+                          .read<SignupCubit>()
+                          .createUserWithEmailAndPassword(
+                            email: email,
+                            password: password,
+                            name: userName,
+                          );
+                    } else {
+                      buildSnackBar(context, S.of(context).pleaseAcceptTerms);
+                    }
                   } else {
                     setState(() {
                       autoValidateMode = AutovalidateMode.always;
