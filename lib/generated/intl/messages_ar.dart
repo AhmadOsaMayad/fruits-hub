@@ -67,6 +67,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "onBoarding2Title": MessageLookupByLibrary.simpleMessage("ابحث وتسوق"),
     "or": MessageLookupByLibrary.simpleMessage("أو"),
     "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+    "pleaseFillThisField": MessageLookupByLibrary.simpleMessage(
+      "يرجى ملء هذا الحقل.",
+    ),
     "skip": MessageLookupByLibrary.simpleMessage("تخط"),
     "termsAndConditions": MessageLookupByLibrary.simpleMessage(
       "الشروط والأحكام الخاصة بنا",

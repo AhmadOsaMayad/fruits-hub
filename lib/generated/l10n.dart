@@ -293,6 +293,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Please fill this field.`
+  String get pleaseFillThisField {
+    return Intl.message(
+      'Please fill this field.',
+      name: 'pleaseFillThisField',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -26,5 +26,6 @@
     "tooWeakPassword":"كلمة المرور ضعيفة جدًا.",
     "emailAlreadyInUse":"الحساب الذي يحمل هذا البريد الإلكتروني موجود بالفعل.",
     "anUnknownError":"حدث خطأ غير معروف.",
-    "anUnexpectedError":"حدث خطأ غير متوقع."
+    "anUnexpectedError":"حدث خطأ غير متوقع.",
+    "pleaseFillThisField":"يرجى ملء هذا الحقل."
 }

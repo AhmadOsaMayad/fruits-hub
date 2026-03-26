@@ -29,23 +29,5 @@ class AuthRepoImpl extends AuthRepo {
         ServerFailure('An unexpected error occurred. Please try again.'),
       );
     }
-
-    // .then((user) {
-    //   return Right(
-    //     UserEntity(
-    //       uId: user.uid,
-    //       name: user.displayName ?? '',
-    //       email: user.email ?? '',
-    //     ),
-    //   );
-    // })
-    // .catchError((error) {
-    //   return Left(ServerFailure(error.toString()));
-    // });
-    // User=await firebaseAuthService.createUserWithEmailAndPassword(email: email, password: password).then((user) {
-    //       return Right(UserEntity(uId: user.uid, name: user.displayName ?? '', email: user.email ?? ''));
-    //     }).catchError((error) {
-    //       return Left(ServerFailure(error.toString()));
-    //     });
   }
 }

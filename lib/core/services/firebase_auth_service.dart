@@ -2,6 +2,7 @@ import 'dart:developer';
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fruit_hub/core/errors/exceptions.dart';
+import 'package:fruit_hub/core/utils/constants.dart';
 
 class FirebaseAuthService {
   Future<User> createUserWithEmailAndPassword({
@@ -13,22 +14,16 @@ class FirebaseAuthService {
           .createUserWithEmailAndPassword(email: email, password: password);
       return credential.user!;
     } on FirebaseAuthException catch (e) {
-      if (e.code == 'weak-password') {
-        throw CustomExceptions(message: 'The password provided is too weak.');
-      } else if (e.code == 'email-already-in-use') {
-        throw CustomExceptions(
-          message: 'The account already exists for that email.',
-        );
+      if (e.code == kWeakPasswordK) {
+        throw CustomExceptions(message: kWeakPasswordV);
+      } else if (e.code == kEmailAlreadyInUseK) {
+        throw CustomExceptions(message: kEmailAlreadyInUseV);
       } else {
-        throw CustomExceptions(
-          message: e.message ?? 'An unknown error occurred.',
-        );
+        throw CustomExceptions(message: e.message ?? kUnknownErrorV);
       }
     } catch (e) {
       log(e.toString());
-      throw CustomExceptions(
-        message: 'An unexpected error occurred. Please try again.',
-      );
+      throw CustomExceptions(message: kUnexpectedErrorV);
     }
   }
 }
