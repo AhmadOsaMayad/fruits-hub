@@ -3,6 +3,7 @@ import 'dart:developer';
 import 'package:dartz/dartz.dart';
 import 'package:fruit_hub/core/errors/exceptions.dart';
 import 'package:fruit_hub/core/errors/failures.dart';
+import 'package:fruit_hub/core/services/database_service.dart';
 import 'package:fruit_hub/core/services/firebase_auth_service.dart';
 import 'package:fruit_hub/core/utils/constants.dart';
 import 'package:fruit_hub/features/auth/data/models/user_model.dart';
@@ -11,8 +12,11 @@ import 'package:fruit_hub/features/auth/domain/repos/auth_repo.dart';
 
 class AuthRepoImpl extends AuthRepo {
   final FirebaseAuthService firebaseAuthService;
-
-  AuthRepoImpl({required this.firebaseAuthService});
+  final DatabaseService databaseService;
+  AuthRepoImpl({
+    required this.firebaseAuthService,
+    required this.databaseService,
+  });
   @override
   Future<Either<Failure, UserEntity>> createUserWithEmailAndPassword({
     required String email,
@@ -24,7 +28,9 @@ class AuthRepoImpl extends AuthRepo {
         email: email,
         password: password,
       );
-      return right(UserModel.fromFireBaseUser(user));
+      var userEntity = UserModel.fromFireBaseUser(user);
+      await addUserData(user: userEntity);
+      return right(userEntity);
     } on CustomExceptions catch (e) {
       return left(ServerFailure(e.toString()));
     } catch (e) {
@@ -76,5 +82,10 @@ class AuthRepoImpl extends AuthRepo {
       log('Exception in AuthRepoImpl.signInWithFacebook: ${e.toString()}');
       return left(ServerFailure(kUnexpectedErrorV));
     }
+  }
+
+  @override
+  Future<dynamic> addUserData({required UserEntity user}) async {
+    await databaseService.addData(path: 'users', data: user.toMap());
   }
 }

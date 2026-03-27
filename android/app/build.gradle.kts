@@ -43,4 +43,5 @@ flutter {
 
 dependencies {
     implementation("com.facebook.android:facebook-login:latest.release")
+    implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.8.0"))
 }
