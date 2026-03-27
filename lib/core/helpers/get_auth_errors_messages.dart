@@ -21,6 +21,6 @@ String getAuthErrorMessage(BuildContext context, String code) {
     case kAccountExistsWithDifferentCredentialV:
       return S.of(context).accountExistsWithDifferentCredential;
     default:
-      return code; //S.of(context).anUnknownError;
+      return code;
   }
 }
