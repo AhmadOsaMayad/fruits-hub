@@ -13,6 +13,11 @@ const kInvalidEmailV = 'The email address is badly formatted';
 const kUserNotFoundK = 'user-not-found';
 const kUserNotFoundV = 'No user found for that email.';
 
+const kAccountExistsWithDifferentCredentialK =
+    'account-exists-with-different-credential';
+const kAccountExistsWithDifferentCredentialV =
+    'An account already exists with a different credential.';
+
 const kPasswordOrEmailAreIncorrect = 'Password or Email are Incorrect';
 
 const kWrongPasswordK = 'wrong-password';

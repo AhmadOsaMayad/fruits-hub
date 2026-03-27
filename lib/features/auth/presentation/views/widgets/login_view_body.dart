@@ -70,7 +70,6 @@ class _LoginViewBodyState extends State<LoginViewBody> {
                 onPressed: () {
                   if (formKey.currentState!.validate()) {
                     formKey.currentState!.save();
-
                     context.read<LoginCubit>().loginUserWithEmailAndPassword(
                       email,
                       password,
@@ -109,7 +108,9 @@ class _LoginViewBodyState extends State<LoginViewBody> {
               ),
               SizedBox(height: 16),
               SocialLoginButton(
-                onPressed: () {},
+                onPressed: () {
+                  context.read<LoginCubit>().loginUserWithFacebook();
+                },
                 title: S.of(context).logInWithFacebook,
                 icon: Assets.imagesFacebookIcon,
               ),

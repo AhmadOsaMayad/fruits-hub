@@ -33,5 +33,6 @@
     "networkRequestFailed":"حدث خطأ في الشبكة (مثل انتهاء المهلة، انقطاع الاتصال أو عدم الوصول إلى المضيف).",
     "userNotFound": "لم يتم العثور على مستخدم لهذا البريد الإلكتروني.",
     "wrongPassword": "كلمة المرور المقدمة خاطئة لهذا المستخدم.",
-    "passwordOrEmailAreIncorrect": "كلمة المرور أو البريد الإلكتروني غير صحيحة."
+    "passwordOrEmailAreIncorrect": "كلمة المرور أو البريد الإلكتروني غير صحيحة.",
+    "accountExistsWithDifferentCredential": "حساب موجود بالفعل تم تسجيله بطريقة تسجيل مختلفة."
 }

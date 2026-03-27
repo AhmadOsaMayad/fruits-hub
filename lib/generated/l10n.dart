@@ -363,6 +363,16 @@ class S {
       args: [],
     );
   }
+
+  /// `An account already exists with a different credential.`
+  String get accountExistsWithDifferentCredential {
+    return Intl.message(
+      'An account already exists with a different credential.',
+      name: 'accountExistsWithDifferentCredential',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

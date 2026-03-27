@@ -33,5 +33,6 @@
     "networkRequestFailed":"A network error (such as timeout, interrupted connection or unreachable host) has occurred.",
     "userNotFound": "No user found for that email.",
     "wrongPassword": "Wrong password provided for that user.",
-    "passwordOrEmailAreIncorrect": "The password or email is incorrect."
+    "passwordOrEmailAreIncorrect": "The password or email is incorrect.",
+    "accountExistsWithDifferentCredential": "An account already exists with a different credential."
 }

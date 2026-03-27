@@ -18,6 +18,8 @@ String getAuthErrorMessage(BuildContext context, String code) {
       return S.of(context).passwordOrEmailAreIncorrect;
     case kWrongPasswordV:
       return S.of(context).passwordOrEmailAreIncorrect;
+    case kAccountExistsWithDifferentCredentialV:
+      return S.of(context).accountExistsWithDifferentCredential;
     default:
       return code; //S.of(context).anUnknownError;
   }
