@@ -42,9 +42,11 @@ class MessageLookup extends MessageLookupByLibrary {
     "createNewAccount": MessageLookupByLibrary.simpleMessage(
       "Create New Account",
     ),
+    "discount25": MessageLookupByLibrary.simpleMessage("25% Discount"),
     "dontHaveAccount": MessageLookupByLibrary.simpleMessage(
       "Don\'t have an account? ",
     ),
+    "eidOffers": MessageLookupByLibrary.simpleMessage("Eid Offers"),
     "email": MessageLookupByLibrary.simpleMessage("Email"),
     "emailAlreadyInUse": MessageLookupByLibrary.simpleMessage(
       "The account already exists for that email.",
@@ -68,6 +70,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "loginSuccessful": MessageLookupByLibrary.simpleMessage(
       "Login successful! Welcome!",
     ),
+    "lookFor": MessageLookupByLibrary.simpleMessage("Look for......."),
     "networkRequestFailed": MessageLookupByLibrary.simpleMessage(
       "A network error (such as timeout, interrupted connection or unreachable host) has occurred.",
     ),
@@ -97,6 +100,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "pleaseFillThisField": MessageLookupByLibrary.simpleMessage(
       "Please fill this field.",
     ),
+    "shopNow": MessageLookupByLibrary.simpleMessage("Shop Now"),
     "signUpSuccessful": MessageLookupByLibrary.simpleMessage(
       "Signup successful! Welcome!",
     ),

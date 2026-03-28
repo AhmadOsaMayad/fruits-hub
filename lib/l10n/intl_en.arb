@@ -36,5 +36,9 @@
     "passwordOrEmailAreIncorrect": "The password or email is incorrect.",
     "accountExistsWithDifferentCredential": "An account already exists with a different credential.",
     "signUpSuccessful": "Signup successful! Welcome!",
-    "loginSuccessful": "Login successful! Welcome!"
+    "loginSuccessful": "Login successful! Welcome!",
+    "lookFor":"Look for.......",
+    "eidOffers":"Eid Offers",
+    "discount25":"25% Discount",
+    "shopNow":"Shop Now"
 }

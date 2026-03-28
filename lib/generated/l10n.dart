@@ -393,6 +393,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Look for.......`
+  String get lookFor {
+    return Intl.message('Look for.......', name: 'lookFor', desc: '', args: []);
+  }
+
+  /// `Eid Offers`
+  String get eidOffers {
+    return Intl.message('Eid Offers', name: 'eidOffers', desc: '', args: []);
+  }
+
+  /// `25% Discount`
+  String get discount25 {
+    return Intl.message('25% Discount', name: 'discount25', desc: '', args: []);
+  }
+
+  /// `Shop Now`
+  String get shopNow {
+    return Intl.message('Shop Now', name: 'shopNow', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
