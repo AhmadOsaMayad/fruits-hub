@@ -65,6 +65,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Sign in with Google",
     ),
     "login": MessageLookupByLibrary.simpleMessage("Login"),
+    "loginSuccessful": MessageLookupByLibrary.simpleMessage(
+      "Login successful! Welcome!",
+    ),
     "networkRequestFailed": MessageLookupByLibrary.simpleMessage(
       "A network error (such as timeout, interrupted connection or unreachable host) has occurred.",
     ),
@@ -93,6 +96,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "pleaseFillThisField": MessageLookupByLibrary.simpleMessage(
       "Please fill this field.",
+    ),
+    "signUpSuccessful": MessageLookupByLibrary.simpleMessage(
+      "Signup successful! Welcome!",
     ),
     "skip": MessageLookupByLibrary.simpleMessage("Skip"),
     "termsAndConditions": MessageLookupByLibrary.simpleMessage(

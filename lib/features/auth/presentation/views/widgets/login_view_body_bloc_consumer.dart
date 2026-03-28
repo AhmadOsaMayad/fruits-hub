@@ -4,6 +4,8 @@ import 'package:fruit_hub/core/helpers/build_snack_bar.dart';
 import 'package:fruit_hub/core/widgets/custom_loading_indicator.dart';
 import 'package:fruit_hub/features/auth/presentation/cubits/cubit/login_cubit.dart';
 import 'package:fruit_hub/features/auth/presentation/views/widgets/login_view_body.dart';
+import 'package:fruit_hub/features/home/presentation/views/home_view.dart';
+import 'package:fruit_hub/generated/l10n.dart';
 
 class LoginViewBodyBlocConsumer extends StatelessWidget {
   const LoginViewBodyBlocConsumer({super.key});
@@ -16,7 +18,8 @@ class LoginViewBodyBlocConsumer extends StatelessWidget {
           buildSnackBar(context, state.errorMessage);
         }
         if (state is LoginSuccess) {
-          buildSnackBar(context, 'Login successful! Welcome');
+          Navigator.pushReplacementNamed(context, HomeView.routeName);
+          buildSnackBar(context, S.of(context).loginSuccessful);
         }
       },
       builder: (context, state) {

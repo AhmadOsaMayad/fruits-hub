@@ -59,6 +59,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "تسجيل بواسطة جوجل",
     ),
     "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
+    "loginSuccessful": MessageLookupByLibrary.simpleMessage(
+      "تم تسجيل الدخول بنجاح! مرحبًا بك!",
+    ),
     "networkRequestFailed": MessageLookupByLibrary.simpleMessage(
       "حدث خطأ في الشبكة (مثل انتهاء المهلة، انقطاع الاتصال أو عدم الوصول إلى المضيف).",
     ),
@@ -85,6 +88,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "pleaseFillThisField": MessageLookupByLibrary.simpleMessage(
       "يرجى ملء هذا الحقل.",
+    ),
+    "signUpSuccessful": MessageLookupByLibrary.simpleMessage(
+      "تم التسجيل بنجاح! مرحبًا بك!",
     ),
     "skip": MessageLookupByLibrary.simpleMessage("تخط"),
     "termsAndConditions": MessageLookupByLibrary.simpleMessage(

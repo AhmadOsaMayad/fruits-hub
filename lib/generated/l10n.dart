@@ -373,6 +373,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Signup successful! Welcome!`
+  String get signUpSuccessful {
+    return Intl.message(
+      'Signup successful! Welcome!',
+      name: 'signUpSuccessful',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Login successful! Welcome!`
+  String get loginSuccessful {
+    return Intl.message(
+      'Login successful! Welcome!',
+      name: 'loginSuccessful',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

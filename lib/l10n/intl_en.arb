@@ -34,5 +34,7 @@
     "userNotFound": "No user found for that email.",
     "wrongPassword": "Wrong password provided for that user.",
     "passwordOrEmailAreIncorrect": "The password or email is incorrect.",
-    "accountExistsWithDifferentCredential": "An account already exists with a different credential."
+    "accountExistsWithDifferentCredential": "An account already exists with a different credential.",
+    "signUpSuccessful": "Signup successful! Welcome!",
+    "loginSuccessful": "Login successful! Welcome!"
 }

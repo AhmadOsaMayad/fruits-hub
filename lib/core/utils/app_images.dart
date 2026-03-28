@@ -2,6 +2,10 @@
 class Assets {
   Assets._();
   
+  /// Assets for imagesAddItem
+  /// assets/images/add_item.svg
+  static const String imagesAddItem = "assets/images/add_item.svg";
+
   /// Assets for imagesAppIcon
   /// assets/images/app_icon.png
   static const String imagesAppIcon = "assets/images/app_icon.png";
@@ -18,9 +22,17 @@ class Assets {
   /// assets/images/google_icon.svg
   static const String imagesGoogleIcon = "assets/images/google_icon.svg";
 
+  /// Assets for imagesHeartOutline
+  /// assets/images/heart_outline.svg
+  static const String imagesHeartOutline = "assets/images/heart_outline.svg";
+
   /// Assets for imagesLogo
   /// assets/images/logo.svg
   static const String imagesLogo = "assets/images/logo.svg";
+
+  /// Assets for imagesNotificationsActive
+  /// assets/images/notifications_active.svg
+  static const String imagesNotificationsActive = "assets/images/notifications_active.svg";
 
   /// Assets for imagesPageViewItem1BackgroundImage
   /// assets/images/page_view_item1_background_image.svg
@@ -41,6 +53,10 @@ class Assets {
   /// Assets for imagesPlant
   /// assets/images/plant.svg
   static const String imagesPlant = "assets/images/plant.svg";
+
+  /// Assets for imagesProfileImage
+  /// assets/images/profile_image.svg
+  static const String imagesProfileImage = "assets/images/profile_image.svg";
 
   /// Assets for imagesSplashBottom
   /// assets/images/splash_bottom.svg

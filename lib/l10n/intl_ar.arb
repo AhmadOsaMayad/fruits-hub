@@ -34,5 +34,7 @@
     "userNotFound": "لم يتم العثور على مستخدم لهذا البريد الإلكتروني.",
     "wrongPassword": "كلمة المرور المقدمة خاطئة لهذا المستخدم.",
     "passwordOrEmailAreIncorrect": "كلمة المرور أو البريد الإلكتروني غير صحيحة.",
-    "accountExistsWithDifferentCredential": "حساب موجود بالفعل تم تسجيله بطريقة تسجيل مختلفة."
+    "accountExistsWithDifferentCredential": "حساب موجود بالفعل تم تسجيله بطريقة تسجيل مختلفة.",
+    "signUpSuccessful": "تم التسجيل بنجاح! مرحبًا بك!",
+    "loginSuccessful": "تم تسجيل الدخول بنجاح! مرحبًا بك!"
 }

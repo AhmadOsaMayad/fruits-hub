@@ -5,6 +5,7 @@ import 'package:fruit_hub/core/helpers/get_auth_errors_messages.dart';
 import 'package:fruit_hub/core/widgets/custom_loading_indicator.dart';
 import 'package:fruit_hub/features/auth/presentation/cubits/signup_cubit/signup_cubit.dart';
 import 'package:fruit_hub/features/auth/presentation/views/widgets/sign_up_view_body.dart';
+import 'package:fruit_hub/generated/l10n.dart';
 
 class SignupViewBodyBlocConsumer extends StatelessWidget {
   const SignupViewBodyBlocConsumer({super.key});
@@ -19,7 +20,8 @@ class SignupViewBodyBlocConsumer extends StatelessWidget {
             getAuthErrorMessage(context, state.errorMessage),
           );
         } else if (state is SignupSuccess) {
-          buildSnackBar(context, 'Signup successful! Welcome');
+          Navigator.pop(context);
+          buildSnackBar(context, S.of(context).signUpSuccessful);
         }
       },
       builder: (context, state) {
