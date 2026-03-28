@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:fruit_hub/core/constants/query_key_words.dart';
 import 'package:fruit_hub/core/services/database_service.dart';
 
 class FireStoreService implements DatabaseService {
@@ -28,13 +29,13 @@ class FireStoreService implements DatabaseService {
     } else {
       Query<Map<String, dynamic>> data = firestore.collection(path);
       if (query != null) {
-        if (query['orderBy'] != null) {
-          var orderByField = query['orderBy'];
-          var descending = query['descending'];
+        if (query[QKWords.orderBy] != null) {
+          var orderByField = query[QKWords.orderBy];
+          var descending = query[QKWords.descending];
           data = data.orderBy(orderByField, descending: descending);
         }
-        if (query['limit'] != null) {
-          var limit = query['limit'];
+        if (query[QKWords.limit] != null) {
+          var limit = query[QKWords.limit];
           data = data.limit(limit);
         }
       }

@@ -73,15 +73,41 @@ class FirebaseAuthService {
     }
   }
 
+  // Future<User> signInWithGoogle() async {
+  //   final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
+  //   final GoogleSignInAuthentication? googleAuth =
+  //       await googleUser?.authentication;
+  //   final credential = GoogleAuthProvider.credential(
+  //     accessToken: googleAuth?.accessToken,
+  //     idToken: googleAuth?.idToken,
+  //   );
+  //   return (await FirebaseAuth.instance.signInWithCredential(credential)).user!;
+  // }
   Future<User> signInWithGoogle() async {
-    final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
+    final googleSignIn = GoogleSignIn();
+
+    // Force sign-out at the app level so the chooser shows
+    await googleSignIn.signOut();
+
+    // Prompt user to pick an account
+    final GoogleSignInAccount? googleUser = await googleSignIn.signIn();
+
+    // Get authentication tokens
     final GoogleSignInAuthentication? googleAuth =
         await googleUser?.authentication;
+
+    // Build Firebase credential
     final credential = GoogleAuthProvider.credential(
       accessToken: googleAuth?.accessToken,
       idToken: googleAuth?.idToken,
     );
-    return (await FirebaseAuth.instance.signInWithCredential(credential)).user!;
+
+    // Sign in to Firebase (creates new user if first time, logs in otherwise)
+    final userCredential = await FirebaseAuth.instance.signInWithCredential(
+      credential,
+    );
+
+    return userCredential.user!;
   }
 
   Future<User> signInWithFacebook() async {

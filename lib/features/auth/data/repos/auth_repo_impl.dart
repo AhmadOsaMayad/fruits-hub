@@ -19,6 +19,7 @@ class AuthRepoImpl extends AuthRepo {
     required this.firebaseAuthService,
     required this.databaseService,
   });
+
   @override
   Future<Either<Failure, UserEntity>> createUserWithEmailAndPassword({
     required String email,
@@ -43,12 +44,6 @@ class AuthRepoImpl extends AuthRepo {
         'Exception in AuthRepoImpl.createUserWithEmailAndPassword: ${e.toString()}',
       );
       return left(ServerFailure(kUnexpectedErrorV));
-    }
-  }
-
-  Future<void> deleteUser(User? user) async {
-    if (user != null) {
-      await firebaseAuthService.deleteUser();
     }
   }
 
@@ -83,7 +78,16 @@ class AuthRepoImpl extends AuthRepo {
     try {
       user = await firebaseAuthService.signInWithGoogle();
       var userEntity = UserModel.fromFireBaseUser(user);
-      await addUserData(user: userEntity);
+      var existingUser = await databaseService.checkIfDataExists(
+        path: BackEndPoints.getUserData,
+        docuementId: user.uid,
+      );
+      if (existingUser) {
+        await getUserData(uId: user.uid);
+      } else {
+        await addUserData(user: userEntity);
+      }
+
       return right(userEntity);
     } catch (e) {
       await deleteUser(user);
@@ -98,7 +102,15 @@ class AuthRepoImpl extends AuthRepo {
     try {
       user = await firebaseAuthService.signInWithFacebook();
       var userEntity = UserModel.fromFireBaseUser(user);
-      await addUserData(user: userEntity);
+      var existingUser = await databaseService.checkIfDataExists(
+        path: BackEndPoints.getUserData,
+        docuementId: user.uid,
+      );
+      if (existingUser) {
+        await getUserData(uId: user.uid);
+      } else {
+        await addUserData(user: userEntity);
+      }
       return right(userEntity);
     } catch (e) {
       await deleteUser(user);
@@ -118,10 +130,16 @@ class AuthRepoImpl extends AuthRepo {
 
   @override
   Future<UserEntity> getUserData({required String uId}) async {
-    final data = await databaseService.getData(
+    final userData = await databaseService.getData(
       path: BackEndPoints.getUserData,
       docuementId: uId,
     );
-    return UserModel.fromJson(data);
+    return UserModel.fromJson(userData);
+  }
+
+  Future<void> deleteUser(User? user) async {
+    if (user != null) {
+      await firebaseAuthService.deleteUser();
+    }
   }
 }
