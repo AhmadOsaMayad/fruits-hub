@@ -35,9 +35,11 @@ class MessageLookup extends MessageLookupByLibrary {
     "anUnknownError": MessageLookupByLibrary.simpleMessage(
       "An unknown error occurred.",
     ),
+    "bestSelling": MessageLookupByLibrary.simpleMessage("Best Selling"),
     "byCreatingAccount": MessageLookupByLibrary.simpleMessage(
       "By creating an account, you agree to ",
     ),
+    "cart": MessageLookupByLibrary.simpleMessage("Cart"),
     "createAccount": MessageLookupByLibrary.simpleMessage("Create Account"),
     "createNewAccount": MessageLookupByLibrary.simpleMessage(
       "Create New Account",
@@ -53,6 +55,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "forgotPassword": MessageLookupByLibrary.simpleMessage("Forgot Password?"),
     "fullName": MessageLookupByLibrary.simpleMessage("Full Name"),
+    "home": MessageLookupByLibrary.simpleMessage("Home"),
     "invalidEmail": MessageLookupByLibrary.simpleMessage(
       "The email address is badly formatted.",
     ),
@@ -71,6 +74,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Login successful! Welcome!",
     ),
     "lookFor": MessageLookupByLibrary.simpleMessage("Look for......."),
+    "more": MessageLookupByLibrary.simpleMessage("More"),
     "networkRequestFailed": MessageLookupByLibrary.simpleMessage(
       "A network error (such as timeout, interrupted connection or unreachable host) has occurred.",
     ),
@@ -100,6 +104,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "pleaseFillThisField": MessageLookupByLibrary.simpleMessage(
       "Please fill this field.",
     ),
+    "products": MessageLookupByLibrary.simpleMessage("Products"),
+    "profile": MessageLookupByLibrary.simpleMessage("Profile"),
     "shopNow": MessageLookupByLibrary.simpleMessage("Shop Now"),
     "signUpSuccessful": MessageLookupByLibrary.simpleMessage(
       "Signup successful! Welcome!",

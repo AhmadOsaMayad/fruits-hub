@@ -35,9 +35,11 @@ class MessageLookup extends MessageLookupByLibrary {
     "anUnknownError": MessageLookupByLibrary.simpleMessage(
       "حدث خطأ غير معروف.",
     ),
+    "bestSelling": MessageLookupByLibrary.simpleMessage("الأكثر مبيعًا"),
     "byCreatingAccount": MessageLookupByLibrary.simpleMessage(
       "من خلال إنشاء حساب، فإنك توافق على ",
     ),
+    "cart": MessageLookupByLibrary.simpleMessage("سلة التسوق"),
     "createAccount": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
     "createNewAccount": MessageLookupByLibrary.simpleMessage("إنشاء حساب جديد"),
     "discount25": MessageLookupByLibrary.simpleMessage("خصم 25%"),
@@ -49,6 +51,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "forgotPassword": MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
     "fullName": MessageLookupByLibrary.simpleMessage("الاسم الكامل"),
+    "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
     "invalidEmail": MessageLookupByLibrary.simpleMessage(
       "عنوان البريد الإلكتروني غير صالح.",
     ),
@@ -65,6 +68,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "تم تسجيل الدخول بنجاح! مرحبًا بك!",
     ),
     "lookFor": MessageLookupByLibrary.simpleMessage("ابحث عن......."),
+    "more": MessageLookupByLibrary.simpleMessage("المزيد"),
     "networkRequestFailed": MessageLookupByLibrary.simpleMessage(
       "حدث خطأ في الشبكة (مثل انتهاء المهلة، انقطاع الاتصال أو عدم الوصول إلى المضيف).",
     ),
@@ -92,6 +96,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "pleaseFillThisField": MessageLookupByLibrary.simpleMessage(
       "يرجى ملء هذا الحقل.",
     ),
+    "products": MessageLookupByLibrary.simpleMessage("المنتجات"),
+    "profile": MessageLookupByLibrary.simpleMessage("حسابي"),
     "shopNow": MessageLookupByLibrary.simpleMessage("تسوق الان"),
     "signUpSuccessful": MessageLookupByLibrary.simpleMessage(
       "تم التسجيل بنجاح! مرحبًا بك!",

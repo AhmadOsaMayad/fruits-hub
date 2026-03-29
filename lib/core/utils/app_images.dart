@@ -14,6 +14,14 @@ class Assets {
   /// assets/images/apple_icon.svg
   static const String imagesAppleIcon = "assets/images/apple_icon.svg";
 
+  /// Assets for imagesCartFilled
+  /// assets/images/cart_filled.svg
+  static const String imagesCartFilled = "assets/images/cart_filled.svg";
+
+  /// Assets for imagesCartOutlined
+  /// assets/images/cart_outlined.svg
+  static const String imagesCartOutlined = "assets/images/cart_outlined.svg";
+
   /// Assets for imagesFacebookIcon
   /// assets/images/facebook_icon.svg
   static const String imagesFacebookIcon = "assets/images/facebook_icon.svg";
@@ -37,6 +45,14 @@ class Assets {
   /// Assets for imagesHeartOutline
   /// assets/images/heart_outline.svg
   static const String imagesHeartOutline = "assets/images/heart_outline.svg";
+
+  /// Assets for imagesHomeFilled
+  /// assets/images/home_filled.svg
+  static const String imagesHomeFilled = "assets/images/home_filled.svg";
+
+  /// Assets for imagesHomeOutlined
+  /// assets/images/home_outlined.svg
+  static const String imagesHomeOutlined = "assets/images/home_outlined.svg";
 
   /// Assets for imagesLogo
   /// assets/images/logo.svg
@@ -70,13 +86,29 @@ class Assets {
   /// assets/images/plant.svg
   static const String imagesPlant = "assets/images/plant.svg";
 
+  /// Assets for imagesProductsFilled
+  /// assets/images/products_filled.svg
+  static const String imagesProductsFilled = "assets/images/products_filled.svg";
+
+  /// Assets for imagesProductsOutlined
+  /// assets/images/products_outlined.svg
+  static const String imagesProductsOutlined = "assets/images/products_outlined.svg";
+
   /// Assets for imagesProfileAvatar
   /// assets/images/profile_avatar.png
   static const String imagesProfileAvatar = "assets/images/profile_avatar.png";
 
+  /// Assets for imagesProfileFilled
+  /// assets/images/profile_filled.svg
+  static const String imagesProfileFilled = "assets/images/profile_filled.svg";
+
   /// Assets for imagesProfileImage
   /// assets/images/profile_image.svg
   static const String imagesProfileImage = "assets/images/profile_image.svg";
+
+  /// Assets for imagesProfileOutlined
+  /// assets/images/profile_outlined.svg
+  static const String imagesProfileOutlined = "assets/images/profile_outlined.svg";
 
   /// Assets for imagesSearchIcon
   /// assets/images/search_icon.svg
@@ -85,5 +117,9 @@ class Assets {
   /// Assets for imagesSplashBottom
   /// assets/images/splash_bottom.svg
   static const String imagesSplashBottom = "assets/images/splash_bottom.svg";
+
+  /// Assets for imagesWatermelon
+  /// assets/images/watermelon.png
+  static const String imagesWatermelon = "assets/images/watermelon.png";
 }
 
