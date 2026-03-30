@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_hub/core/utils/constants.dart';
-import 'package:fruit_hub/core/widgets/fruit_item.dart';
 import 'package:fruit_hub/core/widgets/search_text_field.dart';
 import 'package:fruit_hub/features/home/presentation/views/widgets/best_selling_header.dart';
 import 'package:fruit_hub/features/home/presentation/views/widgets/best_selling_sliver_grid.dart';

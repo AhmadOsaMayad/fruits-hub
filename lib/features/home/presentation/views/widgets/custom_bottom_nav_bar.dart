@@ -2,8 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:fruit_hub/features/home/domain/entities/nav_bar_item_entity.dart';
 import 'package:fruit_hub/features/home/presentation/views/widgets/nav_bar_item.dart';
 
-class CustomBottomNavBar extends StatelessWidget {
+class CustomBottomNavBar extends StatefulWidget {
   const CustomBottomNavBar({super.key});
+
+  @override
+  State<CustomBottomNavBar> createState() => _CustomBottomNavBarState();
+}
+
+class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
+  int selectedIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -28,10 +35,25 @@ class CustomBottomNavBar extends StatelessWidget {
         ],
       ),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children:
-            navBarItems(context).map((e) {
-              return NavBarItem(isSelected: false, item: e);
+            navBarItems(context).asMap().entries.map((e) {
+              var index = e.key;
+              var entity = e.value;
+              return Expanded(
+                flex: e.key == selectedIndex ? 3 : 2,
+                child: GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      selectedIndex = index;
+                      // widget.onItemTapped(index);
+                    });
+                  },
+                  child: NavBarItem(
+                    isSelected: index == selectedIndex,
+                    item: entity,
+                  ),
+                ),
+              );
             }).toList(),
       ),
     );

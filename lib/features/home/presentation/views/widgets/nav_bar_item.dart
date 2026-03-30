@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_hub/features/home/domain/entities/nav_bar_item_entity.dart';
-import 'package:fruit_hub/features/home/presentation/views/widgets/avtive_nav_bar_item.dart';
+import 'package:fruit_hub/features/home/presentation/views/widgets/active_nav_bar_item.dart';
 import 'package:fruit_hub/features/home/presentation/views/widgets/in_active_nav_bar_item.dart';
 
 class NavBarItem extends StatelessWidget {
@@ -10,7 +10,7 @@ class NavBarItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return isSelected
-        ? ActiveNavBarItem()
+        ? ActiveNavBarItem(title: item.title, icon: item.activeIcon)
         : InActiveNavBarItem(icon: item.inActiveIcon);
   }
 }

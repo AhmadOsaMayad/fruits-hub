@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:fruit_hub/core/utils/app_colors.dart';
 import 'package:fruit_hub/core/utils/app_images.dart';
 import 'package:fruit_hub/core/utils/app_text_styles.dart';
-import 'package:svg_flutter/svg_flutter.dart';
 
 class FruitItem extends StatelessWidget {
   const FruitItem({super.key});
@@ -24,9 +23,7 @@ class FruitItem extends StatelessWidget {
             child: IconButton(
               onPressed: () {},
               icon: Icon(Icons.favorite_border_outlined),
-              //  SvgPicture.asset(Assets.imagesHeartOutline),
             ),
-            // child: SvgPicture.asset(Assets.imagesHeartOutline),
           ),
           Positioned.fill(
             child: Column(
@@ -35,27 +32,26 @@ class FruitItem extends StatelessWidget {
                 Image.asset(Assets.imagesWatermelon),
                 SizedBox(height: 24),
                 ListTile(
-                  title: Text(
-                    'بطيخ',
-                    textAlign: TextAlign.right,
-                    style: AppTextStyles.semiBold13,
-                  ),
+                  // title: Text('WaterMelon', style: AppTextStyles.semiBold13),
+                  title: Text('بطيخ', style: AppTextStyles.semiBold13),
                   subtitle: Text.rich(
                     TextSpan(
                       children: [
                         TextSpan(
+                          // text: '20 Euro',
                           text: '20جنية ',
                           style: AppTextStyles.bold13.copyWith(
                             color: Color(0xFFF4A91F),
                           ),
                         ),
                         TextSpan(
-                          text: '/',
+                          text: ' / ',
                           style: AppTextStyles.bold13.copyWith(
                             color: Color(0xFFF8C76D),
                           ),
                         ),
                         TextSpan(
+                          // text: 'Kg',
                           text: ' الكيلو',
                           style: AppTextStyles.bold13.copyWith(
                             color: Color(0xFFF8C76D),
@@ -63,7 +59,6 @@ class FruitItem extends StatelessWidget {
                         ),
                       ],
                     ),
-                    // textAlign: isArabic() ? TextAlign.right : TextAlign.left,
                   ),
                   trailing: CircleAvatar(
                     backgroundColor: AppColors.primary,
