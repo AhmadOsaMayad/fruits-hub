@@ -26,7 +26,7 @@ class _TermsAndConditionsWidgetState extends State<TermsAndConditionsWidget> {
           },
           isChecked: isTermsAccepted,
         ),
-        SizedBox(width: 16),
+        const SizedBox(width: 16),
         Expanded(
           child: TappableSuffixText(
             textAlign: TextAlign.start,

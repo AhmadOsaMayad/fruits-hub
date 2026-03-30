@@ -27,7 +27,7 @@ class SignupViewBodyBlocConsumer extends StatelessWidget {
       builder: (context, state) {
         return CustomLoadingIndicator(
           isLoading: state is SignupLoading,
-          child: SignUpViewBody(),
+          child: const SignUpViewBody(),
         );
       },
     );

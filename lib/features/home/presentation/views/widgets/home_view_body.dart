@@ -11,8 +11,8 @@ class HomeViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: kHPadding),
+    return const Padding(
+      padding: EdgeInsets.symmetric(horizontal: kHPadding),
       child: CustomScrollView(
         slivers: [
           SliverToBoxAdapter(

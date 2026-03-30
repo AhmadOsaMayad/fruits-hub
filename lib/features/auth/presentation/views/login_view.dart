@@ -20,7 +20,7 @@ class LoginView extends StatelessWidget {
           title: S.of(context).login,
           showBackButton: false,
         ),
-        body: LoginViewBodyBlocConsumer(),
+        body: const LoginViewBodyBlocConsumer(),
       ),
     );
   }

@@ -22,18 +22,18 @@ class FruitItem extends StatelessWidget {
             right: 0,
             child: IconButton(
               onPressed: () {},
-              icon: Icon(Icons.favorite_border_outlined),
+              icon: const Icon(Icons.favorite_border_outlined),
             ),
           ),
           Positioned.fill(
             child: Column(
               children: [
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 Image.asset(Assets.imagesWatermelon),
-                SizedBox(height: 24),
+                const SizedBox(height: 24),
                 ListTile(
                   // title: Text('WaterMelon', style: AppTextStyles.semiBold13),
-                  title: Text('بطيخ', style: AppTextStyles.semiBold13),
+                  title: const Text('بطيخ', style: AppTextStyles.semiBold13),
                   subtitle: Text.rich(
                     TextSpan(
                       children: [
@@ -41,26 +41,26 @@ class FruitItem extends StatelessWidget {
                           // text: '20 Euro',
                           text: '20جنية ',
                           style: AppTextStyles.bold13.copyWith(
-                            color: Color(0xFFF4A91F),
+                            color: const Color(0xFFF4A91F),
                           ),
                         ),
                         TextSpan(
                           text: ' / ',
                           style: AppTextStyles.bold13.copyWith(
-                            color: Color(0xFFF8C76D),
+                            color: const Color(0xFFF8C76D),
                           ),
                         ),
                         TextSpan(
                           // text: 'Kg',
                           text: ' الكيلو',
                           style: AppTextStyles.bold13.copyWith(
-                            color: Color(0xFFF8C76D),
+                            color: const Color(0xFFF8C76D),
                           ),
                         ),
                       ],
                     ),
                   ),
-                  trailing: CircleAvatar(
+                  trailing: const CircleAvatar(
                     backgroundColor: AppColors.primary,
                     child: Icon(Icons.add, color: Colors.white),
                   ),

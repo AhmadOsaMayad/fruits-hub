@@ -37,7 +37,7 @@ class CustomTextFormField extends StatelessWidget {
         ),
         hintText: hintText ?? '',
         filled: true,
-        fillColor: Color(0xFFF9FAFA),
+        fillColor: const Color(0xFFF9FAFA),
         border: buildBorder(),
         enabledBorder: buildBorder(),
         focusedBorder: buildBorder(),

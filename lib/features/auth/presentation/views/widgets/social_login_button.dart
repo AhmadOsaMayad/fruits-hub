@@ -29,18 +29,18 @@ class SocialLoginButton extends StatelessWidget {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(16),
           ),
-          side: BorderSide(color: const Color(0xFFDCDEDE), width: 1),
+          side: const BorderSide(color: Color(0xFFDCDEDE), width: 1),
         ),
         // icon: SvgPicture.asset(icon, height: 24, width: 24),
         child: ListTile(
-          visualDensity: VisualDensity(
+          visualDensity: const VisualDensity(
             horizontal: VisualDensity.minimumDensity,
           ),
           leading: SvgPicture.asset(icon, height: 24, width: 24),
           title: Text(
             title,
             textAlign: TextAlign.center,
-            style: AppTextStyles.semiBold16.copyWith(color: Color(0xFF0C0D0D)),
+            style: AppTextStyles.semiBold16.copyWith(color: const Color(0xFF0C0D0D)),
           ),
         ),
       ),
@@ -76,7 +76,7 @@ class SocialLoginButton1 extends StatelessWidget {
               child: Text(
                 title,
                 style: AppTextStyles.semiBold16.copyWith(
-                  color: Color(0xFF0C0D0D),
+                  color: const Color(0xFF0C0D0D),
                 ),
               ),
             ),
@@ -90,7 +90,7 @@ class SocialLoginButton1 extends StatelessWidget {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(16),
           ),
-          side: BorderSide(color: const Color(0xFFDCDEDE), width: 1),
+          side: const BorderSide(color: Color(0xFFDCDEDE), width: 1),
         ),
         icon: Padding(
           padding: EdgeInsets.only(

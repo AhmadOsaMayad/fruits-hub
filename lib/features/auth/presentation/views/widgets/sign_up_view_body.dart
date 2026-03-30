@@ -32,28 +32,28 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
           autovalidateMode: autoValidateMode,
           child: Column(
             children: [
-              SizedBox(height: 24),
+              const SizedBox(height: 24),
               CustomTextFormField(
                 onSaved: (value) => userName = value!,
                 hintText: S.of(context).fullName,
                 keyboardType: TextInputType.name,
               ),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               CustomTextFormField(
                 onSaved: (value) => email = value!,
                 hintText: S.of(context).email,
                 keyboardType: TextInputType.emailAddress,
               ),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               PasswordField(onSaved: (value) => password = value!),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               TermsAndConditionsWidget(
                 onChanged: (value) {
                   isTermsAccepted = value;
                   // setState(() {});
                 },
               ),
-              SizedBox(height: 30),
+              const SizedBox(height: 30),
               CustomButton(
                 text: S.of(context).createAccount,
                 onPressed: () {
@@ -77,13 +77,13 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
                   }
                 },
               ),
-              SizedBox(height: 26),
+              const SizedBox(height: 26),
               TappableSuffixText(
                 prefix: S.of(context).alreadyHaveAccount,
                 suffix: S.of(context).login,
                 justPop: true,
               ),
-              SizedBox(height: 33),
+              const SizedBox(height: 33),
             ],
           ),
         ),

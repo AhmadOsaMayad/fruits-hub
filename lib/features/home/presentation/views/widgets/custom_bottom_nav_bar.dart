@@ -17,7 +17,7 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
     return Container(
       width: 375,
       height: 70,
-      decoration: ShapeDecoration(
+      decoration: const ShapeDecoration(
         color: Colors.white,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.only(

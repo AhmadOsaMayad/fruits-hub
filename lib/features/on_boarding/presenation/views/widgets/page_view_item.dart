@@ -55,7 +55,7 @@ class PageViewItem extends StatelessWidget {
                       S.of(context).skip,
                       textAlign: TextAlign.center,
                       style: AppTextStyles.regular13.copyWith(
-                        color: Color(0xFF949D9D),
+                        color: const Color(0xFF949D9D),
                       ),
                     ),
                   ),
@@ -71,7 +71,7 @@ class PageViewItem extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 37.0),
           child: Text(
             subtitle,
-            style: AppTextStyles.semiBold13.copyWith(color: Color(0xFF4E5456)),
+            style: AppTextStyles.semiBold13.copyWith(color: const Color(0xFF4E5456)),
             textAlign: TextAlign.center,
           ),
         ),

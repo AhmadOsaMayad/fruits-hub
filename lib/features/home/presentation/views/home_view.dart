@@ -7,7 +7,7 @@ class HomeView extends StatelessWidget {
   static const routeName = 'home';
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       bottomNavigationBar: CustomBottomNavBar(),
       body: SafeArea(child: HomeViewBody()),
     );

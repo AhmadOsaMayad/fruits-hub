@@ -37,7 +37,7 @@ class _LoginViewBodyState extends State<LoginViewBody> {
           autovalidateMode: autoValidateMode,
           child: Column(
             children: [
-              SizedBox(height: 24),
+              const SizedBox(height: 24),
               CustomTextFormField(
                 onSaved: (value) {
                   email = value!;
@@ -45,13 +45,13 @@ class _LoginViewBodyState extends State<LoginViewBody> {
                 hintText: S.of(context).email,
                 keyboardType: TextInputType.emailAddress,
               ),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               PasswordField(
                 onSaved: (value) {
                   password = value!;
                 },
               ),
-              SizedBox(height: 8),
+              const SizedBox(height: 8),
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
@@ -60,13 +60,13 @@ class _LoginViewBodyState extends State<LoginViewBody> {
                     child: Text(
                       S.of(context).forgotPassword,
                       style: AppTextStyles.semiBold13.copyWith(
-                        color: Color(0xFF2D9F5D),
+                        color: const Color(0xFF2D9F5D),
                       ),
                     ),
                   ),
                 ],
               ),
-              SizedBox(height: 33),
+              const SizedBox(height: 33),
               CustomButton(
                 text: S.of(context).login,
                 onPressed: () {
@@ -85,16 +85,16 @@ class _LoginViewBodyState extends State<LoginViewBody> {
               ),
 
               // CustomButton(text: S.of(context).login, onPressed: () {}),
-              SizedBox(height: 33),
+              const SizedBox(height: 33),
 
               TappableSuffixText(
                 prefix: S.of(context).dontHaveAccount,
                 suffix: S.of(context).createAccount,
                 onTapRoute: SignUpView.routeName,
               ),
-              SizedBox(height: 33),
+              const SizedBox(height: 33),
               OrDividerWidget(text: S.of(context).or),
-              SizedBox(height: 32),
+              const SizedBox(height: 32),
               SocialLoginButton(
                 onPressed: () {
                   context.read<LoginCubit>().loginUserWithGoogle();
@@ -102,7 +102,7 @@ class _LoginViewBodyState extends State<LoginViewBody> {
                 title: S.of(context).logInWithGoogle,
                 icon: Assets.imagesGoogleIcon,
               ),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               Platform.isIOS
                   ? Column(
                     children: [
@@ -111,10 +111,10 @@ class _LoginViewBodyState extends State<LoginViewBody> {
                         title: S.of(context).logInWithApple,
                         icon: Assets.imagesAppleIcon,
                       ),
-                      SizedBox(height: 16),
+                      const SizedBox(height: 16),
                     ],
                   )
-                  : SizedBox(),
+                  : const SizedBox(),
               SocialLoginButton(
                 onPressed: () {
                   context.read<LoginCubit>().loginUserWithFacebook();

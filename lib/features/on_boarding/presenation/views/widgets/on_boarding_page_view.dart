@@ -19,7 +19,7 @@ class OnBoardingPageView extends StatelessWidget {
           image: Assets.imagesPageViewItem1Image,
           backgroundImage: Assets.imagesPageViewItem1BackgroundImage,
           subtitle: S.of(context).onBoarding1Subtitle,
-          title: OnBoarding1Title(),
+          title: const OnBoarding1Title(),
         ),
         PageViewItem(
           isVisible: false,
@@ -28,7 +28,7 @@ class OnBoardingPageView extends StatelessWidget {
           subtitle: S.of(context).onBoarding2Subtitle,
           title: Text(
             S.of(context).onBoarding2Title,
-            style: AppTextStyles.bold23.copyWith(color: Color(0xFF0C0D0D)),
+            style: AppTextStyles.bold23.copyWith(color: const Color(0xFF0C0D0D)),
           ),
         ),
       ],

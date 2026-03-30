@@ -25,7 +25,7 @@ class LoginViewBodyBlocConsumer extends StatelessWidget {
       builder: (context, state) {
         return CustomLoadingIndicator(
           isLoading: state is LoginLoading,
-          child: LoginViewBody(),
+          child: const LoginViewBody(),
         );
       },
     );

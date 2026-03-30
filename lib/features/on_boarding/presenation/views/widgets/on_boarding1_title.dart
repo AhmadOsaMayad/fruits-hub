@@ -14,21 +14,21 @@ class OnBoarding1Title extends StatelessWidget {
             text: S.of(context).onBoarding1TitlePrefix,
             style: AppTextStyles.bold23.copyWith(
               // fontFamily: 'Cairo',
-              color: Color(0xFF0C0D0D),
+              color: const Color(0xFF0C0D0D),
             ),
           ),
           TextSpan(
             text: S.of(context).onBoarding1Title1,
             style: AppTextStyles.bold23.copyWith(
               // fontFamily: 'Cairo',
-              color: Color(0xFF1B5E37),
+              color: const Color(0xFF1B5E37),
             ),
           ),
           TextSpan(
             text: S.of(context).onBoarding1Title2,
             style: AppTextStyles.bold23.copyWith(
               // fontFamily: 'Cairo',
-              color: Color(0xFFF4A91F),
+              color: const Color(0xFFF4A91F),
             ),
           ),
         ],

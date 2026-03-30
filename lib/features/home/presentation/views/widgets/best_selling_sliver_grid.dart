@@ -7,7 +7,7 @@ class BestSellingSliverGrid extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SliverGrid.builder(
-      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
         crossAxisSpacing: 16,
         mainAxisSpacing: 8,
@@ -16,7 +16,7 @@ class BestSellingSliverGrid extends StatelessWidget {
 
       itemCount: 10,
       itemBuilder: (context, index) {
-        return FruitItem();
+        return const FruitItem();
       },
     );
   }

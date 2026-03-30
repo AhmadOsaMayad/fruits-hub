@@ -27,13 +27,13 @@ class FruitHub extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(
         fontFamily: 'Cairo',
-        scaffoldBackgroundColor: Color(0xFFFFFFFF),
+        scaffoldBackgroundColor: const Color(0xFFFFFFFF),
       ),
       onGenerateRoute: onGenerateRoutes,
       initialRoute: SplashView.routeName,
       debugShowCheckedModeBanner: false,
       locale: const Locale('ar'),
-      localizationsDelegates: [
+      localizationsDelegates: const [
         S.delegate,
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,

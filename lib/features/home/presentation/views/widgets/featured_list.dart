@@ -11,8 +11,8 @@ class FeaturedList extends StatelessWidget {
       child: Row(
         children: List.generate(
           4,
-          (index) => Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 8.0),
+          (index) => const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 8.0),
             child: FeaturedItem(),
           ),
         ),
