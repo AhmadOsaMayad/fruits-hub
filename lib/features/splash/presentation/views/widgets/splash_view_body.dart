@@ -39,10 +39,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [SvgPicture.asset(Assets.imagesLogo)],
         ),
-        // SvgPicture.asset(Assets.imagesLogo, height: 173, width: 178),
         SvgPicture.asset(Assets.imagesSplashBottom, fit: BoxFit.fill),
-
-        // SvgPicture.asset(Assets.imagesLogo),
       ],
     );
   }
@@ -53,9 +50,8 @@ class _SplashViewBodyState extends State<SplashViewBody> {
       if (mounted) {
         if (isOnBoardingSeen) {
           var isLoggedIn = FirebaseAuthService().isLoggedIn();
-
           if (isLoggedIn) {
-            Navigator.pushReplacementNamed(context, LoginView.routeName);
+            Navigator.pushReplacementNamed(context, HomeView.routeName);
           } else {
             Navigator.pushReplacementNamed(context, LoginView.routeName);
           }
