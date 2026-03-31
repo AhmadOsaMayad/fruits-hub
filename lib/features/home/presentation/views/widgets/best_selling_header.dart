@@ -3,8 +3,8 @@ import 'package:fruit_hub/core/utils/app_text_styles.dart';
 import 'package:fruit_hub/generated/l10n.dart';
 
 class BestSellingHeader extends StatelessWidget {
-  const BestSellingHeader({super.key});
-
+  const BestSellingHeader({super.key, this.onPressed});
+  final void Function()? onPressed;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -12,7 +12,7 @@ class BestSellingHeader extends StatelessWidget {
       children: [
         Text(S.of(context).bestSelling, style: AppTextStyles.bold16),
         TextButton(
-          onPressed: () {},
+          onPressed: onPressed,
           child: Text(S.of(context).more, style: AppTextStyles.regular13),
         ),
       ],

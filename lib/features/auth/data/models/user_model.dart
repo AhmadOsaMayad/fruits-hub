@@ -16,4 +16,11 @@ class UserModel extends UserEntity {
     name: json[QKWords.name],
     email: json[QKWords.email],
   );
+  factory UserModel.fromUserEntity(UserEntity userEntity) => UserModel(
+    uId: userEntity.uId,
+    name: userEntity.name,
+    email: userEntity.name,
+  );
+
+  toMap() => {QKWords.uId: uId, QKWords.name: name, QKWords.email: email};
 }

@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:fruit_hub/features/home/domain/entities/nav_bar_item_entity.dart';
 import 'package:fruit_hub/features/home/presentation/views/widgets/nav_bar_item.dart';
@@ -35,15 +37,17 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
         ],
       ),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children:
             navBarItems(context).asMap().entries.map((e) {
               var index = e.key;
               var entity = e.value;
               return Expanded(
-                flex: e.key == selectedIndex ? 3 : 2,
+                flex: index == selectedIndex ? 3 : 2,
                 child: GestureDetector(
                   onTap: () {
                     setState(() {
+                      log('tapped');
                       selectedIndex = index;
                       // widget.onItemTapped(index);
                     });

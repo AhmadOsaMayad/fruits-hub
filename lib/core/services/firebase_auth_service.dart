@@ -112,6 +112,7 @@ class FirebaseAuthService {
 
   Future<User> signInWithFacebook() async {
     final LoginResult loginResult = await FacebookAuth.instance.login();
+    await FacebookAuth.instance.logOut();
     final OAuthCredential facebookAuthCredential =
         FacebookAuthProvider.credential(loginResult.accessToken!.tokenString);
     return (await FirebaseAuth.instance.signInWithCredential(
@@ -122,4 +123,6 @@ class FirebaseAuthService {
   Future deleteUser() async {
     await FirebaseAuth.instance.currentUser!.delete();
   }
+
+  bool isLoggedIn() => FirebaseAuth.instance.currentUser != null;
 }

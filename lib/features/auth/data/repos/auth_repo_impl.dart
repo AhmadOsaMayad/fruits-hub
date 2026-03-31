@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:developer';
 
 import 'package:dartz/dartz.dart';
@@ -6,6 +7,7 @@ import 'package:fruit_hub/core/errors/exceptions.dart';
 import 'package:fruit_hub/core/errors/failures.dart';
 import 'package:fruit_hub/core/services/database_service.dart';
 import 'package:fruit_hub/core/services/firebase_auth_service.dart';
+import 'package:fruit_hub/core/services/shared_preference_singleton.dart';
 import 'package:fruit_hub/core/utils/back_end_points.dart';
 import 'package:fruit_hub/core/utils/constants.dart';
 import 'package:fruit_hub/features/auth/data/models/user_model.dart';
@@ -59,6 +61,7 @@ class AuthRepoImpl extends AuthRepo {
         password: password,
       );
       var userEntity = await getUserData(uId: user.uid);
+      await saveUserData(user: userEntity);
       return right(userEntity);
     } on CustomExceptions catch (e) {
       // await deleteUser(user);
@@ -83,9 +86,12 @@ class AuthRepoImpl extends AuthRepo {
         docuementId: user.uid,
       );
       if (existingUser) {
-        await getUserData(uId: user.uid);
+        var fetchedUser = await getUserData(uId: user.uid);
+        await saveUserData(user: fetchedUser);
       } else {
         await addUserData(user: userEntity);
+        var fetchedUser = await getUserData(uId: user.uid);
+        await saveUserData(user: fetchedUser);
       }
 
       return right(userEntity);
@@ -123,7 +129,7 @@ class AuthRepoImpl extends AuthRepo {
   Future<dynamic> addUserData({required UserEntity user}) async {
     await databaseService.addData(
       path: BackEndPoints.addUserData,
-      data: user.toMap(),
+      data: UserModel.fromUserEntity(user).toMap(),
       documentId: user.uId,
     );
   }
@@ -141,5 +147,12 @@ class AuthRepoImpl extends AuthRepo {
     if (user != null) {
       await firebaseAuthService.deleteUser();
     }
+  }
+
+  @override
+  Future<dynamic> saveUserData({required UserEntity user}) async {
+    var jsonData = jsonEncode(UserModel.fromUserEntity(user).toMap());
+
+    await Prefs.setString(kUserData, jsonData);
   }
 }

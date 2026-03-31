@@ -9,6 +9,7 @@ class ActiveNavBarItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Container(
+        padding: const EdgeInsets.only(left: 16),
         decoration: ShapeDecoration(
           color: const Color(0xFFEEEEEE),
           shape: RoundedRectangleBorder(
@@ -19,8 +20,8 @@ class ActiveNavBarItem extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             Container(
-              width: 30,
-              height: 30,
+              width: 35,
+              height: 35,
               decoration: ShapeDecoration(
                 color: const Color(0xFF1B5E37),
                 shape: RoundedRectangleBorder(
@@ -29,14 +30,14 @@ class ActiveNavBarItem extends StatelessWidget {
               ),
               child: Center(child: SvgPicture.asset(icon)),
             ),
-            const SizedBox(width: 8),
+            const SizedBox(width: 4),
             Text(
               title,
               style: AppTextStyles.semiBold11.copyWith(
                 color: const Color(0xFF1B5E37),
               ),
             ),
-            const SizedBox(width: 16),
+            // const SizedBox(width: 16),
           ],
         ),
       ),

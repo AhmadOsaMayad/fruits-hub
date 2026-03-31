@@ -64,5 +64,10 @@
             <action android:name="android.intent.action.PROCESS_TEXT"/>
             <data android:mimeType="text/plain"/>
         </intent>
+        <!-- Add Facebook packages for Android 11+ visibility -->
+        <package android:name="com.facebook.katana" /> <!-- Facebook -->
+        <package android:name="com.facebook.lite" />    <!-- Facebook Lite -->
+        <package android:name="com.facebook.orca" />    <!-- Messenger -->
+        <package android:name="com.facebook.pages.app" /> <!-- Pages Manager -->
     </queries>
 </manifest>

@@ -8,14 +8,11 @@ class InActiveNavBarItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Container(
+        height: 20,
+        width: 20,
         color: Colors.transparent,
         child: SvgPicture.asset(icon),
       ),
     );
-    // Row(
-    //   children: [
-    //     Container(color: Colors.transparent, child: SvgPicture.asset(icon)),
-    //   ],
-    // );
   }
 }

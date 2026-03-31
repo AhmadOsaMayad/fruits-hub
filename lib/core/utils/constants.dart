@@ -1,6 +1,6 @@
 const kHPadding = 16.0;
 const kIsOnBoardingSeen = 'isOnBoardingSeen';
-
+const kUserData = 'userData';
 const kWeakPasswordK = 'weak-password';
 const kWeakPasswordV = 'The password provided is too weak.';
 
