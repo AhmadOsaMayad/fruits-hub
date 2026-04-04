@@ -1,8 +1,8 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
-import 'package:fruit_hub/features/home/domain/entities/nav_bar_item_entity.dart';
-import 'package:fruit_hub/features/home/presentation/views/widgets/nav_bar_item.dart';
+import 'package:fruit_hub/features/main/domain/entities/nav_bar_item_entity.dart';
+import 'package:fruit_hub/features/main/presentation/views/widgets/nav_bar_item.dart';
 
 class CustomBottomNavBar extends StatefulWidget {
   const CustomBottomNavBar({super.key});

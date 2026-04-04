@@ -1,5 +1,5 @@
 class QKWords {
-  static const orderBy = 'orderBy';
+  static const orderBy = 'order_by';
   static const descending = 'descending';
   static const limit = 'limit';
   static const uId = 'uId';

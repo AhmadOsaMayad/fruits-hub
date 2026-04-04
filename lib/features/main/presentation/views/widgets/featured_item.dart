@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fruit_hub/core/helpers/is_arabic.dart';
 import 'package:fruit_hub/core/utils/app_images.dart';
 import 'package:fruit_hub/core/utils/app_text_styles.dart';
-import 'package:fruit_hub/features/home/presentation/views/widgets/featured_item_button.dart';
+import 'package:fruit_hub/features/main/presentation/views/widgets/featured_item_button.dart';
 import 'package:fruit_hub/generated/l10n.dart';
 import 'package:svg_flutter/svg.dart';
 import 'package:svg_flutter/svg_flutter.dart';
