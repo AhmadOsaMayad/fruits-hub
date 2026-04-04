@@ -1,0 +1,40 @@
+import 'dart:io';
+
+import 'package:fruit_hub/core/entities/review_entity.dart';
+
+class ProductEntity {
+  final File image;
+  final String name;
+  final String code;
+  final String description;
+  final num price;
+  final int quantity;
+  final bool isFeatured;
+  String? imageUrl;
+  final String expDate;
+  final num calPer100g;
+  final num avgRating;
+  final int avgCount;
+  final int sellingCount;
+
+  final List<ReviewEntity> reviews;
+  // final bool isOrganic;
+  // final num orgPercentage;
+
+  ProductEntity({
+    required this.image,
+    required this.name,
+    required this.code,
+    required this.description,
+    required this.price,
+    required this.isFeatured,
+    required this.expDate,
+    this.quantity = 1,
+    this.imageUrl,
+    this.calPer100g = 0,
+    this.avgRating = 0,
+    this.avgCount = 0,
+    this.sellingCount = 0,
+    required this.reviews,
+  });
+}
