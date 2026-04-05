@@ -448,6 +448,11 @@ class S {
   String get products {
     return Intl.message('Products', name: 'products', desc: '', args: []);
   }
+
+  /// `Kg`
+  String get kg {
+    return Intl.message('Kg', name: 'kg', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

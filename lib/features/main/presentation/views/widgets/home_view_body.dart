@@ -5,7 +5,7 @@ import 'package:fruit_hub/core/utils/constants.dart';
 import 'package:fruit_hub/core/widgets/search_text_field.dart';
 import 'package:fruit_hub/features/best_selling/presentation/views/best_selling_view.dart';
 import 'package:fruit_hub/features/main/presentation/views/widgets/best_selling_header.dart';
-import 'package:fruit_hub/features/main/presentation/views/widgets/best_selling_sliver_grid.dart';
+import 'package:fruit_hub/features/main/presentation/views/widgets/best_selling_sliver_grid_bloc_builder.dart';
 import 'package:fruit_hub/features/main/presentation/views/widgets/custom_home_app_bar.dart';
 import 'package:fruit_hub/features/main/presentation/views/widgets/featured_list.dart';
 
@@ -20,7 +20,7 @@ class _HomeViewBodyState extends State<HomeViewBody> {
   @override
   void initState() {
     super.initState();
-    context.read<ProductsCubit>().getProducts();
+    context.read<ProductsCubit>().getBestSelling();
   }
 
   @override
@@ -28,6 +28,7 @@ class _HomeViewBodyState extends State<HomeViewBody> {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: kHPadding),
       child: CustomScrollView(
+        physics: const BouncingScrollPhysics(),
         slivers: [
           SliverToBoxAdapter(
             child: Column(
@@ -48,7 +49,7 @@ class _HomeViewBodyState extends State<HomeViewBody> {
               ],
             ),
           ),
-          const BestSellingSliverGrid(),
+          const BestSellingSliverGridBlocBuilder(),
         ],
       ),
     );

@@ -55,6 +55,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "invalidEmail": MessageLookupByLibrary.simpleMessage(
       "عنوان البريد الإلكتروني غير صالح.",
     ),
+    "kg": MessageLookupByLibrary.simpleMessage("كجم"),
     "letsCreateAccount": MessageLookupByLibrary.simpleMessage("قم بإنشاء حساب"),
     "logInWithApple": MessageLookupByLibrary.simpleMessage("تسجيل بواسطة أبل"),
     "logInWithFacebook": MessageLookupByLibrary.simpleMessage(

@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:fruit_hub/core/entities/product_entity.dart';
 import 'package:fruit_hub/core/utils/app_colors.dart';
-import 'package:fruit_hub/core/utils/app_images.dart';
 import 'package:fruit_hub/core/utils/app_text_styles.dart';
+import 'package:fruit_hub/core/widgets/custom_network_image.dart';
+import 'package:fruit_hub/generated/l10n.dart';
 
 class FruitItem extends StatelessWidget {
-  const FruitItem({super.key});
+  const FruitItem({super.key, required this.product});
+  final ProductEntity product;
 
   @override
   Widget build(BuildContext context) {
@@ -17,29 +20,30 @@ class FruitItem extends StatelessWidget {
       ),
       child: Stack(
         children: [
-          Positioned(
-            top: 0,
-            right: 0,
-            child: IconButton(
-              onPressed: () {},
-              icon: const Icon(Icons.favorite_border_outlined),
-            ),
-          ),
           Positioned.fill(
             child: Column(
               children: [
                 const SizedBox(height: 20),
-                Image.asset(Assets.imagesWatermelon),
-                const SizedBox(height: 24),
+                product.imageUrl != null
+                    ? Flexible(
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(12),
+                        child: CustomNetworkImage(imageUrl: product.imageUrl!),
+                      ),
+                    )
+                    : Container(color: Colors.grey, height: 100, width: 100),
+                // Image.network(product.imageUrl!),
+                // Image.asset(Assets.imagesWatermelon),
+                const SizedBox(height: 20),
                 ListTile(
                   // title: Text('WaterMelon', style: AppTextStyles.semiBold13),
-                  title: const Text('بطيخ', style: AppTextStyles.semiBold13),
+                  title: Text(product.name, style: AppTextStyles.semiBold13),
                   subtitle: Text.rich(
                     TextSpan(
                       children: [
                         TextSpan(
                           // text: '20 Euro',
-                          text: '20جنية ',
+                          text: '\$${product.price}',
                           style: AppTextStyles.bold13.copyWith(
                             color: const Color(0xFFF4A91F),
                           ),
@@ -52,7 +56,7 @@ class FruitItem extends StatelessWidget {
                         ),
                         TextSpan(
                           // text: 'Kg',
-                          text: ' الكيلو',
+                          text: S.of(context).kg,
                           style: AppTextStyles.bold13.copyWith(
                             color: const Color(0xFFF8C76D),
                           ),
@@ -66,6 +70,14 @@ class FruitItem extends StatelessWidget {
                   ),
                 ),
               ],
+            ),
+          ),
+          Positioned(
+            top: 0,
+            right: 0,
+            child: IconButton(
+              onPressed: () {},
+              icon: const Icon(Icons.favorite_border_outlined),
             ),
           ),
         ],

@@ -1,11 +1,9 @@
-import 'dart:io';
-
 import 'package:fruit_hub/core/constants/query_key_words.dart';
 import 'package:fruit_hub/core/entities/product_entity.dart';
 import 'package:fruit_hub/core/models/review_model.dart';
 
 class ProductModel {
-  final File image;
+  // final File? image;
   final String name;
   final String code;
   final String description;
@@ -22,7 +20,7 @@ class ProductModel {
   final List<ReviewModel> reviews;
 
   ProductModel({
-    required this.image,
+    // this.image,
     required this.name,
     required this.code,
     required this.description,
@@ -40,7 +38,7 @@ class ProductModel {
 
   factory ProductModel.fromJson(Map<String, dynamic> json) {
     return ProductModel(
-      image: File(json[QKWords.imageUrl]),
+      // image: File(json[QKWords.imageUrl]),
       name: json[QKWords.name],
       code: json[QKWords.code],
       description: json[QKWords.description],
@@ -62,7 +60,7 @@ class ProductModel {
 
   factory ProductModel.fromEntity(ProductEntity entity) {
     return ProductModel(
-      image: entity.image,
+      // image: entity.image,
       name: entity.name,
       code: entity.code,
       description: entity.description,
@@ -102,7 +100,7 @@ class ProductModel {
 
   ProductEntity toEntity() {
     return ProductEntity(
-      image: image,
+      // image: image,
       name: name,
       code: code,
       description: description,

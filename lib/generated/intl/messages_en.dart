@@ -59,6 +59,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "invalidEmail": MessageLookupByLibrary.simpleMessage(
       "The email address is badly formatted.",
     ),
+    "kg": MessageLookupByLibrary.simpleMessage("Kg"),
     "letsCreateAccount": MessageLookupByLibrary.simpleMessage("Create Account"),
     "logInWithApple": MessageLookupByLibrary.simpleMessage(
       "Sign in with Apple",

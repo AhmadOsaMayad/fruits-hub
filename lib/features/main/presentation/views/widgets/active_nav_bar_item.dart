@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fruit_hub/core/helpers/is_arabic.dart';
 import 'package:fruit_hub/core/utils/app_text_styles.dart';
 import 'package:svg_flutter/svg.dart';
 
@@ -9,7 +10,10 @@ class ActiveNavBarItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Container(
-        padding: const EdgeInsets.only(left: 16),
+        padding: EdgeInsets.only(
+          left: isArabic() ? 16 : 0,
+          right: isArabic() ? 0 : 16,
+        ),
         decoration: ShapeDecoration(
           color: const Color(0xFFEEEEEE),
           shape: RoundedRectangleBorder(

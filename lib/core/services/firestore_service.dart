@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:fruit_hub/core/constants/query_key_words.dart';
 import 'package:fruit_hub/core/services/database_service.dart';
@@ -39,8 +41,16 @@ class FireStoreService implements DatabaseService {
           data = data.limit(limit);
         }
       }
-      var result = await data.get();
-      return result.docs.map((e) => e.data()).toList();
+      try {
+        var result = await data.get();
+        return result.docs.map((e) => e.data()).toList();
+      } on Exception catch (e) {
+        log('Error fetching data: ${e.toString()}');
+        throw Exception('Failed to fetch data: ${e.toString()}');
+      } catch (e) {
+        log('Error fetching data: ${e.toString()}');
+        throw Exception('Failed to fetch data: ${e.toString()}');
+      }
     }
   }
 

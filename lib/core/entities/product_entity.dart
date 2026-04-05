@@ -1,9 +1,7 @@
-import 'dart:io';
-
 import 'package:fruit_hub/core/entities/review_entity.dart';
 
 class ProductEntity {
-  final File image;
+  // final File? image;
   final String name;
   final String code;
   final String description;
@@ -22,7 +20,7 @@ class ProductEntity {
   // final num orgPercentage;
 
   ProductEntity({
-    required this.image,
+    // this.image,
     required this.name,
     required this.code,
     required this.description,
