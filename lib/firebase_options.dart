@@ -3,6 +3,7 @@
 import 'package:firebase_core/firebase_core.dart' show FirebaseOptions;
 import 'package:flutter/foundation.dart'
     show defaultTargetPlatform, kIsWeb, TargetPlatform;
+import 'package:fruit_hub/core/utils/constants.dart';
 
 /// Default [FirebaseOptions] for use with your Firebase apps.
 ///
@@ -40,8 +41,8 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyDSZnfL3EuqmnmzhmEKTrbXNDCqYqv8D04',
+  static FirebaseOptions web = FirebaseOptions(
+    apiKey: kFIREBASEWEBAPIKEY!,
     appId: '1:439223858386:web:62a7de06deaa29412de90b',
     messagingSenderId: '439223858386',
     projectId: 'fruit-hub-134cc',
@@ -50,16 +51,16 @@ class DefaultFirebaseOptions {
     measurementId: 'G-BE4LVDBEZ2',
   );
 
-  static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyAh59yPQBf5M4zSFknn_p-soEspC1FTI_M',
+  static FirebaseOptions android = FirebaseOptions(
+    apiKey: kFIREBASEANDROIDAPIKEY!,
     appId: '1:439223858386:android:60b2bf1b83bde6ef2de90b',
     messagingSenderId: '439223858386',
     projectId: 'fruit-hub-134cc',
     storageBucket: 'fruit-hub-134cc.firebasestorage.app',
   );
 
-  static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyDSrT6vEZZZ68N1QtTmyWDR44q3MW6LTJ8',
+  static FirebaseOptions ios = FirebaseOptions(
+    apiKey: kFIREBASEIOSAPIKEY!,
     appId: '1:439223858386:ios:5f459510e3dcd18f2de90b',
     messagingSenderId: '439223858386',
     projectId: 'fruit-hub-134cc',
