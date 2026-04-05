@@ -79,6 +79,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "networkRequestFailed": MessageLookupByLibrary.simpleMessage(
       "A network error (such as timeout, interrupted connection or unreachable host) has occurred.",
     ),
+    "noResultsFound": MessageLookupByLibrary.simpleMessage("No results found."),
     "onBoarding1Subtitle": MessageLookupByLibrary.simpleMessage(
       "Discover a unique shopping experience with FruitHUB. Explore our wide selection of fresh and excellent fruits and get the best deals and high quality.",
     ),
@@ -107,6 +108,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "products": MessageLookupByLibrary.simpleMessage("Products"),
     "profile": MessageLookupByLibrary.simpleMessage("Profile"),
+    "results": MessageLookupByLibrary.simpleMessage("Results"),
     "shopNow": MessageLookupByLibrary.simpleMessage("Shop Now"),
     "signUpSuccessful": MessageLookupByLibrary.simpleMessage(
       "Signup successful! Welcome!",

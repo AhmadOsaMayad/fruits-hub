@@ -73,6 +73,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "networkRequestFailed": MessageLookupByLibrary.simpleMessage(
       "حدث خطأ في الشبكة (مثل انتهاء المهلة، انقطاع الاتصال أو عدم الوصول إلى المضيف).",
     ),
+    "noResultsFound": MessageLookupByLibrary.simpleMessage(
+      "لم يتم العثور على نتائج.",
+    ),
     "onBoarding1Subtitle": MessageLookupByLibrary.simpleMessage(
       "اكتشف تجربة تسوق فريدة مع FruitHUB. استكشف مجموعتنا الواسعة من الفواكه الطازجة الممتازة واحصل على أفضل العروض والجودة العالية.",
     ),
@@ -99,6 +102,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "products": MessageLookupByLibrary.simpleMessage("المنتجات"),
     "profile": MessageLookupByLibrary.simpleMessage("حسابي"),
+    "results": MessageLookupByLibrary.simpleMessage("النتائج"),
     "shopNow": MessageLookupByLibrary.simpleMessage("تسوق الان"),
     "signUpSuccessful": MessageLookupByLibrary.simpleMessage(
       "تم التسجيل بنجاح! مرحبًا بك!",

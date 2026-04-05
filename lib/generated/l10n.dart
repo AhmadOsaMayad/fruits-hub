@@ -453,6 +453,21 @@ class S {
   String get kg {
     return Intl.message('Kg', name: 'kg', desc: '', args: []);
   }
+
+  /// `Results`
+  String get results {
+    return Intl.message('Results', name: 'results', desc: '', args: []);
+  }
+
+  /// `No results found.`
+  String get noResultsFound {
+    return Intl.message(
+      'No results found.',
+      name: 'noResultsFound',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

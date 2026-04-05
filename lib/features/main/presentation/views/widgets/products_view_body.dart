@@ -2,25 +2,29 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruit_hub/core/cubits/products_cubit/products_cubit.dart';
 import 'package:fruit_hub/core/utils/constants.dart';
+import 'package:fruit_hub/core/widgets/custom_app_bar.dart';
 import 'package:fruit_hub/core/widgets/search_text_field.dart';
-import 'package:fruit_hub/features/best_selling/presentation/views/best_selling_view.dart';
-import 'package:fruit_hub/features/main/presentation/views/widgets/best_selling_header.dart';
+import 'package:fruit_hub/features/main/presentation/views/widgets/products_result_header.dart';
 import 'package:fruit_hub/features/main/presentation/views/widgets/products_sliver_grid_bloc_builder.dart';
-import 'package:fruit_hub/features/main/presentation/views/widgets/custom_home_app_bar.dart';
-import 'package:fruit_hub/features/main/presentation/views/widgets/featured_list.dart';
+import 'package:fruit_hub/generated/l10n.dart';
 
-class HomeViewBody extends StatefulWidget {
-  const HomeViewBody({super.key});
+class ProductsViewBody extends StatefulWidget {
+  const ProductsViewBody({super.key});
 
   @override
-  State<HomeViewBody> createState() => _HomeViewBodyState();
+  State<ProductsViewBody> createState() => _ProductsViewBodyState();
 }
 
-class _HomeViewBodyState extends State<HomeViewBody> {
+class _ProductsViewBodyState extends State<ProductsViewBody> {
   @override
   void initState() {
     super.initState();
-    context.read<ProductsCubit>().getBestSelling();
+    getProds();
+  }
+
+  getProds() async {
+    await context.read<ProductsCubit>().getProducts();
+    setState(() {});
   }
 
   @override
@@ -34,15 +38,19 @@ class _HomeViewBodyState extends State<HomeViewBody> {
             child: Column(
               children: [
                 const SizedBox(height: 16),
-                const CustomHomeAppBar(),
+                buildAppBar(
+                  context,
+                  title: S.of(context).products,
+                  showBackButton: false,
+                  showNotification: true,
+                ),
                 const SizedBox(height: 16),
                 const SearchTextField(),
                 const SizedBox(height: 16),
-                const FeaturedList(),
-                const SizedBox(height: 16),
-                BestSellingHeader(
+                ProductsResultHeader(
+                  results: context.read<ProductsCubit>().productsLength,
                   onPressed: () {
-                    Navigator.pushNamed(context, BestSellingView.routeName);
+                    // Navigator.pushNamed(context, BestSellingView.routeName);
                   },
                 ),
                 const SizedBox(height: 8),
