@@ -53,9 +53,12 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
                       widget.onItemTapped(index);
                     });
                   },
-                  child: NavBarItem(
-                    isSelected: index == selectedIndex,
-                    item: entity,
+                  child: Container(
+                    color: Colors.transparent,
+                    child: NavBarItem(
+                      isSelected: index == selectedIndex,
+                      item: entity,
+                    ),
                   ),
                 ),
               );

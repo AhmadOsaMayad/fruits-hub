@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_hub/features/best_selling/presentation/views/best_selling_view.dart';
+import 'package:fruit_hub/features/main/presentation/views/cart_view.dart';
 import 'package:fruit_hub/features/main/presentation/views/widgets/custom_bottom_nav_bar.dart';
-import 'package:fruit_hub/features/main/presentation/views/widgets/home_view.dart';
-import 'package:fruit_hub/features/main/presentation/views/widgets/products_view.dart';
+import 'package:fruit_hub/features/main/presentation/views/home_view.dart';
+import 'package:fruit_hub/features/main/presentation/views/products_view.dart';
 
 class MainView extends StatefulWidget {
   const MainView({super.key});
@@ -24,15 +25,12 @@ class _MainViewState extends State<MainView> {
           });
         },
       ),
-      body: SafeArea(child: getCurrentView()),
+      body: SafeArea(
+        child: IndexedStack(
+          index: currentIndex,
+          children: const [HomeView(), ProductsView(), CartView(),BestSellingView()],
+        ),
+      ),
     );
-  }
-
-  Widget getCurrentView() {
-    return [
-      const HomeView(),
-      const ProductsView(),
-      const BestSellingView(),
-    ][currentIndex];
   }
 }

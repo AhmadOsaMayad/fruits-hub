@@ -6,13 +6,6 @@ class InActiveNavBarItem extends StatelessWidget {
   final String icon;
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Container(
-        height: 20,
-        width: 20,
-        color: Colors.transparent,
-        child: SvgPicture.asset(icon),
-      ),
-    );
+    return Center(child: SvgPicture.asset(icon, height: 20, width: 20));
   }
 }

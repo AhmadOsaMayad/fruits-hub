@@ -102,7 +102,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "products": MessageLookupByLibrary.simpleMessage("المنتجات"),
     "profile": MessageLookupByLibrary.simpleMessage("حسابي"),
-    "results": MessageLookupByLibrary.simpleMessage("النتائج"),
+    "results": MessageLookupByLibrary.simpleMessage("نتائج"),
     "shopNow": MessageLookupByLibrary.simpleMessage("تسوق الان"),
     "signUpSuccessful": MessageLookupByLibrary.simpleMessage(
       "تم التسجيل بنجاح! مرحبًا بك!",
