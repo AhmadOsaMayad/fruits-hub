@@ -126,6 +126,10 @@ class Assets {
   /// assets/images/strawberry.png
   static const String imagesStrawberry = "assets/images/strawberry.png";
 
+  /// Assets for imagesTrash2
+  /// assets/images/trash2.svg
+  static const String imagesTrash2 = "assets/images/trash2.svg";
+
   /// Assets for imagesWatermelon
   /// assets/images/watermelon.png
   static const String imagesWatermelon = "assets/images/watermelon.png";
