@@ -13,7 +13,6 @@ class CartItem extends StatelessWidget {
     return Row(
       children: [
         Container(
-          // margin: const EdgeInsets.all(4),
           padding: const EdgeInsets.symmetric(horizontal: 4),
           width: 80,
           height: 100,

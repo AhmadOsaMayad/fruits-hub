@@ -25,7 +25,10 @@ class ProductsRepoImpl implements ProductsRepo {
       return right(products);
     } on CustomExceptions catch (e) {
       return left(
-        ServerFailure('ErrorMessage: ${e.message}  TO STRING: ${e.toString()}'),
+        ServerFailure(
+          message: 'ErrorMessage: ${e.message}  TO STRING: ${e.toString()}',
+          code: e.code,
+        ),
       );
     }
   }
@@ -50,7 +53,10 @@ class ProductsRepoImpl implements ProductsRepo {
       return right(products);
     } on CustomExceptions catch (e) {
       return left(
-        ServerFailure('ErrorMessage: ${e.message}  TO STRING: ${e.toString()}'),
+        ServerFailure(
+          message: 'ErrorMessage: ${e.message}  TO STRING: ${e.toString()}',
+          code: e.code,
+        ),
       );
     }
   }

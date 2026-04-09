@@ -19,22 +19,23 @@ class FirebaseAuthService {
       log(
         'Exception in FirebaseAuthService.createUserWithEmailAndPassword:- Code: ${e.code} \n Message: ${e.toString()}',
       );
-      if (e.code == kWeakPasswordK) {
-        throw CustomExceptions(message: kWeakPasswordV);
-      } else if (e.code == kEmailAlreadyInUseK) {
-        throw CustomExceptions(message: kEmailAlreadyInUseV);
-      } else if (e.code == kInvalidEmailK) {
-        throw CustomExceptions(message: kInvalidEmailV);
-      } else if (e.code == kNetworkRequestFailedK) {
-        throw CustomExceptions(message: kNetworkRequestFailedV);
-      } else {
-        throw CustomExceptions(message: e.message ?? kUnknownErrorV);
-      }
+      throw CustomExceptions(code: e.code, message: e.message ?? kUnknownError);
+      // if (e.code == kWeakPasswordK) {
+      //   throw CustomExceptions(message: kWeakPasswordV);
+      // } else if (e.code == kEmailAlreadyInUseK) {
+      //   throw CustomExceptions(message: kEmailAlreadyInUseV);
+      // } else if (e.code == kInvalidEmailK) {
+      //   throw CustomExceptions(message: kInvalidEmailV);
+      // } else if (e.code == kNetworkRequestFailedK) {
+      //   throw CustomExceptions(message: kNetworkRequestFailedV);
+      // } else {
+      //   throw CustomExceptions(message: e.message ?? kUnknownErrorV);
+      // }
     } catch (e) {
       log(
         'Exception in FirebaseAuthService.createUserWithEmailAndPassword:- Message: ${e.toString()}',
       );
-      throw CustomExceptions(message: kUnexpectedErrorV);
+      throw CustomExceptions(message: kUnexpectedError);
     }
   }
 
@@ -52,24 +53,25 @@ class FirebaseAuthService {
       log(
         'Exception in FirebaseAuthService.loginWithEmailAndPassword:- Code: ${e.code} \n Message: ${e.toString()}',
       );
-      if (e.code == kInvalidEmailK) {
-        throw CustomExceptions(message: kInvalidEmailV);
-      } else if (e.code == kNetworkRequestFailedK) {
-        throw CustomExceptions(message: kNetworkRequestFailedV);
-      } else if (e.code == kUserNotFoundK) {
-        throw CustomExceptions(message: kPasswordOrEmailAreIncorrect);
-      } else if (e.code == kWrongPasswordK) {
-        throw CustomExceptions(message: kPasswordOrEmailAreIncorrect);
-      } else if (e.code == kNetworkRequestFailedK) {
-        throw CustomExceptions(message: kNetworkRequestFailedV);
-      } else {
-        throw CustomExceptions(message: e.message ?? kUnknownErrorV);
-      }
+      throw CustomExceptions(code: e.code, message: e.message ?? kUnknownError);
+      // if (e.code == kInvalidEmailK) {
+      //   throw CustomExceptions(message: kInvalidEmailV);
+      // } else if (e.code == kNetworkRequestFailedK) {
+      //   throw CustomExceptions(message: kNetworkRequestFailedV);
+      // } else if (e.code == kUserNotFoundK) {
+      //   throw CustomExceptions(message: kPasswordOrEmailAreIncorrect);
+      // } else if (e.code == kWrongPasswordK) {
+      //   throw CustomExceptions(message: kPasswordOrEmailAreIncorrect);
+      // } else if (e.code == kNetworkRequestFailedK) {
+      //   throw CustomExceptions(message: kNetworkRequestFailedV);
+      // } else {
+      //   throw CustomExceptions(message: e.message ?? kUnknownErrorV);
+      // }
     } catch (e) {
       log(
         'Exception in FirebaseAuthService.loginWithEmailAndPassword:- Message: ${e.toString()}',
       );
-      throw CustomExceptions(message: kUnexpectedErrorV);
+      throw CustomExceptions(message: kUnexpectedError);
     }
   }
 
@@ -84,6 +86,7 @@ class FirebaseAuthService {
   //   return (await FirebaseAuth.instance.signInWithCredential(credential)).user!;
   // }
   Future<User> signInWithGoogle() async {
+    // try {
     final googleSignIn = GoogleSignIn();
 
     // Force sign-out at the app level so the chooser shows
@@ -91,15 +94,23 @@ class FirebaseAuthService {
 
     // Prompt user to pick an account
     final GoogleSignInAccount? googleUser = await googleSignIn.signIn();
+    // try {
+    // googleUser = await googleSignIn.signIn();
+    if (googleUser == null) {
+      throw CustomExceptions(code: kProcessAbortedK, message: kProcessAbortedK);
+    }
+    // } on Exception catch (e) {
+    //   throw CustomCodeExceptions(code: e.toString());
+    // }
 
     // Get authentication tokens
-    final GoogleSignInAuthentication? googleAuth =
-        await googleUser?.authentication;
+    final GoogleSignInAuthentication googleAuth =
+        await googleUser.authentication;
 
     // Build Firebase credential
     final credential = GoogleAuthProvider.credential(
-      accessToken: googleAuth?.accessToken,
-      idToken: googleAuth?.idToken,
+      accessToken: googleAuth.accessToken,
+      idToken: googleAuth.idToken,
     );
 
     // Sign in to Firebase (creates new user if first time, logs in otherwise)
@@ -108,6 +119,11 @@ class FirebaseAuthService {
     );
 
     return userCredential.user!;
+    // } on FirebaseException catch (e) {
+    //   throw CustomCodeExceptions(code: kProcessAbortedK);
+    // } on Exception catch (e) {
+    //   throw CustomCodeExceptions(code: e.toString());
+    // }
   }
 
   Future<User> signInWithFacebook() async {

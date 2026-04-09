@@ -17,7 +17,9 @@ class SignupViewBodyBlocConsumer extends StatelessWidget {
         if (state is SignupFailure) {
           buildSnackBar(
             context,
-            getAuthErrorMessage(context, state.errorMessage),
+            state.code != null
+                ? getErrorMessage(context, state.code!)
+                : state.errorMessage,
           );
         } else if (state is SignupSuccess) {
           Navigator.pop(context);

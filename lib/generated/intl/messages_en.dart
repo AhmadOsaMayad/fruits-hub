@@ -44,6 +44,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "createNewAccount": MessageLookupByLibrary.simpleMessage(
       "Create New Account",
     ),
+    "customTokenMismatch": MessageLookupByLibrary.simpleMessage(
+      "The custom token does not match this Firebase project.",
+    ),
     "discount25": MessageLookupByLibrary.simpleMessage("25% Discount"),
     "dontHaveAccount": MessageLookupByLibrary.simpleMessage(
       "Don\'t have an account? ",
@@ -53,11 +56,29 @@ class MessageLookup extends MessageLookupByLibrary {
     "emailAlreadyInUse": MessageLookupByLibrary.simpleMessage(
       "The account already exists for that email.",
     ),
+    "expiredActionCode": MessageLookupByLibrary.simpleMessage(
+      "The action code has expired. Please request a new one.",
+    ),
     "forgotPassword": MessageLookupByLibrary.simpleMessage("Forgot Password?"),
     "fullName": MessageLookupByLibrary.simpleMessage("Full Name"),
     "home": MessageLookupByLibrary.simpleMessage("Home"),
+    "invalidActionCode": MessageLookupByLibrary.simpleMessage(
+      "The action code is invalid or has already been used.",
+    ),
+    "invalidCredential": MessageLookupByLibrary.simpleMessage(
+      "The provided credentials are invalid or have expired. Please try again.",
+    ),
+    "invalidCustomToken": MessageLookupByLibrary.simpleMessage(
+      "The custom token format is invalid.",
+    ),
     "invalidEmail": MessageLookupByLibrary.simpleMessage(
       "The email address is badly formatted.",
+    ),
+    "invalidVerificationCode": MessageLookupByLibrary.simpleMessage(
+      "The verification code is invalid. Please enter the correct code.",
+    ),
+    "invalidVerificationId": MessageLookupByLibrary.simpleMessage(
+      "The verification ID is invalid. Please request a new code.",
     ),
     "kg": MessageLookupByLibrary.simpleMessage("Kg"),
     "letsCreateAccount": MessageLookupByLibrary.simpleMessage("Create Account"),
@@ -95,6 +116,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "We provide you with the best selected fruits. Take a look at the details, images, and reviews to ensure you choose the perfect fruit.",
     ),
     "onBoarding2Title": MessageLookupByLibrary.simpleMessage("Search and Shop"),
+    "operationNotAllowed": MessageLookupByLibrary.simpleMessage(
+      "This sign-in method is not enabled. Please contact support.",
+    ),
     "or": MessageLookupByLibrary.simpleMessage("Or"),
     "password": MessageLookupByLibrary.simpleMessage("Password"),
     "passwordOrEmailAreIncorrect": MessageLookupByLibrary.simpleMessage(
@@ -105,6 +129,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "pleaseFillThisField": MessageLookupByLibrary.simpleMessage(
       "Please fill this field.",
+    ),
+    "processAborted": MessageLookupByLibrary.simpleMessage(
+      "Process Cancelled.",
     ),
     "products": MessageLookupByLibrary.simpleMessage("Products"),
     "profile": MessageLookupByLibrary.simpleMessage("Profile"),
@@ -119,6 +146,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "tooWeakPassword": MessageLookupByLibrary.simpleMessage(
       "The password provided is too weak.",
+    ),
+    "userDisabled": MessageLookupByLibrary.simpleMessage(
+      "This account has been disabled. Please contact support.",
     ),
     "userNotFound": MessageLookupByLibrary.simpleMessage(
       "No user found for that email.",

@@ -39,13 +39,17 @@ class AuthRepoImpl extends AuthRepo {
       return right(userEntity);
     } on CustomExceptions catch (e) {
       await deleteUser(user);
-      return left(ServerFailure(e.toString()));
+      return left(ServerFailure(message: e.toString(), code: e.code));
     } catch (e) {
       await deleteUser(user);
       log(
         'Exception in AuthRepoImpl.createUserWithEmailAndPassword: ${e.toString()}',
       );
-      return left(ServerFailure(kUnexpectedErrorV));
+      return left(
+        ServerFailure(
+          message: e.toString().isEmpty ? kUnexpectedError : e.toString(),
+        ),
+      );
     }
   }
 
@@ -65,13 +69,17 @@ class AuthRepoImpl extends AuthRepo {
       return right(userEntity);
     } on CustomExceptions catch (e) {
       // await deleteUser(user);
-      return left(ServerFailure(e.toString()));
+      return left(ServerFailure(message: e.toString(), code: e.code));
     } catch (e) {
       await deleteUser(user);
       log(
         'Exception in AuthRepoImpl.loginWithEmailAndPassword: ${e.toString()}',
       );
-      return left(ServerFailure(kUnexpectedErrorV));
+      return left(
+        ServerFailure(
+          message: e.toString().isEmpty ? kUnexpectedError : e.toString(),
+        ),
+      );
     }
   }
 
@@ -95,10 +103,17 @@ class AuthRepoImpl extends AuthRepo {
       }
 
       return right(userEntity);
+    } on CustomExceptions catch (e) {
+      log('Exception in AuthRepoImpl.signInWithGoogle: ${e.toString()}');
+      return left(ServerFailure(message: e.message, code: e.code));
     } catch (e) {
       await deleteUser(user);
       log('Exception in AuthRepoImpl.signInWithGoogle: ${e.toString()}');
-      return left(ServerFailure(kUnexpectedErrorV));
+      return left(
+        ServerFailure(
+          message: e.toString().isEmpty ? kUnexpectedError : e.toString(),
+        ),
+      );
     }
   }
 
@@ -121,7 +136,11 @@ class AuthRepoImpl extends AuthRepo {
     } catch (e) {
       await deleteUser(user);
       log('Exception in AuthRepoImpl.signInWithFacebook: ${e.toString()}');
-      return left(ServerFailure(kUnexpectedErrorV));
+      return left(
+        ServerFailure(
+          message: e.toString().isEmpty ? kUnexpectedError : e.toString(),
+        ),
+      );
     }
   }
 

@@ -254,46 +254,6 @@ class S {
     );
   }
 
-  /// `The password provided is too weak.`
-  String get tooWeakPassword {
-    return Intl.message(
-      'The password provided is too weak.',
-      name: 'tooWeakPassword',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `The account already exists for that email.`
-  String get emailAlreadyInUse {
-    return Intl.message(
-      'The account already exists for that email.',
-      name: 'emailAlreadyInUse',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `An unknown error occurred.`
-  String get anUnknownError {
-    return Intl.message(
-      'An unknown error occurred.',
-      name: 'anUnknownError',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `An unexpected error occurred.`
-  String get anUnexpectedError {
-    return Intl.message(
-      'An unexpected error occurred.',
-      name: 'anUnexpectedError',
-      desc: '',
-      args: [],
-    );
-  }
-
   /// `Please fill this field.`
   String get pleaseFillThisField {
     return Intl.message(
@@ -309,66 +269,6 @@ class S {
     return Intl.message(
       'Please accept the terms and conditions.',
       name: 'pleaseAcceptTerms',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `The email address is badly formatted.`
-  String get invalidEmail {
-    return Intl.message(
-      'The email address is badly formatted.',
-      name: 'invalidEmail',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `A network error (such as timeout, interrupted connection or unreachable host) has occurred.`
-  String get networkRequestFailed {
-    return Intl.message(
-      'A network error (such as timeout, interrupted connection or unreachable host) has occurred.',
-      name: 'networkRequestFailed',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `No user found for that email.`
-  String get userNotFound {
-    return Intl.message(
-      'No user found for that email.',
-      name: 'userNotFound',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Wrong password provided for that user.`
-  String get wrongPassword {
-    return Intl.message(
-      'Wrong password provided for that user.',
-      name: 'wrongPassword',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `The password or email is incorrect.`
-  String get passwordOrEmailAreIncorrect {
-    return Intl.message(
-      'The password or email is incorrect.',
-      name: 'passwordOrEmailAreIncorrect',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `An account already exists with a different credential.`
-  String get accountExistsWithDifferentCredential {
-    return Intl.message(
-      'An account already exists with a different credential.',
-      name: 'accountExistsWithDifferentCredential',
       desc: '',
       args: [],
     );
@@ -464,6 +364,206 @@ class S {
     return Intl.message(
       'No results found.',
       name: 'noResultsFound',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `An unknown error occurred.`
+  String get anUnknownError {
+    return Intl.message(
+      'An unknown error occurred.',
+      name: 'anUnknownError',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `An unexpected error occurred.`
+  String get anUnexpectedError {
+    return Intl.message(
+      'An unexpected error occurred.',
+      name: 'anUnexpectedError',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The password provided is too weak.`
+  String get tooWeakPassword {
+    return Intl.message(
+      'The password provided is too weak.',
+      name: 'tooWeakPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The account already exists for that email.`
+  String get emailAlreadyInUse {
+    return Intl.message(
+      'The account already exists for that email.',
+      name: 'emailAlreadyInUse',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The email address is badly formatted.`
+  String get invalidEmail {
+    return Intl.message(
+      'The email address is badly formatted.',
+      name: 'invalidEmail',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `A network error (such as timeout, interrupted connection or unreachable host) has occurred.`
+  String get networkRequestFailed {
+    return Intl.message(
+      'A network error (such as timeout, interrupted connection or unreachable host) has occurred.',
+      name: 'networkRequestFailed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No user found for that email.`
+  String get userNotFound {
+    return Intl.message(
+      'No user found for that email.',
+      name: 'userNotFound',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Wrong password provided for that user.`
+  String get wrongPassword {
+    return Intl.message(
+      'Wrong password provided for that user.',
+      name: 'wrongPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The password or email is incorrect.`
+  String get passwordOrEmailAreIncorrect {
+    return Intl.message(
+      'The password or email is incorrect.',
+      name: 'passwordOrEmailAreIncorrect',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `An account already exists with a different credential.`
+  String get accountExistsWithDifferentCredential {
+    return Intl.message(
+      'An account already exists with a different credential.',
+      name: 'accountExistsWithDifferentCredential',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The action code has expired. Please request a new one.`
+  String get expiredActionCode {
+    return Intl.message(
+      'The action code has expired. Please request a new one.',
+      name: 'expiredActionCode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The action code is invalid or has already been used.`
+  String get invalidActionCode {
+    return Intl.message(
+      'The action code is invalid or has already been used.',
+      name: 'invalidActionCode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `This account has been disabled. Please contact support.`
+  String get userDisabled {
+    return Intl.message(
+      'This account has been disabled. Please contact support.',
+      name: 'userDisabled',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `This sign-in method is not enabled. Please contact support.`
+  String get operationNotAllowed {
+    return Intl.message(
+      'This sign-in method is not enabled. Please contact support.',
+      name: 'operationNotAllowed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The provided credentials are invalid or have expired. Please try again.`
+  String get invalidCredential {
+    return Intl.message(
+      'The provided credentials are invalid or have expired. Please try again.',
+      name: 'invalidCredential',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The verification code is invalid. Please enter the correct code.`
+  String get invalidVerificationCode {
+    return Intl.message(
+      'The verification code is invalid. Please enter the correct code.',
+      name: 'invalidVerificationCode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The verification ID is invalid. Please request a new code.`
+  String get invalidVerificationId {
+    return Intl.message(
+      'The verification ID is invalid. Please request a new code.',
+      name: 'invalidVerificationId',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The custom token does not match this Firebase project.`
+  String get customTokenMismatch {
+    return Intl.message(
+      'The custom token does not match this Firebase project.',
+      name: 'customTokenMismatch',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The custom token format is invalid.`
+  String get invalidCustomToken {
+    return Intl.message(
+      'The custom token format is invalid.',
+      name: 'invalidCustomToken',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Process Cancelled.`
+  String get processAborted {
+    return Intl.message(
+      'Process Cancelled.',
+      name: 'processAborted',
       desc: '',
       args: [],
     );

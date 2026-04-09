@@ -8,7 +8,7 @@ import 'package:fruit_hub/core/utils/constants.dart';
 import 'package:fruit_hub/core/widgets/custom_button.dart';
 import 'package:fruit_hub/core/widgets/custom_text_form_field.dart';
 import 'package:fruit_hub/core/widgets/password_field.dart';
-import 'package:fruit_hub/features/auth/presentation/cubits/cubit/login_cubit.dart';
+import 'package:fruit_hub/features/auth/presentation/cubits/login_cubit/login_cubit.dart';
 import 'package:fruit_hub/features/auth/presentation/views/sign_up_view.dart';
 import 'package:fruit_hub/features/auth/presentation/views/widgets/tappable_suffix_text.dart';
 import 'package:fruit_hub/features/auth/presentation/views/widgets/or_divider_widget.dart';

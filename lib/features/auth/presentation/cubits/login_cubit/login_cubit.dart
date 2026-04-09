@@ -20,7 +20,8 @@ class LoginCubit extends Cubit<LoginState> {
     );
 
     result.fold(
-      (failure) => emit(LoginFailure(errorMessage: failure.message)),
+      (failure) =>
+          emit(LoginFailure(errorMessage: failure.message, code: failure.code)),
       (user) => emit(LoginSuccess(userEntity: user)),
     );
   }
@@ -30,7 +31,8 @@ class LoginCubit extends Cubit<LoginState> {
     var result = await authRepo.loginWithGoogle();
 
     result.fold(
-      (failure) => emit(LoginFailure(errorMessage: failure.message)),
+      (failure) =>
+          emit(LoginFailure(errorMessage: failure.message, code: failure.code)),
       (user) => emit(LoginSuccess(userEntity: user)),
     );
   }
@@ -40,7 +42,8 @@ class LoginCubit extends Cubit<LoginState> {
     var result = await authRepo.loginWithFacebook();
 
     result.fold(
-      (failure) => emit(LoginFailure(errorMessage: failure.message)),
+      (failure) =>
+          emit(LoginFailure(errorMessage: failure.message, code: failure.code)),
       (user) => emit(LoginSuccess(userEntity: user)),
     );
   }

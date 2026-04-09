@@ -42,6 +42,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "cart": MessageLookupByLibrary.simpleMessage("سلة التسوق"),
     "createAccount": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
     "createNewAccount": MessageLookupByLibrary.simpleMessage("إنشاء حساب جديد"),
+    "customTokenMismatch": MessageLookupByLibrary.simpleMessage(
+      "الرمز المخصص لا يتطابق مع مشروع Firebase هذا.",
+    ),
     "discount25": MessageLookupByLibrary.simpleMessage("خصم 25%"),
     "dontHaveAccount": MessageLookupByLibrary.simpleMessage("لا تمتلك حساب؟ "),
     "eidOffers": MessageLookupByLibrary.simpleMessage("عروض العيد"),
@@ -49,11 +52,29 @@ class MessageLookup extends MessageLookupByLibrary {
     "emailAlreadyInUse": MessageLookupByLibrary.simpleMessage(
       "الحساب الذي يحمل هذا البريد الإلكتروني موجود بالفعل.",
     ),
+    "expiredActionCode": MessageLookupByLibrary.simpleMessage(
+      "انتهت صلاحية رمز الإجراء. يرجى طلب رمز جديد.",
+    ),
     "forgotPassword": MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
     "fullName": MessageLookupByLibrary.simpleMessage("الاسم الكامل"),
     "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
+    "invalidActionCode": MessageLookupByLibrary.simpleMessage(
+      "رمز الإجراء غير صالح أو تم استخدامه بالفعل.",
+    ),
+    "invalidCredential": MessageLookupByLibrary.simpleMessage(
+      "بيانات الاعتماد المقدمة غير صالحة أو منتهية الصلاحية. يرجى المحاولة مرة أخرى.",
+    ),
+    "invalidCustomToken": MessageLookupByLibrary.simpleMessage(
+      "تنسيق الرمز المخصص غير صالح.",
+    ),
     "invalidEmail": MessageLookupByLibrary.simpleMessage(
       "عنوان البريد الإلكتروني غير صالح.",
+    ),
+    "invalidVerificationCode": MessageLookupByLibrary.simpleMessage(
+      "رمز التحقق غير صالح. يرجى إدخال الرمز الصحيح.",
+    ),
+    "invalidVerificationId": MessageLookupByLibrary.simpleMessage(
+      "معرف التحقق غير صالح. يرجى طلب رمز جديد.",
     ),
     "kg": MessageLookupByLibrary.simpleMessage("كجم"),
     "letsCreateAccount": MessageLookupByLibrary.simpleMessage("قم بإنشاء حساب"),
@@ -89,6 +110,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "نقدم لك أفضل الفواكه المختارة بعناية. اطلع على التفاصيل والصور والتقييمات لتتأكد من اختيار الفاكهة المثالية",
     ),
     "onBoarding2Title": MessageLookupByLibrary.simpleMessage("ابحث وتسوق"),
+    "operationNotAllowed": MessageLookupByLibrary.simpleMessage(
+      "طريقة تسجيل الدخول هذه غير مفعلة. يرجى الاتصال بالدعم.",
+    ),
     "or": MessageLookupByLibrary.simpleMessage("أو"),
     "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
     "passwordOrEmailAreIncorrect": MessageLookupByLibrary.simpleMessage(
@@ -100,6 +124,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "pleaseFillThisField": MessageLookupByLibrary.simpleMessage(
       "يرجى ملء هذا الحقل.",
     ),
+    "processAborted": MessageLookupByLibrary.simpleMessage("تم إلغاء العملية."),
     "products": MessageLookupByLibrary.simpleMessage("المنتجات"),
     "profile": MessageLookupByLibrary.simpleMessage("حسابي"),
     "results": MessageLookupByLibrary.simpleMessage("نتائج"),
@@ -113,6 +138,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "tooWeakPassword": MessageLookupByLibrary.simpleMessage(
       "كلمة المرور ضعيفة جدًا.",
+    ),
+    "userDisabled": MessageLookupByLibrary.simpleMessage(
+      "تم تعطيل هذا الحساب. يرجى الاتصال بالدعم.",
     ),
     "userNotFound": MessageLookupByLibrary.simpleMessage(
       "لم يتم العثور على مستخدم لهذا البريد الإلكتروني.",

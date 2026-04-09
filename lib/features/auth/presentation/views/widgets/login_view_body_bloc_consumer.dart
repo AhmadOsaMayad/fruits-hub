@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruit_hub/core/helpers/build_snack_bar.dart';
-import 'package:fruit_hub/core/widgets/custom_loading_indicator.dart';
-import 'package:fruit_hub/features/auth/presentation/cubits/cubit/login_cubit.dart';
+import 'package:fruit_hub/core/helpers/get_auth_errors_messages.dart';
+import 'package:fruit_hub/core/widgets/loadable_body.dart';
+import 'package:fruit_hub/features/auth/presentation/cubits/login_cubit/login_cubit.dart';
 import 'package:fruit_hub/features/auth/presentation/views/widgets/login_view_body.dart';
 import 'package:fruit_hub/features/main/presentation/views/main_view.dart';
 import 'package:fruit_hub/generated/l10n.dart';
@@ -15,7 +16,12 @@ class LoginViewBodyBlocConsumer extends StatelessWidget {
     return BlocConsumer<LoginCubit, LoginState>(
       listener: (context, state) {
         if (state is LoginFailure) {
-          buildSnackBar(context, state.errorMessage);
+          buildSnackBar(
+            context,
+            state.code != null
+                ? getErrorMessage(context, state.code!)
+                : state.errorMessage,
+          );
         }
         if (state is LoginSuccess) {
           Navigator.pushReplacementNamed(context, MainView.routeName);
@@ -23,10 +29,14 @@ class LoginViewBodyBlocConsumer extends StatelessWidget {
         }
       },
       builder: (context, state) {
-        return CustomLoadingIndicator(
+        return LoadableBody(
           isLoading: state is LoginLoading,
           child: const LoginViewBody(),
         );
+        // CustomLoadingIndicator(
+        //   isLoading: state is LoginLoading,
+        //   child: const LoginViewBody(),
+        // );
       },
     );
   }
