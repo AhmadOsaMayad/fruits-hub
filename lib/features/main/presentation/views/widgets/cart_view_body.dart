@@ -34,7 +34,10 @@ class _CartViewBodyState extends State<CartViewBody> {
                     showNotification: false,
                   ),
                   const SizedBox(height: 16),
-                  const CartHeader(),
+                  CartHeader(
+                    itemsCount:
+                        context.watch<CartCubit>().cartEntity.cartItems.length,
+                  ),
                   const SizedBox(height: 8),
                 ],
               ),
@@ -49,7 +52,10 @@ class _CartViewBodyState extends State<CartViewBody> {
                 ? SliverToBoxAdapter(
                   child: MsgPlaceHolder(msg: S.of(context).yourCartIsEmpty),
                 )
-                : const CartItemSliverList(cartItems: []),
+                : CartItemSliverList(
+                  // onDecrease: ,
+                  cartItems: context.read<CartCubit>().cartEntity.cartItems,
+                ),
             SliverToBoxAdapter(
               child:
                   context.read<CartCubit>().cartEntity.cartItems.isEmpty
@@ -66,7 +72,8 @@ class _CartViewBodyState extends State<CartViewBody> {
           left: 16,
           bottom: MediaQuery.sizeOf(context).height * 0.05,
           child: CustomButton(
-            text: '${S.of(context).totalPayment} 120\$ ${S.of(context).only}',
+            text:
+                '${S.of(context).totalPayment} ${context.read<CartCubit>().cartEntity.totalPrice()}\$ ${S.of(context).only}',
             onPressed: () {},
           ),
         ),

@@ -593,6 +593,51 @@ class S {
       args: [],
     );
   }
+
+  /// `Maximum quantity reached for this product`
+  String get maxQuantityReached {
+    return Intl.message(
+      'Maximum quantity reached for this product',
+      name: 'maxQuantityReached',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Product removed from cart`
+  String get productRemovedFromCart {
+    return Intl.message(
+      'Product removed from cart',
+      name: 'productRemovedFromCart',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Product added to cart`
+  String get productAddedToCart {
+    return Intl.message(
+      'Product added to cart',
+      name: 'productAddedToCart',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You have `
+  String get youHave {
+    return Intl.message('You have ', name: 'youHave', desc: '', args: []);
+  }
+
+  /// ` products in your cart`
+  String get productsInCart {
+    return Intl.message(
+      ' products in your cart',
+      name: 'productsInCart',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

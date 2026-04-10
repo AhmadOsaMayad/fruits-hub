@@ -96,6 +96,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Login successful! Welcome!",
     ),
     "lookFor": MessageLookupByLibrary.simpleMessage("Look for......."),
+    "maxQuantityReached": MessageLookupByLibrary.simpleMessage(
+      "Maximum quantity reached for this product",
+    ),
     "more": MessageLookupByLibrary.simpleMessage("More"),
     "networkRequestFailed": MessageLookupByLibrary.simpleMessage(
       "A network error (such as timeout, interrupted connection or unreachable host) has occurred.",
@@ -134,7 +137,16 @@ class MessageLookup extends MessageLookupByLibrary {
     "processAborted": MessageLookupByLibrary.simpleMessage(
       "Process Cancelled.",
     ),
+    "productAddedToCart": MessageLookupByLibrary.simpleMessage(
+      "Product added to cart",
+    ),
+    "productRemovedFromCart": MessageLookupByLibrary.simpleMessage(
+      "Product removed from cart",
+    ),
     "products": MessageLookupByLibrary.simpleMessage("Products"),
+    "productsInCart": MessageLookupByLibrary.simpleMessage(
+      " products in your cart",
+    ),
     "profile": MessageLookupByLibrary.simpleMessage("Profile"),
     "results": MessageLookupByLibrary.simpleMessage("Results"),
     "shopNow": MessageLookupByLibrary.simpleMessage("Shop Now"),
@@ -158,6 +170,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "wrongPassword": MessageLookupByLibrary.simpleMessage(
       "Wrong password provided for that user.",
     ),
+    "youHave": MessageLookupByLibrary.simpleMessage("You have "),
     "yourCartIsEmpty": MessageLookupByLibrary.simpleMessage(
       "Your cart is still empty",
     ),

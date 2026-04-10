@@ -4,8 +4,12 @@ import 'package:fruit_hub/features/main/domain/entities/cart_item_entity.dart';
 import 'package:fruit_hub/features/main/presentation/views/widgets/cart_item.dart';
 
 class CartItemSliverList extends StatelessWidget {
-  const CartItemSliverList({super.key, required this.cartItems});
+  const CartItemSliverList({
+    super.key,
+    required this.cartItems,
+  }); //this.onIncrease, this.onDecrease, this.onRemove});
   final List<CartItemEntity> cartItems;
+  // final VoidCallback? onIncrease, onDecrease, onRemove;
 
   @override
   Widget build(BuildContext context) {
@@ -14,8 +18,9 @@ class CartItemSliverList extends StatelessWidget {
       itemBuilder:
           (context, index) => Padding(
             padding: const EdgeInsets.symmetric(horizontal: kHPadding),
-
-            child: CartItem(cartItem: cartItems[index]),
+            child: CartItem(
+              cartItem: cartItems[index],
+            ), //,onDecrease: onDecrease,onIncrease: onIncrease, onRemove: onRemove),
           ),
       separatorBuilder: (context, index) => const CustomDivider(),
     );

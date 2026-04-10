@@ -6,6 +6,15 @@ class CartView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    return const CartViewBodyBlocBuilder();
+  }
+}
+
+class CartViewBodyBlocBuilder extends StatelessWidget {
+  const CartViewBodyBlocBuilder({super.key});
+
+  @override
+  Widget build(BuildContext context) {
     return const CartViewBody();
   }
 }

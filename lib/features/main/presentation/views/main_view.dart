@@ -1,11 +1,10 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:fruit_hub/features/best_selling/presentation/views/best_selling_view.dart';
 import 'package:fruit_hub/features/main/presentation/cubits/cart_cubit/cart_cubit.dart';
-import 'package:fruit_hub/features/main/presentation/views/cart_view.dart';
 import 'package:fruit_hub/features/main/presentation/views/widgets/custom_bottom_nav_bar.dart';
-import 'package:fruit_hub/features/main/presentation/views/home_view.dart';
-import 'package:fruit_hub/features/main/presentation/views/products_view.dart';
+import 'package:fruit_hub/features/main/presentation/views/widgets/main_view_body_bloc_listener.dart';
 
 class MainView extends StatefulWidget {
   const MainView({super.key});
@@ -25,20 +24,15 @@ class _MainViewState extends State<MainView> {
         bottomNavigationBar: CustomBottomNavBar(
           onItemTapped: (index) {
             setState(() {
-              currentIndex = index;
+              if (currentIndex != index) {
+                currentIndex = index;
+                log('tapped index: $index');
+              }
             });
           },
         ),
         body: SafeArea(
-          child: IndexedStack(
-            index: currentIndex,
-            children: const [
-              HomeView(),
-              ProductsView(),
-              CartView(),
-              BestSellingView(),
-            ],
-          ),
+          child: MainViewBodyBlocListener(currentIndex: currentIndex),
         ),
       ),
     );

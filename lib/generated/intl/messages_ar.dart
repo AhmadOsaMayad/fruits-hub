@@ -90,6 +90,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "تم تسجيل الدخول بنجاح! مرحبًا بك!",
     ),
     "lookFor": MessageLookupByLibrary.simpleMessage("ابحث عن......."),
+    "maxQuantityReached": MessageLookupByLibrary.simpleMessage(
+      "لقد بلغت الحد الاقصى من الكمية لهذا المنتج",
+    ),
     "more": MessageLookupByLibrary.simpleMessage("المزيد"),
     "networkRequestFailed": MessageLookupByLibrary.simpleMessage(
       "حدث خطأ في الشبكة (مثل انتهاء المهلة، انقطاع الاتصال أو عدم الوصول إلى المضيف).",
@@ -126,7 +129,16 @@ class MessageLookup extends MessageLookupByLibrary {
       "يرجى ملء هذا الحقل.",
     ),
     "processAborted": MessageLookupByLibrary.simpleMessage("تم إلغاء العملية."),
+    "productAddedToCart": MessageLookupByLibrary.simpleMessage(
+      "تمت اضافة المنتج الى السلة",
+    ),
+    "productRemovedFromCart": MessageLookupByLibrary.simpleMessage(
+      "تمت ازالة المنتج من السلة",
+    ),
     "products": MessageLookupByLibrary.simpleMessage("المنتجات"),
+    "productsInCart": MessageLookupByLibrary.simpleMessage(
+      " منتجات في سلة التسوق",
+    ),
     "profile": MessageLookupByLibrary.simpleMessage("حسابي"),
     "results": MessageLookupByLibrary.simpleMessage("نتائج"),
     "shopNow": MessageLookupByLibrary.simpleMessage("تسوق الان"),
@@ -150,6 +162,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "wrongPassword": MessageLookupByLibrary.simpleMessage(
       "كلمة المرور المقدمة خاطئة لهذا المستخدم.",
     ),
+    "youHave": MessageLookupByLibrary.simpleMessage("لديك "),
     "yourCartIsEmpty": MessageLookupByLibrary.simpleMessage(
       "سلة التسوق الخاصة بك مازالت فارغة",
     ),

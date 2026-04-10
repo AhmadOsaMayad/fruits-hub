@@ -9,14 +9,26 @@ class CartEntity {
     cartItems.add(cartItem);
   }
 
+  removeCartItem(CartItemEntity cartItem) {
+    cartItems.remove(cartItem);
+  }
+
   bool isExist(ProductEntity product) {
-    return cartItems.any((item) => item.product == product);
+    return cartItems.any((item) => item.product.code == product.code);
   }
 
   CartItemEntity getCartItem(ProductEntity product) {
+    return cartItems.firstWhere(
+      (item) => item.product.code == product.code,
+      orElse: () => CartItemEntity(product: product, count: 1),
+    );
+  }
+
+  num totalPrice() {
+    num total = 0;
     for (var item in cartItems) {
-      if (item.product == product) return item;
+      total += item.totalPrice();
     }
-    return CartItemEntity(product: product, count: 1);
+    return total;
   }
 }

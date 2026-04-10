@@ -17,12 +17,16 @@ class CartItemEntity {
   increaseCount() {
     if (count < product.quantity) {
       count++;
+      return true;
     }
+    return false;
   }
 
   decreaseCount() {
-    if (count > 0) {
+    if (count > 1) {
       count--;
+      return true;
     }
+    return false;
   }
 }

@@ -63,5 +63,10 @@
     "processAborted": "تم إلغاء العملية.",
     "totalPayment": "إجمالي الدفع",
     "only": "فقط",
-    "yourCartIsEmpty": "سلة التسوق الخاصة بك مازالت فارغة"
+    "yourCartIsEmpty": "سلة التسوق الخاصة بك مازالت فارغة",
+    "maxQuantityReached": "لقد بلغت الحد الاقصى من الكمية لهذا المنتج",
+    "productRemovedFromCart": "تمت ازالة المنتج من السلة",
+    "productAddedToCart": "تمت اضافة المنتج الى السلة",
+    "youHave":"لديك ",
+    "productsInCart":" منتجات في سلة التسوق"
 }

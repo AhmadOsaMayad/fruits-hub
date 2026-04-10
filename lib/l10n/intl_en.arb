@@ -62,5 +62,10 @@
     "processAborted": "Process Cancelled.",
     "totalPayment": "Total Payment",
     "only": "Only",
-    "yourCartIsEmpty": "Your cart is still empty"
+    "yourCartIsEmpty": "Your cart is still empty",
+    "maxQuantityReached": "Maximum quantity reached for this product",
+    "productRemovedFromCart": "Product removed from cart",
+    "productAddedToCart": "Product added to cart",
+    "youHave":"You have ",
+    "productsInCart":" products in your cart"
 }
