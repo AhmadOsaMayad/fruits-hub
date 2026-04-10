@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruit_hub/core/cubits/products_cubit/products_cubit.dart';
 import 'package:fruit_hub/core/helpers/get_auth_errors_messages.dart';
 import 'package:fruit_hub/core/helpers/get_dummy_products.dart';
-import 'package:fruit_hub/features/main/presentation/views/widgets/products_sliver_grid.dart';
+import 'package:fruit_hub/features/main/presentation/views/shared/products_sliver_grid.dart';
 import 'package:skeletonizer/skeletonizer.dart';
 
 class ProductsSliverGridBlocBuilder extends StatelessWidget {

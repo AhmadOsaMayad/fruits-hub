@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_hub/features/main/domain/entities/nav_bar_item_entity.dart';
-import 'package:fruit_hub/features/main/presentation/views/widgets/active_nav_bar_item.dart';
-import 'package:fruit_hub/features/main/presentation/views/widgets/in_active_nav_bar_item.dart';
+import 'package:fruit_hub/features/main/presentation/views/shared/active_nav_bar_item.dart';
+import 'package:fruit_hub/features/main/presentation/views/shared/in_active_nav_bar_item.dart';
 
 class NavBarItem extends StatelessWidget {
   const NavBarItem({super.key, required this.isSelected, required this.item});

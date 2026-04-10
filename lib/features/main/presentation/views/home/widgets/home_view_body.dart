@@ -4,10 +4,10 @@ import 'package:fruit_hub/core/cubits/products_cubit/products_cubit.dart';
 import 'package:fruit_hub/core/utils/constants.dart';
 import 'package:fruit_hub/core/widgets/search_text_field.dart';
 import 'package:fruit_hub/features/best_selling/presentation/views/best_selling_view.dart';
-import 'package:fruit_hub/features/main/presentation/views/widgets/best_selling_header.dart';
-import 'package:fruit_hub/features/main/presentation/views/widgets/products_sliver_grid_bloc_builder.dart';
-import 'package:fruit_hub/features/main/presentation/views/widgets/custom_home_app_bar.dart';
-import 'package:fruit_hub/features/main/presentation/views/widgets/featured_list.dart';
+import 'package:fruit_hub/features/main/presentation/views/home/widgets/best_selling_header.dart';
+import 'package:fruit_hub/features/main/presentation/views/shared/products_sliver_grid_bloc_builder.dart';
+import 'package:fruit_hub/features/main/presentation/views/home/widgets/custom_home_app_bar.dart';
+import 'package:fruit_hub/features/main/presentation/views/home/widgets/featured_list.dart';
 
 class HomeViewBody extends StatefulWidget {
   const HomeViewBody({super.key});

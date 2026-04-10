@@ -3,8 +3,8 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruit_hub/features/main/presentation/cubits/cart_cubit/cart_cubit.dart';
-import 'package:fruit_hub/features/main/presentation/views/widgets/custom_bottom_nav_bar.dart';
-import 'package:fruit_hub/features/main/presentation/views/widgets/main_view_body_bloc_listener.dart';
+import 'package:fruit_hub/features/main/presentation/views/shared/custom_bottom_nav_bar.dart';
+import 'package:fruit_hub/features/main/presentation/views/shared/main_view_body_bloc_listener.dart';
 
 class MainView extends StatefulWidget {
   const MainView({super.key});

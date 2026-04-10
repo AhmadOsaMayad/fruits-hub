@@ -4,8 +4,8 @@ import 'package:fruit_hub/core/widgets/custom_app_bar.dart';
 import 'package:fruit_hub/core/widgets/custom_button.dart';
 import 'package:fruit_hub/core/widgets/msg_place_holder.dart';
 import 'package:fruit_hub/features/main/presentation/cubits/cart_cubit/cart_cubit.dart';
-import 'package:fruit_hub/features/main/presentation/views/widgets/cart_header.dart';
-import 'package:fruit_hub/features/main/presentation/views/widgets/cart_item_sliver_list.dart';
+import 'package:fruit_hub/features/main/presentation/views/cart/widgets/cart_header.dart';
+import 'package:fruit_hub/features/main/presentation/views/cart/widgets/cart_item_sliver_list.dart';
 import 'package:fruit_hub/generated/l10n.dart';
 
 class CartViewBody extends StatefulWidget {

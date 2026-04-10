@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruit_hub/core/helpers/build_snack_bar.dart';
 import 'package:fruit_hub/features/main/presentation/cubits/cart_cubit/cart_cubit.dart';
-import 'package:fruit_hub/features/main/presentation/views/widgets/main_view_body.dart';
+import 'package:fruit_hub/features/main/presentation/views/shared/main_view_body.dart';
 import 'package:fruit_hub/generated/l10n.dart';
 
 class MainViewBodyBlocListener extends StatelessWidget {

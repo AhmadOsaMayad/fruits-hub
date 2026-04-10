@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_hub/core/utils/constants.dart';
 import 'package:fruit_hub/features/main/domain/entities/cart_item_entity.dart';
-import 'package:fruit_hub/features/main/presentation/views/widgets/cart_item.dart';
+import 'package:fruit_hub/features/main/presentation/views/cart/widgets/cart_item.dart';
 
 class CartItemSliverList extends StatelessWidget {
   const CartItemSliverList({

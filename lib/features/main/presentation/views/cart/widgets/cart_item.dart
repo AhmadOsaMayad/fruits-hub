@@ -6,7 +6,7 @@ import 'package:fruit_hub/core/widgets/cust_img_holder_shimmer.dart';
 import 'package:fruit_hub/core/widgets/custom_network_image.dart';
 import 'package:fruit_hub/features/main/domain/entities/cart_item_entity.dart';
 import 'package:fruit_hub/features/main/presentation/cubits/cart_cubit/cart_cubit.dart';
-import 'package:fruit_hub/features/main/presentation/views/widgets/cart_item_action_buttons.dart';
+import 'package:fruit_hub/features/main/presentation/views/cart/widgets/cart_item_action_buttons.dart';
 import 'package:fruit_hub/generated/l10n.dart';
 import 'package:svg_flutter/svg_flutter.dart';
 
@@ -48,7 +48,7 @@ class CartItem extends StatelessWidget {
                   subtitle: Padding(
                     padding: const EdgeInsets.only(top: 8.0),
                     child: Text(
-                      '${cartItem.product.quantity} ${S.of(context).kg}',
+                      '${cartItem.totalWeight()} ${S.of(context).kg}',
                       style: AppTextStyles.regular13.copyWith(
                         color: const Color(0xFFF4A91F),
                       ),
@@ -79,7 +79,7 @@ class CartItem extends StatelessWidget {
                           ), //onIncrease,
                     ),
                     Text(
-                      '\$${cartItem.product.price}',
+                      '\$${cartItem.totalPrice()}',
                       style: AppTextStyles.bold16.copyWith(
                         color: const Color(0xFFF4A91F),
                       ),
