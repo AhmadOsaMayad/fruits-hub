@@ -12,7 +12,7 @@ class ProductEntity {
   final String expDate;
   final num calPer100g;
   final num avgRating;
-  final int avgCount;
+  final int avgUnitWeight;
   final int sellingCount;
 
   final List<ReviewEntity> reviews;
@@ -31,7 +31,7 @@ class ProductEntity {
     this.imageUrl,
     this.calPer100g = 0,
     this.avgRating = 0,
-    this.avgCount = 0,
+    this.avgUnitWeight = 0,
     this.sellingCount = 0,
     required this.reviews,
   });

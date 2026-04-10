@@ -14,7 +14,7 @@ class QKWords {
   static const expMonths = 'exp_date';
   static const calPer100g = 'cal_per_100g';
   static const avgRating = 'avg_rating';
-  static const avgCount = 'avg_count';
+  static const avgUnitWeight = 'avg_unit_weight';
   static const revName = 'reviewer_name';
   static const revImage = 'reviewer_image';
   static const revDesc = 'reviewer_description';

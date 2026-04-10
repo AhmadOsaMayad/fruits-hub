@@ -60,5 +60,8 @@
     "invalidVerificationId": "معرف التحقق غير صالح. يرجى طلب رمز جديد.",
     "customTokenMismatch": "الرمز المخصص لا يتطابق مع مشروع Firebase هذا.",
     "invalidCustomToken": "تنسيق الرمز المخصص غير صالح.",
-    "processAborted": "تم إلغاء العملية."
+    "processAborted": "تم إلغاء العملية.",
+    "totalPayment": "إجمالي الدفع",
+    "only": "فقط",
+    "yourCartIsEmpty": "سلة التسوق الخاصة بك مازالت فارغة"
 }

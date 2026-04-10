@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_hub/core/entities/product_entity.dart';
-import 'package:fruit_hub/core/utils/app_colors.dart';
 import 'package:fruit_hub/core/utils/app_text_styles.dart';
+import 'package:fruit_hub/core/widgets/circle_action_button.dart';
 import 'package:fruit_hub/core/widgets/cust_img_holder_shimmer.dart';
 import 'package:fruit_hub/core/widgets/custom_network_image.dart';
 import 'package:fruit_hub/generated/l10n.dart';
@@ -63,10 +63,7 @@ class FruitItem extends StatelessWidget {
                       ],
                     ),
                   ),
-                  trailing: const CircleAvatar(
-                    backgroundColor: AppColors.primary,
-                    child: Icon(Icons.add, color: Colors.white),
-                  ),
+                  trailing: const CircleActionButton(),
                 ),
               ],
             ),

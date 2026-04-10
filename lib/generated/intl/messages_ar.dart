@@ -110,6 +110,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "نقدم لك أفضل الفواكه المختارة بعناية. اطلع على التفاصيل والصور والتقييمات لتتأكد من اختيار الفاكهة المثالية",
     ),
     "onBoarding2Title": MessageLookupByLibrary.simpleMessage("ابحث وتسوق"),
+    "only": MessageLookupByLibrary.simpleMessage("فقط"),
     "operationNotAllowed": MessageLookupByLibrary.simpleMessage(
       "طريقة تسجيل الدخول هذه غير مفعلة. يرجى الاتصال بالدعم.",
     ),
@@ -139,6 +140,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "tooWeakPassword": MessageLookupByLibrary.simpleMessage(
       "كلمة المرور ضعيفة جدًا.",
     ),
+    "totalPayment": MessageLookupByLibrary.simpleMessage("إجمالي الدفع"),
     "userDisabled": MessageLookupByLibrary.simpleMessage(
       "تم تعطيل هذا الحساب. يرجى الاتصال بالدعم.",
     ),
@@ -147,6 +149,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "wrongPassword": MessageLookupByLibrary.simpleMessage(
       "كلمة المرور المقدمة خاطئة لهذا المستخدم.",
+    ),
+    "yourCartIsEmpty": MessageLookupByLibrary.simpleMessage(
+      "سلة التسوق الخاصة بك مازالت فارغة",
     ),
   };
 }

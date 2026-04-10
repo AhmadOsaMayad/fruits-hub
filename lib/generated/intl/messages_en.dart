@@ -116,6 +116,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "We provide you with the best selected fruits. Take a look at the details, images, and reviews to ensure you choose the perfect fruit.",
     ),
     "onBoarding2Title": MessageLookupByLibrary.simpleMessage("Search and Shop"),
+    "only": MessageLookupByLibrary.simpleMessage("Only"),
     "operationNotAllowed": MessageLookupByLibrary.simpleMessage(
       "This sign-in method is not enabled. Please contact support.",
     ),
@@ -147,6 +148,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "tooWeakPassword": MessageLookupByLibrary.simpleMessage(
       "The password provided is too weak.",
     ),
+    "totalPayment": MessageLookupByLibrary.simpleMessage("Total Payment"),
     "userDisabled": MessageLookupByLibrary.simpleMessage(
       "This account has been disabled. Please contact support.",
     ),
@@ -155,6 +157,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "wrongPassword": MessageLookupByLibrary.simpleMessage(
       "Wrong password provided for that user.",
+    ),
+    "yourCartIsEmpty": MessageLookupByLibrary.simpleMessage(
+      "Your cart is still empty",
     ),
   };
 }

@@ -14,7 +14,7 @@ class ProductModel {
   final String expDate;
   final num calPer100g;
   final num avgRating;
-  final int avgCount;
+  final int avgUnitWeight;
   final int sellingCount;
 
   final List<ReviewModel> reviews;
@@ -31,7 +31,7 @@ class ProductModel {
     required this.expDate,
     this.calPer100g = 0,
     this.avgRating = 0,
-    this.avgCount = 0,
+    this.avgUnitWeight = 0,
     this.sellingCount = 0,
     required this.reviews,
   });
@@ -49,7 +49,7 @@ class ProductModel {
       expDate: json[QKWords.expMonths],
       calPer100g: json[QKWords.calPer100g],
       avgRating: json[QKWords.avgRating],
-      avgCount: json[QKWords.avgCount],
+      avgUnitWeight: json[QKWords.avgUnitWeight],
       sellingCount: json[QKWords.sellingCount],
       reviews:
           (json[QKWords.reviews] as List)
@@ -71,7 +71,7 @@ class ProductModel {
       expDate: entity.expDate,
       calPer100g: entity.calPer100g,
       avgRating: entity.avgRating,
-      avgCount: entity.avgCount,
+      avgUnitWeight: entity.avgUnitWeight,
       sellingCount: entity.sellingCount,
       reviews:
           entity.reviews
@@ -92,7 +92,7 @@ class ProductModel {
       QKWords.expMonths: expDate,
       QKWords.calPer100g: calPer100g,
       QKWords.avgRating: avgRating,
-      QKWords.avgCount: avgCount,
+      QKWords.avgUnitWeight: avgUnitWeight,
       QKWords.sellingCount: sellingCount,
       QKWords.reviews: reviews.map((review) => review.toJson()).toList(),
     };
@@ -111,7 +111,7 @@ class ProductModel {
       expDate: expDate,
       calPer100g: calPer100g,
       avgRating: avgRating,
-      avgCount: avgCount,
+      avgUnitWeight: avgUnitWeight,
       sellingCount: sellingCount,
       reviews: reviews.map((review) => review.toEntity()).toList(),
     );

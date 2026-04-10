@@ -59,5 +59,8 @@
     "invalidVerificationId": "The verification ID is invalid. Please request a new code.",
     "customTokenMismatch": "The custom token does not match this Firebase project.",
     "invalidCustomToken": "The custom token format is invalid.",
-    "processAborted": "Process Cancelled."
+    "processAborted": "Process Cancelled.",
+    "totalPayment": "Total Payment",
+    "only": "Only",
+    "yourCartIsEmpty": "Your cart is still empty"
 }

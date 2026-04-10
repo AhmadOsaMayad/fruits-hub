@@ -568,6 +568,31 @@ class S {
       args: [],
     );
   }
+
+  /// `Total Payment`
+  String get totalPayment {
+    return Intl.message(
+      'Total Payment',
+      name: 'totalPayment',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Only`
+  String get only {
+    return Intl.message('Only', name: 'only', desc: '', args: []);
+  }
+
+  /// `Your cart is still empty`
+  String get yourCartIsEmpty {
+    return Intl.message(
+      'Your cart is still empty',
+      name: 'yourCartIsEmpty',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
