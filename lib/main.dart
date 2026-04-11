@@ -34,7 +34,7 @@ class FruitHub extends StatelessWidget {
       onGenerateRoute: onGenerateRoutes,
       initialRoute: SplashView.routeName,
       debugShowCheckedModeBanner: false,
-      locale: const Locale('ar'),
+      locale: const Locale('en'),
       localizationsDelegates: const [
         S.delegate,
         GlobalMaterialLocalizations.delegate,

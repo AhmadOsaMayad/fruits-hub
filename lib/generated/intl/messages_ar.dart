@@ -26,6 +26,7 @@ class MessageLookup extends MessageLookupByLibrary {
         MessageLookupByLibrary.simpleMessage(
           "حساب موجود بالفعل تم تسجيله بطريقة تسجيل مختلفة.",
         ),
+    "address": MessageLookupByLibrary.simpleMessage("العنوان"),
     "alreadyHaveAccount": MessageLookupByLibrary.simpleMessage(
       "لديك حساب بالفعل؟ ",
     ),
@@ -97,6 +98,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "networkRequestFailed": MessageLookupByLibrary.simpleMessage(
       "حدث خطأ في الشبكة (مثل انتهاء المهلة، انقطاع الاتصال أو عدم الوصول إلى المضيف).",
     ),
+    "nextStepPointer": MessageLookupByLibrary.simpleMessage(">"),
     "noResultsFound": MessageLookupByLibrary.simpleMessage(
       "لم يتم العثور على نتائج.",
     ),
@@ -122,6 +124,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "passwordOrEmailAreIncorrect": MessageLookupByLibrary.simpleMessage(
       "كلمة المرور أو البريد الإلكتروني غير صحيحة.",
     ),
+    "payment": MessageLookupByLibrary.simpleMessage("الدفع"),
     "pleaseAcceptTerms": MessageLookupByLibrary.simpleMessage(
       "يرجى قبول الشروط والأحكام.",
     ),
@@ -141,6 +144,8 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "profile": MessageLookupByLibrary.simpleMessage("حسابي"),
     "results": MessageLookupByLibrary.simpleMessage("نتائج"),
+    "review": MessageLookupByLibrary.simpleMessage("المراجعة"),
+    "shipping": MessageLookupByLibrary.simpleMessage("الشحن"),
     "shopNow": MessageLookupByLibrary.simpleMessage("تسوق الان"),
     "signUpSuccessful": MessageLookupByLibrary.simpleMessage(
       "تم التسجيل بنجاح! مرحبًا بك!",

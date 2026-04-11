@@ -68,5 +68,10 @@
     "productRemovedFromCart": "تمت ازالة المنتج من السلة",
     "productAddedToCart": "تمت اضافة المنتج الى السلة",
     "youHave":"لديك ",
-    "productsInCart":" منتجات في سلة التسوق"
+    "productsInCart":" منتجات في سلة التسوق",
+    "shipping": "الشحن",
+    "nextStepPointer":">",
+    "address":"العنوان",
+    "payment":"الدفع",
+    "review":"المراجعة"
 }

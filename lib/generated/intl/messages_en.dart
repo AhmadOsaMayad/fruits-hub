@@ -26,6 +26,7 @@ class MessageLookup extends MessageLookupByLibrary {
         MessageLookupByLibrary.simpleMessage(
           "An account already exists with a different credential.",
         ),
+    "address": MessageLookupByLibrary.simpleMessage("Address"),
     "alreadyHaveAccount": MessageLookupByLibrary.simpleMessage(
       "Already have an account? ",
     ),
@@ -103,6 +104,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "networkRequestFailed": MessageLookupByLibrary.simpleMessage(
       "A network error (such as timeout, interrupted connection or unreachable host) has occurred.",
     ),
+    "nextStepPointer": MessageLookupByLibrary.simpleMessage(">"),
     "noResultsFound": MessageLookupByLibrary.simpleMessage("No results found."),
     "onBoarding1Subtitle": MessageLookupByLibrary.simpleMessage(
       "Discover a unique shopping experience with FruitHUB. Explore our wide selection of fresh and excellent fruits and get the best deals and high quality.",
@@ -128,6 +130,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "passwordOrEmailAreIncorrect": MessageLookupByLibrary.simpleMessage(
       "The password or email is incorrect.",
     ),
+    "payment": MessageLookupByLibrary.simpleMessage("Payment"),
     "pleaseAcceptTerms": MessageLookupByLibrary.simpleMessage(
       "Please accept the terms and conditions.",
     ),
@@ -149,6 +152,8 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "profile": MessageLookupByLibrary.simpleMessage("Profile"),
     "results": MessageLookupByLibrary.simpleMessage("Results"),
+    "review": MessageLookupByLibrary.simpleMessage("Review"),
+    "shipping": MessageLookupByLibrary.simpleMessage("Shipping"),
     "shopNow": MessageLookupByLibrary.simpleMessage("Shop Now"),
     "signUpSuccessful": MessageLookupByLibrary.simpleMessage(
       "Signup successful! Welcome!",

@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruit_hub/core/widgets/custom_app_bar.dart';
 import 'package:fruit_hub/core/widgets/custom_button.dart';
 import 'package:fruit_hub/core/widgets/msg_place_holder.dart';
+import 'package:fruit_hub/features/checkout/presentation/views/checkout_view.dart';
 import 'package:fruit_hub/features/main/presentation/cubits/cart_cubit/cart_cubit.dart';
 import 'package:fruit_hub/features/main/presentation/views/cart/widgets/cart_header.dart';
 import 'package:fruit_hub/features/main/presentation/views/cart/widgets/cart_item_sliver_list.dart';
@@ -74,7 +75,9 @@ class _CartViewBodyState extends State<CartViewBody> {
           child: CustomButton(
             text:
                 '${S.of(context).totalPayment} ${context.read<CartCubit>().cartEntity.totalPrice()}\$ ${S.of(context).only}',
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, CheckoutView.routeName);
+            },
           ),
         ),
       ],
