@@ -6,8 +6,8 @@ import 'package:fruit_hub/core/widgets/custom_button.dart';
 import 'package:fruit_hub/core/widgets/custom_text_form_field.dart';
 import 'package:fruit_hub/features/auth/presentation/cubits/signup_cubit/signup_cubit.dart';
 import 'package:fruit_hub/core/widgets/password_field.dart';
-import 'package:fruit_hub/features/auth/presentation/views/widgets/tappable_suffix_text.dart';
-import 'package:fruit_hub/features/auth/presentation/views/widgets/terms_and_conditions_widget.dart';
+import 'package:fruit_hub/features/auth/presentation/views/shared/tappable_suffix_text.dart';
+import 'package:fruit_hub/features/auth/presentation/views/signup/widgets/terms_and_conditions_widget.dart';
 import 'package:fruit_hub/generated/l10n.dart';
 
 class SignUpViewBody extends StatefulWidget {

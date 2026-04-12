@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fruit_hub/core/services/shared_preference_singleton.dart';
 import 'package:fruit_hub/core/utils/app_text_styles.dart';
 import 'package:fruit_hub/core/utils/constants.dart';
-import 'package:fruit_hub/features/auth/presentation/views/login_view.dart';
+import 'package:fruit_hub/features/auth/presentation/views/login/login_view.dart';
 import 'package:fruit_hub/generated/l10n.dart';
 import 'package:svg_flutter/svg.dart';
 
@@ -71,7 +71,9 @@ class PageViewItem extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 37.0),
           child: Text(
             subtitle,
-            style: AppTextStyles.semiBold13.copyWith(color: const Color(0xFF4E5456)),
+            style: AppTextStyles.semiBold13.copyWith(
+              color: const Color(0xFF4E5456),
+            ),
             textAlign: TextAlign.center,
           ),
         ),

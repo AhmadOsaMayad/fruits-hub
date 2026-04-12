@@ -73,5 +73,14 @@
     "nextStepPointer":">",
     "address":"العنوان",
     "payment":"الدفع",
-    "review":"المراجعة"
+    "review":"المراجعة",
+    "next":"التالي",
+    "cashOnDelivery":"الدفع عند الاستلام",
+    "deliveryAtStore":"التسليم من المكان",
+    "payInAdvance":"ادفع مسبقا",
+    "selectPaymentMethod":"يرجى تحديد طريقة الدفع",
+    "phoneNumber":"رقم الهاتف",
+    "city":"المدينة",
+    "aptSuite":"الشقة/الجناح"
+
 }

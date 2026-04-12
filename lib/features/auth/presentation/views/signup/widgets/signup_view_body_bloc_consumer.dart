@@ -4,7 +4,7 @@ import 'package:fruit_hub/core/helpers/build_snack_bar.dart';
 import 'package:fruit_hub/core/helpers/get_auth_errors_messages.dart';
 import 'package:fruit_hub/core/widgets/custom_loading_indicator.dart';
 import 'package:fruit_hub/features/auth/presentation/cubits/signup_cubit/signup_cubit.dart';
-import 'package:fruit_hub/features/auth/presentation/views/widgets/sign_up_view_body.dart';
+import 'package:fruit_hub/features/auth/presentation/views/signup/widgets/sign_up_view_body.dart';
 import 'package:fruit_hub/generated/l10n.dart';
 
 class SignupViewBodyBlocConsumer extends StatelessWidget {

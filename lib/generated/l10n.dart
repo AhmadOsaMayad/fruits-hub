@@ -663,6 +663,71 @@ class S {
   String get review {
     return Intl.message('Review', name: 'review', desc: '', args: []);
   }
+
+  /// `Next`
+  String get next {
+    return Intl.message('Next', name: 'next', desc: '', args: []);
+  }
+
+  /// `Cash on Delivery`
+  String get cashOnDelivery {
+    return Intl.message(
+      'Cash on Delivery',
+      name: 'cashOnDelivery',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delivery at Store`
+  String get deliveryAtStore {
+    return Intl.message(
+      'Delivery at Store',
+      name: 'deliveryAtStore',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Pay in Advance`
+  String get payInAdvance {
+    return Intl.message(
+      'Pay in Advance',
+      name: 'payInAdvance',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please select a payment method`
+  String get selectPaymentMethod {
+    return Intl.message(
+      'Please select a payment method',
+      name: 'selectPaymentMethod',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Phone Number`
+  String get phoneNumber {
+    return Intl.message(
+      'Phone Number',
+      name: 'phoneNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `City`
+  String get city {
+    return Intl.message('City', name: 'city', desc: '', args: []);
+  }
+
+  /// `Apt/Suite`
+  String get aptSuite {
+    return Intl.message('Apt/Suite', name: 'aptSuite', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

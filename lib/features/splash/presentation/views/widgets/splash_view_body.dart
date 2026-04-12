@@ -4,7 +4,7 @@ import 'package:fruit_hub/core/services/firebase_auth_service.dart';
 import 'package:fruit_hub/core/services/shared_preference_singleton.dart';
 import 'package:fruit_hub/core/utils/app_images.dart';
 import 'package:fruit_hub/core/utils/constants.dart';
-import 'package:fruit_hub/features/auth/presentation/views/login_view.dart';
+import 'package:fruit_hub/features/auth/presentation/views/login/login_view.dart';
 import 'package:fruit_hub/features/main/presentation/views/main_view.dart';
 import 'package:fruit_hub/features/on_boarding/presenation/views/on_boarding_view.dart';
 import 'package:svg_flutter/svg.dart';

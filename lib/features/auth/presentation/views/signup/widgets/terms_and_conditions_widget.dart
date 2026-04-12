@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_hub/features/auth/presentation/views/widgets/custom_checkbox.dart';
-import 'package:fruit_hub/features/auth/presentation/views/widgets/tappable_suffix_text.dart';
+import 'package:fruit_hub/features/auth/presentation/views/signup/widgets/custom_checkbox.dart';
+import 'package:fruit_hub/features/auth/presentation/views/shared/tappable_suffix_text.dart';
 import 'package:fruit_hub/generated/l10n.dart';
 
 class TermsAndConditionsWidget extends StatefulWidget {

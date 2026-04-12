@@ -72,5 +72,14 @@
     "nextStepPointer":">",
     "address":"Address",
     "payment":"Payment",
-    "review":"Review"
+    "review":"Review",
+    "next":"Next",
+    "cashOnDelivery":"Cash on Delivery",
+    "deliveryAtStore":"Delivery at Store",
+    "payInAdvance":"Pay in Advance",
+    "selectPaymentMethod":"Please select a payment method",
+    "phoneNumber":"Phone Number",
+    "city":"City",
+    "aptSuite":"Apt/Suite"
+
 }

@@ -7,7 +7,6 @@ class ActiveStepItem extends StatelessWidget {
   const ActiveStepItem({this.stepNumber, super.key, required this.title});
   final String title;
   final String? stepNumber;
-  // final Widget? child;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -43,7 +42,6 @@ class InActiveStepItem extends StatelessWidget {
   final String title;
   final String stepNumber;
   final bool isActive;
-  // final Widget? child;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -60,9 +58,10 @@ class InActiveStepItem extends StatelessWidget {
                   ? null
                   : Text(
                     stepNumber,
-                    style: AppTextStyles.bold13.copyWith(color: Colors.black),
+                    style: AppTextStyles.semiBold13.copyWith(
+                      color: Colors.black,
+                    ),
                   ),
-          // : null,
         ),
         const SizedBox(width: 4),
         Text(

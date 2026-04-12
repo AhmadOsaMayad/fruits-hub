@@ -4,7 +4,7 @@ import 'package:fruit_hub/core/services/shared_preference_singleton.dart';
 import 'package:fruit_hub/core/utils/app_colors.dart';
 import 'package:fruit_hub/core/utils/constants.dart';
 import 'package:fruit_hub/core/widgets/custom_button.dart';
-import 'package:fruit_hub/features/auth/presentation/views/login_view.dart';
+import 'package:fruit_hub/features/auth/presentation/views/login/login_view.dart';
 import 'package:fruit_hub/features/on_boarding/presenation/views/widgets/on_boarding_page_view.dart';
 import 'package:fruit_hub/generated/l10n.dart';
 

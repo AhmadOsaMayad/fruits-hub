@@ -36,15 +36,23 @@ class MessageLookup extends MessageLookupByLibrary {
     "anUnknownError": MessageLookupByLibrary.simpleMessage(
       "حدث خطأ غير معروف.",
     ),
+    "aptSuite": MessageLookupByLibrary.simpleMessage("الشقة/الجناح"),
     "bestSelling": MessageLookupByLibrary.simpleMessage("الأكثر مبيعًا"),
     "byCreatingAccount": MessageLookupByLibrary.simpleMessage(
       "من خلال إنشاء حساب، فإنك توافق على ",
     ),
     "cart": MessageLookupByLibrary.simpleMessage("سلة التسوق"),
+    "cashOnDelivery": MessageLookupByLibrary.simpleMessage(
+      "الدفع عند الاستلام",
+    ),
+    "city": MessageLookupByLibrary.simpleMessage("المدينة"),
     "createAccount": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
     "createNewAccount": MessageLookupByLibrary.simpleMessage("إنشاء حساب جديد"),
     "customTokenMismatch": MessageLookupByLibrary.simpleMessage(
       "الرمز المخصص لا يتطابق مع مشروع Firebase هذا.",
+    ),
+    "deliveryAtStore": MessageLookupByLibrary.simpleMessage(
+      "التسليم من المكان",
     ),
     "discount25": MessageLookupByLibrary.simpleMessage("خصم 25%"),
     "dontHaveAccount": MessageLookupByLibrary.simpleMessage("لا تمتلك حساب؟ "),
@@ -98,6 +106,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "networkRequestFailed": MessageLookupByLibrary.simpleMessage(
       "حدث خطأ في الشبكة (مثل انتهاء المهلة، انقطاع الاتصال أو عدم الوصول إلى المضيف).",
     ),
+    "next": MessageLookupByLibrary.simpleMessage("التالي"),
     "nextStepPointer": MessageLookupByLibrary.simpleMessage(">"),
     "noResultsFound": MessageLookupByLibrary.simpleMessage(
       "لم يتم العثور على نتائج.",
@@ -124,7 +133,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "passwordOrEmailAreIncorrect": MessageLookupByLibrary.simpleMessage(
       "كلمة المرور أو البريد الإلكتروني غير صحيحة.",
     ),
+    "payInAdvance": MessageLookupByLibrary.simpleMessage("ادفع مسبقا"),
     "payment": MessageLookupByLibrary.simpleMessage("الدفع"),
+    "phoneNumber": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
     "pleaseAcceptTerms": MessageLookupByLibrary.simpleMessage(
       "يرجى قبول الشروط والأحكام.",
     ),
@@ -145,6 +156,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "profile": MessageLookupByLibrary.simpleMessage("حسابي"),
     "results": MessageLookupByLibrary.simpleMessage("نتائج"),
     "review": MessageLookupByLibrary.simpleMessage("المراجعة"),
+    "selectPaymentMethod": MessageLookupByLibrary.simpleMessage(
+      "يرجى تحديد طريقة الدفع",
+    ),
     "shipping": MessageLookupByLibrary.simpleMessage("الشحن"),
     "shopNow": MessageLookupByLibrary.simpleMessage("تسوق الان"),
     "signUpSuccessful": MessageLookupByLibrary.simpleMessage(

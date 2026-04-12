@@ -36,17 +36,23 @@ class MessageLookup extends MessageLookupByLibrary {
     "anUnknownError": MessageLookupByLibrary.simpleMessage(
       "An unknown error occurred.",
     ),
+    "aptSuite": MessageLookupByLibrary.simpleMessage("Apt/Suite"),
     "bestSelling": MessageLookupByLibrary.simpleMessage("Best Selling"),
     "byCreatingAccount": MessageLookupByLibrary.simpleMessage(
       "By creating an account, you agree to ",
     ),
     "cart": MessageLookupByLibrary.simpleMessage("Cart"),
+    "cashOnDelivery": MessageLookupByLibrary.simpleMessage("Cash on Delivery"),
+    "city": MessageLookupByLibrary.simpleMessage("City"),
     "createAccount": MessageLookupByLibrary.simpleMessage("Create Account"),
     "createNewAccount": MessageLookupByLibrary.simpleMessage(
       "Create New Account",
     ),
     "customTokenMismatch": MessageLookupByLibrary.simpleMessage(
       "The custom token does not match this Firebase project.",
+    ),
+    "deliveryAtStore": MessageLookupByLibrary.simpleMessage(
+      "Delivery at Store",
     ),
     "discount25": MessageLookupByLibrary.simpleMessage("25% Discount"),
     "dontHaveAccount": MessageLookupByLibrary.simpleMessage(
@@ -104,6 +110,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "networkRequestFailed": MessageLookupByLibrary.simpleMessage(
       "A network error (such as timeout, interrupted connection or unreachable host) has occurred.",
     ),
+    "next": MessageLookupByLibrary.simpleMessage("Next"),
     "nextStepPointer": MessageLookupByLibrary.simpleMessage(">"),
     "noResultsFound": MessageLookupByLibrary.simpleMessage("No results found."),
     "onBoarding1Subtitle": MessageLookupByLibrary.simpleMessage(
@@ -130,7 +137,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "passwordOrEmailAreIncorrect": MessageLookupByLibrary.simpleMessage(
       "The password or email is incorrect.",
     ),
+    "payInAdvance": MessageLookupByLibrary.simpleMessage("Pay in Advance"),
     "payment": MessageLookupByLibrary.simpleMessage("Payment"),
+    "phoneNumber": MessageLookupByLibrary.simpleMessage("Phone Number"),
     "pleaseAcceptTerms": MessageLookupByLibrary.simpleMessage(
       "Please accept the terms and conditions.",
     ),
@@ -153,6 +162,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "profile": MessageLookupByLibrary.simpleMessage("Profile"),
     "results": MessageLookupByLibrary.simpleMessage("Results"),
     "review": MessageLookupByLibrary.simpleMessage("Review"),
+    "selectPaymentMethod": MessageLookupByLibrary.simpleMessage(
+      "Please select a payment method",
+    ),
     "shipping": MessageLookupByLibrary.simpleMessage("Shipping"),
     "shopNow": MessageLookupByLibrary.simpleMessage("Shop Now"),
     "signUpSuccessful": MessageLookupByLibrary.simpleMessage(
