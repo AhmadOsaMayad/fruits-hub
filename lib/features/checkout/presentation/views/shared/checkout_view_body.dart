@@ -1,32 +1,42 @@
 import 'package:flutter/material.dart';
+import 'package:fruit_hub/core/helpers/build_snack_bar.dart';
 import 'package:fruit_hub/core/utils/constants.dart';
 import 'package:fruit_hub/core/widgets/custom_button.dart';
-import 'package:fruit_hub/features/checkout/presentation/views/address/address_input_section.dart';
-import 'package:fruit_hub/features/checkout/presentation/views/payment/widgets/payment_section.dart';
+import 'package:fruit_hub/features/checkout/domain/entities/order_entity.dart';
 import 'package:fruit_hub/features/checkout/presentation/views/shared/checkout_steps_list.dart';
 import 'package:fruit_hub/features/checkout/presentation/views/shared/checkout_steps_page_view.dart';
-import 'package:fruit_hub/features/checkout/presentation/views/shipping/shipping_section.dart';
 import 'package:fruit_hub/generated/l10n.dart';
+import 'package:provider/provider.dart';
 
 class CheckoutViewBody extends StatefulWidget {
   const CheckoutViewBody({super.key});
-
   @override
   State<CheckoutViewBody> createState() => _CheckoutViewBodyState();
 }
 
 class _CheckoutViewBodyState extends State<CheckoutViewBody> {
   late PageController pageController;
+  int currentPageIndex = 0;
+  final GlobalKey<FormState> formKey = GlobalKey<FormState>();
+  ValueNotifier<AutovalidateMode> autoValidateMode = ValueNotifier(
+    AutovalidateMode.disabled,
+  );
 
   @override
   void initState() {
     super.initState();
     pageController = PageController();
+    pageController.addListener(() {
+      setState(() {
+        currentPageIndex = pageController.page!.toInt();
+      });
+    });
   }
 
   @override
   void dispose() {
     pageController.dispose();
+    autoValidateMode.dispose();
     super.dispose();
   }
 
@@ -37,17 +47,26 @@ class _CheckoutViewBodyState extends State<CheckoutViewBody> {
       child: Column(
         children: [
           const SizedBox(height: 20),
-          const CheckoutStepsList(),
+          CheckoutStepsList(
+            currentPageIndex: currentPageIndex,
+            pageController: pageController,
+          ),
           Expanded(
-            child: CheckoutStepsPageView(pageController: pageController),
+            child: CheckoutStepsPageView(
+              valueListenable: autoValidateMode,
+              pageController: pageController,
+              formKey: formKey,
+            ),
           ),
           CustomButton(
-            text: S.of(context).next,
+            text: getNextButtonTitle(context)[currentPageIndex],
             onPressed: () {
-              pageController.nextPage(
-                duration: const Duration(milliseconds: 300),
-                curve: Curves.easeIn,
-              );
+              if (currentPageIndex == 0) {
+                _handleShippingSection(context);
+              } else if (currentPageIndex == 1) {
+                _handleAddressInputSection();
+              } else if (currentPageIndex == 2) {
+              } else if (currentPageIndex == 3) {}
             },
           ),
           const SizedBox(height: 32),
@@ -55,13 +74,36 @@ class _CheckoutViewBodyState extends State<CheckoutViewBody> {
       ),
     );
   }
+
+  void _handleShippingSection(BuildContext context) {
+    if (context.read<OrderEntity>().payWithCash != null) {
+      pageController.nextPage(
+        duration: const Duration(milliseconds: 300),
+        curve: Curves.easeIn,
+      );
+    } else {
+      showSnackBar(context, S.of(context).selectPaymentMethod);
+    }
+  }
+
+  void _handleAddressInputSection() {
+    if (formKey.currentState!.validate()) {
+      formKey.currentState!.save();
+      pageController.nextPage(
+        duration: const Duration(milliseconds: 300),
+        curve: Curves.easeIn,
+      );
+    } else {
+      autoValidateMode.value = AutovalidateMode.always;
+    }
+  }
 }
 
-List<Widget> checkoutStepsPages() {
+List<String> getNextButtonTitle(BuildContext context) {
   return [
-    const ShippingSection(),
-    const AddressInputSection(),
-    const PaymentSection(),
-    const SizedBox(),
+    S.of(context).next,
+    S.of(context).next,
+    '${S.of(context).payWith} ${S.of(context).payPal} ',
+    S.of(context).next,
   ];
 }

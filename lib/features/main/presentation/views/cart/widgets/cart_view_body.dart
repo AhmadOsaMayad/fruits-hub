@@ -19,6 +19,10 @@ class CartViewBody extends StatefulWidget {
 class _CartViewBodyState extends State<CartViewBody> {
   @override
   Widget build(BuildContext context) {
+    var cartEntity = context.read<CartCubit>().cartEntity;
+    var cartItems = cartEntity.cartItems;
+    var sText = S.of(context);
+    var height = MediaQuery.sizeOf(context).height;
     return Stack(
       children: [
         CustomScrollView(
@@ -30,7 +34,7 @@ class _CartViewBodyState extends State<CartViewBody> {
                   const SizedBox(height: 16),
                   buildAppBar(
                     context,
-                    title: S.of(context).cart,
+                    title: sText.cart,
                     showBackButton: false,
                     showNotification: false,
                   ),
@@ -45,38 +49,38 @@ class _CartViewBodyState extends State<CartViewBody> {
             ),
             SliverToBoxAdapter(
               child:
-                  context.read<CartCubit>().cartEntity.cartItems.isEmpty
-                      ? const SizedBox()
-                      : const CustomDivider(),
+                  cartItems.isEmpty ? const SizedBox() : const CustomDivider(),
             ),
-            context.read<CartCubit>().cartEntity.cartItems.isEmpty
+            cartItems.isEmpty
                 ? SliverToBoxAdapter(
-                  child: MsgPlaceHolder(msg: S.of(context).yourCartIsEmpty),
+                  child: MsgPlaceHolder(msg: sText.yourCartIsEmpty),
                 )
                 : CartItemSliverList(
                   // onDecrease: ,
-                  cartItems: context.read<CartCubit>().cartEntity.cartItems,
+                  cartItems: cartItems,
                 ),
             SliverToBoxAdapter(
               child:
-                  context.read<CartCubit>().cartEntity.cartItems.isEmpty
-                      ? const SizedBox()
-                      : const CustomDivider(),
+                  cartItems.isEmpty ? const SizedBox() : const CustomDivider(),
             ),
-            SliverToBoxAdapter(
-              child: SizedBox(height: MediaQuery.sizeOf(context).height * 0.13),
-            ),
+            SliverToBoxAdapter(child: SizedBox(height: height * 0.13)),
           ],
         ),
         Positioned(
           right: 16,
           left: 16,
-          bottom: MediaQuery.sizeOf(context).height * 0.05,
+          bottom: height * 0.05,
           child: CustomButton(
             text:
-                '${S.of(context).totalPayment} ${context.read<CartCubit>().cartEntity.totalPrice()}\$ ${S.of(context).only}',
+                '${sText.totalPayment} ${cartEntity.totalPrice()}\$ ${sText.only}',
             onPressed: () {
-              Navigator.pushNamed(context, CheckoutView.routeName);
+              if (cartItems.isNotEmpty) {
+                Navigator.pushNamed(
+                  context,
+                  CheckoutView.routeName,
+                  arguments: cartEntity,
+                );
+              }
             },
           ),
         ),

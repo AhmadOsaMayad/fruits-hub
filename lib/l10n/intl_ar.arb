@@ -81,6 +81,15 @@
     "selectPaymentMethod":"يرجى تحديد طريقة الدفع",
     "phoneNumber":"رقم الهاتف",
     "city":"المدينة",
-    "aptSuite":"الشقة/الجناح"
-
+    "aptSuite":"الشقة/الجناح",
+    "orderSummary":"ملخص الطلب",
+    "subTotal":"المجموع الفرعي",
+    "total":"الإجمالي",
+    "deliveryFee":"رسوم التوصيل",
+    "payWith":"ادفع عبر",
+    "payPal":"PayPal",
+    "shippingAddress":"عنوان التوصيل",
+    "edit":"تعديل",
+    "country":"الدولة",
+    "selectPaymentMethodMessage":"يرجى اختيار طريقة الدفع"
 }

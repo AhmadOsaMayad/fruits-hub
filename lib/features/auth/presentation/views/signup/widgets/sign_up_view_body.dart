@@ -68,7 +68,7 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
                             name: userName,
                           );
                     } else {
-                      buildSnackBar(context, S.of(context).pleaseAcceptTerms);
+                      showSnackBar(context, S.of(context).pleaseAcceptTerms);
                     }
                   } else {
                     setState(() {

@@ -16,7 +16,7 @@ class LoginViewBodyBlocConsumer extends StatelessWidget {
     return BlocConsumer<LoginCubit, LoginState>(
       listener: (context, state) {
         if (state is LoginFailure) {
-          buildSnackBar(
+          showSnackBar(
             context,
             state.code != null
                 ? getErrorMessage(context, state.code!)
@@ -25,7 +25,7 @@ class LoginViewBodyBlocConsumer extends StatelessWidget {
         }
         if (state is LoginSuccess) {
           Navigator.pushReplacementNamed(context, MainView.routeName);
-          buildSnackBar(context, S.of(context).loginSuccessful);
+          showSnackBar(context, S.of(context).loginSuccessful);
         }
       },
       builder: (context, state) {

@@ -44,6 +44,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "cart": MessageLookupByLibrary.simpleMessage("Cart"),
     "cashOnDelivery": MessageLookupByLibrary.simpleMessage("Cash on Delivery"),
     "city": MessageLookupByLibrary.simpleMessage("City"),
+    "country": MessageLookupByLibrary.simpleMessage("Country"),
     "createAccount": MessageLookupByLibrary.simpleMessage("Create Account"),
     "createNewAccount": MessageLookupByLibrary.simpleMessage(
       "Create New Account",
@@ -54,10 +55,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "deliveryAtStore": MessageLookupByLibrary.simpleMessage(
       "Delivery at Store",
     ),
+    "deliveryFee": MessageLookupByLibrary.simpleMessage("Delivery Fee"),
     "discount25": MessageLookupByLibrary.simpleMessage("25% Discount"),
     "dontHaveAccount": MessageLookupByLibrary.simpleMessage(
       "Don\'t have an account? ",
     ),
+    "edit": MessageLookupByLibrary.simpleMessage("Edit"),
     "eidOffers": MessageLookupByLibrary.simpleMessage("Eid Offers"),
     "email": MessageLookupByLibrary.simpleMessage("Email"),
     "emailAlreadyInUse": MessageLookupByLibrary.simpleMessage(
@@ -133,11 +136,14 @@ class MessageLookup extends MessageLookupByLibrary {
       "This sign-in method is not enabled. Please contact support.",
     ),
     "or": MessageLookupByLibrary.simpleMessage("Or"),
+    "orderSummary": MessageLookupByLibrary.simpleMessage("Order Summary"),
     "password": MessageLookupByLibrary.simpleMessage("Password"),
     "passwordOrEmailAreIncorrect": MessageLookupByLibrary.simpleMessage(
       "The password or email is incorrect.",
     ),
     "payInAdvance": MessageLookupByLibrary.simpleMessage("Pay in Advance"),
+    "payPal": MessageLookupByLibrary.simpleMessage("PayPal"),
+    "payWith": MessageLookupByLibrary.simpleMessage("Pay with"),
     "payment": MessageLookupByLibrary.simpleMessage("Payment"),
     "phoneNumber": MessageLookupByLibrary.simpleMessage("Phone Number"),
     "pleaseAcceptTerms": MessageLookupByLibrary.simpleMessage(
@@ -165,18 +171,24 @@ class MessageLookup extends MessageLookupByLibrary {
     "selectPaymentMethod": MessageLookupByLibrary.simpleMessage(
       "Please select a payment method",
     ),
+    "selectPaymentMethodMessage": MessageLookupByLibrary.simpleMessage(
+      "Please select a payment method",
+    ),
     "shipping": MessageLookupByLibrary.simpleMessage("Shipping"),
+    "shippingAddress": MessageLookupByLibrary.simpleMessage("Address Title"),
     "shopNow": MessageLookupByLibrary.simpleMessage("Shop Now"),
     "signUpSuccessful": MessageLookupByLibrary.simpleMessage(
       "Signup successful! Welcome!",
     ),
     "skip": MessageLookupByLibrary.simpleMessage("Skip"),
+    "subTotal": MessageLookupByLibrary.simpleMessage("Sub Total"),
     "termsAndConditions": MessageLookupByLibrary.simpleMessage(
       "our Terms and Conditions",
     ),
     "tooWeakPassword": MessageLookupByLibrary.simpleMessage(
       "The password provided is too weak.",
     ),
+    "total": MessageLookupByLibrary.simpleMessage("Total"),
     "totalPayment": MessageLookupByLibrary.simpleMessage("Total Payment"),
     "userDisabled": MessageLookupByLibrary.simpleMessage(
       "This account has been disabled. Please contact support.",

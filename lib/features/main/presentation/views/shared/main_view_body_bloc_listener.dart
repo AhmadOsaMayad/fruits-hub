@@ -15,11 +15,11 @@ class MainViewBodyBlocListener extends StatelessWidget {
     return BlocListener<CartCubit, CartState>(
       listener: (context, state) {
         if (state is CartProductAdded) {
-          buildSnackBar(context, S.of(context).productAddedToCart);
+          showSnackBar(context, S.of(context).productAddedToCart);
         } else if (state is CartProductRemoved) {
-          buildSnackBar(context, S.of(context).productRemovedFromCart);
+          showSnackBar(context, S.of(context).productRemovedFromCart);
         } else if (state is CartProductMaxQuantity) {
-          buildSnackBar(context, S.of(context).maxQuantityReached);
+          showSnackBar(context, S.of(context).maxQuantityReached);
         }
       },
       child: MainViewBody(currentIndex: currentIndex),

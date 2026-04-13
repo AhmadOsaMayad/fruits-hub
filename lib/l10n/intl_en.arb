@@ -80,6 +80,15 @@
     "selectPaymentMethod":"Please select a payment method",
     "phoneNumber":"Phone Number",
     "city":"City",
-    "aptSuite":"Apt/Suite"
-
+    "aptSuite":"Apt/Suite",
+    "orderSummary":"Order Summary",
+    "subTotal":"Sub Total",
+    "total":"Total",
+    "deliveryFee":"Delivery Fee",
+    "payWith":"Pay with",
+    "payPal":"PayPal",
+    "shippingAddress":"Address Title",
+    "edit":"Edit",
+    "country":"Country",
+    "selectPaymentMethodMessage":"Please select a payment method"
 }

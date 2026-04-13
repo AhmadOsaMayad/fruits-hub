@@ -728,6 +728,76 @@ class S {
   String get aptSuite {
     return Intl.message('Apt/Suite', name: 'aptSuite', desc: '', args: []);
   }
+
+  /// `Order Summary`
+  String get orderSummary {
+    return Intl.message(
+      'Order Summary',
+      name: 'orderSummary',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sub Total`
+  String get subTotal {
+    return Intl.message('Sub Total', name: 'subTotal', desc: '', args: []);
+  }
+
+  /// `Total`
+  String get total {
+    return Intl.message('Total', name: 'total', desc: '', args: []);
+  }
+
+  /// `Delivery Fee`
+  String get deliveryFee {
+    return Intl.message(
+      'Delivery Fee',
+      name: 'deliveryFee',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Pay with`
+  String get payWith {
+    return Intl.message('Pay with', name: 'payWith', desc: '', args: []);
+  }
+
+  /// `PayPal`
+  String get payPal {
+    return Intl.message('PayPal', name: 'payPal', desc: '', args: []);
+  }
+
+  /// `Address Title`
+  String get shippingAddress {
+    return Intl.message(
+      'Address Title',
+      name: 'shippingAddress',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Edit`
+  String get edit {
+    return Intl.message('Edit', name: 'edit', desc: '', args: []);
+  }
+
+  /// `Country`
+  String get country {
+    return Intl.message('Country', name: 'country', desc: '', args: []);
+  }
+
+  /// `Please select a payment method`
+  String get selectPaymentMethodMessage {
+    return Intl.message(
+      'Please select a payment method',
+      name: 'selectPaymentMethodMessage',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

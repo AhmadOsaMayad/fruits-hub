@@ -46,6 +46,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "الدفع عند الاستلام",
     ),
     "city": MessageLookupByLibrary.simpleMessage("المدينة"),
+    "country": MessageLookupByLibrary.simpleMessage("الدولة"),
     "createAccount": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
     "createNewAccount": MessageLookupByLibrary.simpleMessage("إنشاء حساب جديد"),
     "customTokenMismatch": MessageLookupByLibrary.simpleMessage(
@@ -54,8 +55,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "deliveryAtStore": MessageLookupByLibrary.simpleMessage(
       "التسليم من المكان",
     ),
+    "deliveryFee": MessageLookupByLibrary.simpleMessage("رسوم التوصيل"),
     "discount25": MessageLookupByLibrary.simpleMessage("خصم 25%"),
     "dontHaveAccount": MessageLookupByLibrary.simpleMessage("لا تمتلك حساب؟ "),
+    "edit": MessageLookupByLibrary.simpleMessage("تعديل"),
     "eidOffers": MessageLookupByLibrary.simpleMessage("عروض العيد"),
     "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
     "emailAlreadyInUse": MessageLookupByLibrary.simpleMessage(
@@ -129,11 +132,14 @@ class MessageLookup extends MessageLookupByLibrary {
       "طريقة تسجيل الدخول هذه غير مفعلة. يرجى الاتصال بالدعم.",
     ),
     "or": MessageLookupByLibrary.simpleMessage("أو"),
+    "orderSummary": MessageLookupByLibrary.simpleMessage("ملخص الطلب"),
     "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
     "passwordOrEmailAreIncorrect": MessageLookupByLibrary.simpleMessage(
       "كلمة المرور أو البريد الإلكتروني غير صحيحة.",
     ),
     "payInAdvance": MessageLookupByLibrary.simpleMessage("ادفع مسبقا"),
+    "payPal": MessageLookupByLibrary.simpleMessage("PayPal"),
+    "payWith": MessageLookupByLibrary.simpleMessage("ادفع عبر"),
     "payment": MessageLookupByLibrary.simpleMessage("الدفع"),
     "phoneNumber": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
     "pleaseAcceptTerms": MessageLookupByLibrary.simpleMessage(
@@ -159,18 +165,24 @@ class MessageLookup extends MessageLookupByLibrary {
     "selectPaymentMethod": MessageLookupByLibrary.simpleMessage(
       "يرجى تحديد طريقة الدفع",
     ),
+    "selectPaymentMethodMessage": MessageLookupByLibrary.simpleMessage(
+      "يرجى اختيار طريقة الدفع",
+    ),
     "shipping": MessageLookupByLibrary.simpleMessage("الشحن"),
+    "shippingAddress": MessageLookupByLibrary.simpleMessage("عنوان التوصيل"),
     "shopNow": MessageLookupByLibrary.simpleMessage("تسوق الان"),
     "signUpSuccessful": MessageLookupByLibrary.simpleMessage(
       "تم التسجيل بنجاح! مرحبًا بك!",
     ),
     "skip": MessageLookupByLibrary.simpleMessage("تخط"),
+    "subTotal": MessageLookupByLibrary.simpleMessage("المجموع الفرعي"),
     "termsAndConditions": MessageLookupByLibrary.simpleMessage(
       "الشروط والأحكام الخاصة بنا",
     ),
     "tooWeakPassword": MessageLookupByLibrary.simpleMessage(
       "كلمة المرور ضعيفة جدًا.",
     ),
+    "total": MessageLookupByLibrary.simpleMessage("الإجمالي"),
     "totalPayment": MessageLookupByLibrary.simpleMessage("إجمالي الدفع"),
     "userDisabled": MessageLookupByLibrary.simpleMessage(
       "تم تعطيل هذا الحساب. يرجى الاتصال بالدعم.",
