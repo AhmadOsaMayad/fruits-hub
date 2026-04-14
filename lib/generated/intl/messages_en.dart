@@ -136,6 +136,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "This sign-in method is not enabled. Please contact support.",
     ),
     "or": MessageLookupByLibrary.simpleMessage("Or"),
+    "orderAddedSuccessfully": MessageLookupByLibrary.simpleMessage(
+      "Order added successfully",
+    ),
     "orderSummary": MessageLookupByLibrary.simpleMessage("Order Summary"),
     "password": MessageLookupByLibrary.simpleMessage("Password"),
     "passwordOrEmailAreIncorrect": MessageLookupByLibrary.simpleMessage(

@@ -9,4 +9,9 @@ class ShippingAddressEntity {
     this.phone,
     this.aptSuite,
   });
+
+  @override
+  String toString() {
+    return '$fullName,$email,$phone,$address,$country,$city,$address,$aptSuite';
+  }
 }

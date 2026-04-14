@@ -90,5 +90,6 @@
     "shippingAddress":"Address Title",
     "edit":"Edit",
     "country":"Country",
-    "selectPaymentMethodMessage":"Please select a payment method"
+    "selectPaymentMethodMessage":"Please select a payment method",
+    "orderAddedSuccessfully":"Order added successfully"
 }

@@ -22,4 +22,19 @@ class QKWords {
   static const revDate = 'reviewer_date';
   static const reviews = 'reviews';
   static const sellingCount = 'selling_count';
+  static const country = 'country';
+  static const city = 'city';
+  static const address = 'address';
+  static const aptSuite = 'apt_suite';
+  static const phone = 'phone';
+  static const totalPrice = 'total_price';
+  static const orderId = 'order_id';
+  static const orderDate = 'order_date';
+  static const orderStatus = 'order_status';
+  static const shippingAddress = 'shipping_address';
+  static const orderProducts = 'order_products';
+  static const paymentMethod = 'payment_method';
+  static const pending = 'pending';
+  static const cash = 'cash';
+  static const paypal = 'paypal';
 }

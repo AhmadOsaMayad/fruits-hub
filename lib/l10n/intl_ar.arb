@@ -91,5 +91,6 @@
     "shippingAddress":"عنوان التوصيل",
     "edit":"تعديل",
     "country":"الدولة",
-    "selectPaymentMethodMessage":"يرجى اختيار طريقة الدفع"
+    "selectPaymentMethodMessage":"يرجى اختيار طريقة الدفع",
+    "orderAddedSuccessfully":"تم اضافة الطلب بنجاح"
 }

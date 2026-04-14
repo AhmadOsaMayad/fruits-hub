@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_paypal_payment/flutter_paypal_payment.dart';
 import 'package:fruit_hub/core/helpers/build_snack_bar.dart';
 import 'package:fruit_hub/core/utils/constants.dart';
 import 'package:fruit_hub/core/widgets/custom_button.dart';
 import 'package:fruit_hub/features/checkout/domain/entities/order_entity.dart';
+import 'package:fruit_hub/features/checkout/domain/entities/paypal_payment_entity/paypal_payment_entity.dart';
+import 'package:fruit_hub/features/checkout/presentation/cubits/add_order_cubit/add_order_cubit.dart';
 import 'package:fruit_hub/features/checkout/presentation/views/shared/checkout_steps_list.dart';
 import 'package:fruit_hub/features/checkout/presentation/views/shared/checkout_steps_page_view.dart';
 import 'package:fruit_hub/generated/l10n.dart';
@@ -66,6 +69,7 @@ class _CheckoutViewBodyState extends State<CheckoutViewBody> {
               } else if (currentPageIndex == 1) {
                 _handleAddressInputSection();
               } else if (currentPageIndex == 2) {
+                _processPayment();
               } else if (currentPageIndex == 3) {}
             },
           ),
@@ -96,6 +100,38 @@ class _CheckoutViewBodyState extends State<CheckoutViewBody> {
     } else {
       autoValidateMode.value = AutovalidateMode.always;
     }
+  }
+
+  void _processPayment() {
+    var orderEntity = context.read<OrderEntity>();
+    var paypalPaymentEntity = PaypalPaymentEntity.fromEntity(orderEntity);
+    // if (orderEntity.payWithCash == null) {
+    //   showSnackBar(context, S.of(context).selectPaymentMethod);
+    // } else if (orderEntity.payWithCash == true) {
+    //             var orderEntity = context.read<OrderEntity>();
+    //             context.read<AddOrderCubit>().addOrder(orderEntity);
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder:
+            (BuildContext context) => PaypalCheckoutView(
+              sandboxMode: true,
+              clientId: "",
+              secretKey: "",
+              transactions: [paypalPaymentEntity.toJson()],
+              note: "Contact us for any questions on your order.",
+              onSuccess: (Map params) async {
+                // print("onSuccess: $params");
+              },
+              onError: (error) {
+                // print("onError: $error");
+                Navigator.pop(context);
+              },
+              onCancel: () {
+                // print('cancelled:');
+              },
+            ),
+      ),
+    );
   }
 }
 

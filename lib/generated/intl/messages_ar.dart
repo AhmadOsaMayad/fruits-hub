@@ -132,6 +132,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "طريقة تسجيل الدخول هذه غير مفعلة. يرجى الاتصال بالدعم.",
     ),
     "or": MessageLookupByLibrary.simpleMessage("أو"),
+    "orderAddedSuccessfully": MessageLookupByLibrary.simpleMessage(
+      "تم اضافة الطلب بنجاح",
+    ),
     "orderSummary": MessageLookupByLibrary.simpleMessage("ملخص الطلب"),
     "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
     "passwordOrEmailAreIncorrect": MessageLookupByLibrary.simpleMessage(
