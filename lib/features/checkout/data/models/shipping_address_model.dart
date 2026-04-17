@@ -2,13 +2,6 @@ import 'package:fruit_hub/core/constants/query_key_words.dart';
 import 'package:fruit_hub/features/checkout/domain/entities/shipping_address_entity.dart';
 
 class ShippingAddressModel {
-  // String? fullName;
-  // String? phone;
-  // String? address;
-  // String? city;
-  // String? country;
-  // String? email;
-  // String? aptSuite;
   String? fullName, email, address, city, country, phone, aptSuite;
 
   ShippingAddressModel({

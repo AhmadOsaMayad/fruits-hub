@@ -37,4 +37,13 @@ class QKWords {
   static const pending = 'pending';
   static const cash = 'cash';
   static const paypal = 'paypal';
+  static const total = 'total';
+  static const subtotal = 'subtotal';
+  static const shipping = 'shipping';
+  static const shippingDiscount = 'shipping_discount';
+  static const currency = 'currency';
+  static const details = 'details';
+  static const items = 'items';
+  static const amount = 'amount';
+  static const itemList = 'item_list';
 }

@@ -16,7 +16,7 @@ class CartHeader extends StatelessWidget {
       child: Center(
         child: Text(
           '${S.of(context).youHave} $itemsCount ${S.of(context).productsInCart}',
-          style: AppTextStyles.regular13.copyWith(color: AppColors.primary),
+          style: AppTextStyles.regular13.copyWith(color: AppCols.primary),
         ),
       ),
     );

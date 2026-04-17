@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_hub/core/helpers/is_arabic.dart';
 import 'package:fruit_hub/core/utils/app_colors.dart';
+import 'package:fruit_hub/core/utils/app_defs.dart';
 import 'package:fruit_hub/core/utils/app_text_styles.dart';
 import 'package:fruit_hub/core/utils/static_decoration.dart';
 import 'package:fruit_hub/features/checkout/presentation/views/shipping/widgets/active_dot_shipping_item.dart';
@@ -23,7 +24,7 @@ class ShippingItem extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: AnimatedContainer(
-        duration: const Duration(milliseconds: 300),
+        duration: kDefDuration,
         clipBehavior: Clip.antiAlias,
         padding: EdgeInsets.only(
           left: isArabic() ? 13 : 28,
@@ -53,7 +54,7 @@ class ShippingItem extends StatelessWidget {
                     child: Text(
                       subTitle,
                       style: AppTextStyles.regular13.copyWith(
-                        color: Colors.black,
+                        color: AppCols.black,
                       ),
                     ),
                   ),
@@ -64,7 +65,7 @@ class ShippingItem extends StatelessWidget {
                 child: Text(
                   '\$$price',
                   style: AppTextStyles.semiBold13.copyWith(
-                    color: AppColors.primary,
+                    color: AppCols.primary,
                   ),
                 ),
               ),

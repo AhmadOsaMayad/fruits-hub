@@ -3,38 +3,29 @@ import 'dart:developer';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 import 'package:fruit_hub/core/errors/exceptions.dart';
-import 'package:fruit_hub/core/utils/constants.dart';
+import 'package:fruit_hub/core/utils/error_codes.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
 class FirebaseAuthService {
+  final _kException1 = '$kExceptionIn $kFireAthSrvc';
+
   Future<User> createUserWithEmailAndPassword({
     required String email,
     required String password,
   }) async {
+    const kFuncName = 'createUserWithEmailAndPassword';
     try {
       final credential = await FirebaseAuth.instance
           .createUserWithEmailAndPassword(email: email, password: password);
       return credential.user!;
     } on FirebaseAuthException catch (e) {
       log(
-        'Exception in FirebaseAuthService.createUserWithEmailAndPassword:- Code: ${e.code} \n Message: ${e.toString()}',
+        '$_kException1.$kFuncName \n $kEcode ${e.code} \n $kEmsg ${e.toString()}',
       );
       throw CustomExceptions(code: e.code, message: e.message ?? kUnknownError);
-      // if (e.code == kWeakPasswordK) {
-      //   throw CustomExceptions(message: kWeakPasswordV);
-      // } else if (e.code == kEmailAlreadyInUseK) {
-      //   throw CustomExceptions(message: kEmailAlreadyInUseV);
-      // } else if (e.code == kInvalidEmailK) {
-      //   throw CustomExceptions(message: kInvalidEmailV);
-      // } else if (e.code == kNetworkRequestFailedK) {
-      //   throw CustomExceptions(message: kNetworkRequestFailedV);
-      // } else {
-      //   throw CustomExceptions(message: e.message ?? kUnknownErrorV);
-      // }
     } catch (e) {
-      log(
-        'Exception in FirebaseAuthService.createUserWithEmailAndPassword:- Message: ${e.toString()}',
-      );
+      log('$_kException1.$kFuncName \n $kEmsg ${e.toString()}');
+
       throw CustomExceptions(message: kUnexpectedError);
     }
   }
@@ -43,6 +34,7 @@ class FirebaseAuthService {
     required String email,
     required String password,
   }) async {
+    const kFuncName = 'loginWithEmailAndPassword';
     try {
       final credential = await FirebaseAuth.instance.signInWithEmailAndPassword(
         email: email,
@@ -51,26 +43,11 @@ class FirebaseAuthService {
       return credential.user!;
     } on FirebaseAuthException catch (e) {
       log(
-        'Exception in FirebaseAuthService.loginWithEmailAndPassword:- Code: ${e.code} \n Message: ${e.toString()}',
+        '$_kException1.$kFuncName \n $kEcode ${e.code} \n $kEmsg ${e.toString()}',
       );
       throw CustomExceptions(code: e.code, message: e.message ?? kUnknownError);
-      // if (e.code == kInvalidEmailK) {
-      //   throw CustomExceptions(message: kInvalidEmailV);
-      // } else if (e.code == kNetworkRequestFailedK) {
-      //   throw CustomExceptions(message: kNetworkRequestFailedV);
-      // } else if (e.code == kUserNotFoundK) {
-      //   throw CustomExceptions(message: kPasswordOrEmailAreIncorrect);
-      // } else if (e.code == kWrongPasswordK) {
-      //   throw CustomExceptions(message: kPasswordOrEmailAreIncorrect);
-      // } else if (e.code == kNetworkRequestFailedK) {
-      //   throw CustomExceptions(message: kNetworkRequestFailedV);
-      // } else {
-      //   throw CustomExceptions(message: e.message ?? kUnknownErrorV);
-      // }
     } catch (e) {
-      log(
-        'Exception in FirebaseAuthService.loginWithEmailAndPassword:- Message: ${e.toString()}',
-      );
+      log('$_kException1.$kFuncName \n $kEmsg ${e.toString()}');
       throw CustomExceptions(message: kUnexpectedError);
     }
   }

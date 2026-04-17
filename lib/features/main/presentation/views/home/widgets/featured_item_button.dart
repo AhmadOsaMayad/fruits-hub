@@ -13,7 +13,7 @@ class FeaturedItemButton extends StatelessWidget {
       child: TextButton(
         style: TextButton.styleFrom(
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
-          backgroundColor: Colors.white,
+          backgroundColor: AppCols.white,
         ),
         onPressed: onPressed,
         child: Padding(
@@ -21,7 +21,7 @@ class FeaturedItemButton extends StatelessWidget {
           child: FittedBox(
             child: Text(
               S.of(context).shopNow,
-              style: AppTextStyles.bold13.copyWith(color: AppColors.primary),
+              style: AppTextStyles.bold13.copyWith(color: AppCols.primary),
             ),
           ),
         ),

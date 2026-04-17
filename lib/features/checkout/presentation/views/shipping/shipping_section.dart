@@ -33,8 +33,7 @@ class _ShippingSectionState extends State<ShippingSection>
           isSelected: selectedIndex == 0,
           title: sText.cashOnDelivery,
           subTitle: sText.deliveryAtStore,
-          price:
-              '${orderEntity.cartEntity.totalPrice() + deliveryFee}', //widget.cartEntity.totalPrice().toString(),
+          price: '${orderEntity.cartEntity.totalPrice() + deliveryFee}',
         ),
         const SizedBox(height: 16),
         ShippingItem(

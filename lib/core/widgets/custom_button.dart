@@ -13,9 +13,7 @@ class CustomButton extends StatelessWidget {
       height: 54,
       child: TextButton(
         style: TextButton.styleFrom(
-          backgroundColor: AppColors.primary,
-          // foregroundColor: Colors.white,
-          // padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 12),
+          backgroundColor: AppCols.primary,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(16),
           ),
@@ -23,7 +21,7 @@ class CustomButton extends StatelessWidget {
         onPressed: onPressed,
         child: Text(
           text,
-          style: AppTextStyles.bold16.copyWith(color: const Color(0xffFFFFFF)),
+          style: AppTextStyles.bold16.copyWith(color: AppCols.white),
         ),
       ),
     );

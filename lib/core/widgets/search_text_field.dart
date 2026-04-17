@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:fruit_hub/core/utils/app_colors.dart';
 import 'package:fruit_hub/core/utils/app_images.dart';
 import 'package:fruit_hub/core/utils/app_text_styles.dart';
+import 'package:fruit_hub/core/widgets/svg_ats.dart';
 import 'package:fruit_hub/generated/l10n.dart';
-import 'package:svg_flutter/svg.dart';
 
 class SearchTextField extends StatelessWidget {
   const SearchTextField({super.key});
@@ -23,20 +24,20 @@ class SearchTextField extends StatelessWidget {
       child: TextField(
         keyboardType: TextInputType.text,
         decoration: InputDecoration(
-          prefixIcon: SizedBox(
+          prefixIcon: const SizedBox(
             width: 20,
-            child: Center(child: SvgPicture.asset(Assets.imagesSearchIcon)),
+            child: Center(child: SvgAts(Assets.imagesSearchIcon)),
           ),
-          suffixIcon: SizedBox(
+          suffixIcon: const SizedBox(
             width: 20,
-            child: Center(child: SvgPicture.asset(Assets.imagesFilter)),
+            child: Center(child: SvgAts(Assets.imagesFilter)),
           ),
           hintStyle: AppTextStyles.regular13.copyWith(
-            color: const Color(0xFF949D9E),
+            color: AppCols.silverMist,
           ),
           hintText: S.of(context).lookFor,
           filled: true,
-          fillColor: Colors.white,
+          fillColor: AppCols.white,
           border: buildBorder(),
           enabledBorder: buildBorder(),
           focusedBorder: buildBorder(),
@@ -48,7 +49,7 @@ class SearchTextField extends StatelessWidget {
   OutlineInputBorder buildBorder() {
     return OutlineInputBorder(
       borderRadius: BorderRadius.circular(4),
-      borderSide: const BorderSide(width: 1, color: Colors.white),
+      borderSide: const BorderSide(width: 1, color: AppCols.white),
     );
   }
 }

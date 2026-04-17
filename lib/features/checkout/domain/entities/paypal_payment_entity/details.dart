@@ -1,3 +1,4 @@
+import 'package:fruit_hub/core/constants/query_key_words.dart';
 import 'package:fruit_hub/features/checkout/domain/entities/order_entity.dart';
 
 class DetailsEntity {
@@ -8,9 +9,9 @@ class DetailsEntity {
   DetailsEntity({this.subtotal, this.shipping, this.shippingDiscount});
 
   Map<String, dynamic> toJson() => {
-    'subtotal': subtotal,
-    'shipping': shipping,
-    'shipping_discount': shippingDiscount,
+    QKWords.subtotal: subtotal,
+    QKWords.shipping: shipping,
+    QKWords.shippingDiscount: shippingDiscount,
   };
 
   factory DetailsEntity.fromEntity(OrderEntity entity) => DetailsEntity(

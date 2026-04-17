@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fruit_hub/core/utils/app_colors.dart';
 import 'package:fruit_hub/core/utils/app_text_styles.dart';
 import 'package:fruit_hub/core/widgets/circle_action_button.dart';
 
@@ -26,7 +27,7 @@ class CartItemActionButtons extends StatelessWidget {
           backgroundColor: Colors.grey.shade200,
           child: CircleActionButton(
             radius: 14,
-            backColor: const Color(0xFFF3F5F7),
+            backColor: AppCols.iceWhite,
             icon: Icons.remove,
             iconColor: null,
             onTap: onDecrease,

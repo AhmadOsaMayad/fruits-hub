@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fruit_hub/core/utils/app_colors.dart';
 import 'package:fruit_hub/core/utils/app_text_styles.dart';
 import 'package:fruit_hub/core/widgets/notification_widget.dart';
 
@@ -9,7 +10,7 @@ AppBar buildAppBar(
   bool showNotification = true,
 }) {
   return AppBar(
-    backgroundColor: Colors.white,
+    backgroundColor: AppCols.white,
     actions: [
       Visibility(
         visible: showNotification,

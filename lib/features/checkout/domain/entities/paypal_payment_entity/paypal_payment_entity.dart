@@ -1,3 +1,4 @@
+import 'package:fruit_hub/core/constants/query_key_words.dart';
 import 'package:fruit_hub/features/checkout/domain/entities/order_entity.dart';
 import 'package:fruit_hub/features/checkout/domain/entities/paypal_payment_entity/amount.dart';
 import 'package:fruit_hub/features/checkout/domain/entities/paypal_payment_entity/item_list.dart';
@@ -18,8 +19,8 @@ class PaypalPaymentEntity {
   }
 
   toJson() => {
-    'amount': amount?.toJson(),
-    'description': description,
-    'item_list': itemList?.toJson(),
+    QKWords.amount: amount?.toJson(),
+    QKWords.description: description,
+    QKWords.itemList: itemList?.toJson(),
   };
 }

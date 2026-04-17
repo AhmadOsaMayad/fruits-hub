@@ -46,3 +46,6 @@ app.*.map.json
 
 #API keys
 .env
+
+# app keys folders
+app_vault.dart

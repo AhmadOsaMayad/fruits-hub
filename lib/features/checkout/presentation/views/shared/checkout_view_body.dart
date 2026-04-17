@@ -1,6 +1,10 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_paypal_payment/flutter_paypal_payment.dart';
+import 'package:fruit_hub/app_vault.dart';
 import 'package:fruit_hub/core/helpers/build_snack_bar.dart';
+import 'package:fruit_hub/core/utils/app_defs.dart';
 import 'package:fruit_hub/core/utils/constants.dart';
 import 'package:fruit_hub/core/widgets/custom_button.dart';
 import 'package:fruit_hub/features/checkout/domain/entities/order_entity.dart';
@@ -81,10 +85,7 @@ class _CheckoutViewBodyState extends State<CheckoutViewBody> {
 
   void _handleShippingSection(BuildContext context) {
     if (context.read<OrderEntity>().payWithCash != null) {
-      pageController.nextPage(
-        duration: const Duration(milliseconds: 300),
-        curve: Curves.easeIn,
-      );
+      pageController.nextPage(duration: kDefDuration, curve: Curves.easeIn);
     } else {
       showSnackBar(context, S.of(context).selectPaymentMethod);
     }
@@ -93,10 +94,7 @@ class _CheckoutViewBodyState extends State<CheckoutViewBody> {
   void _handleAddressInputSection() {
     if (formKey.currentState!.validate()) {
       formKey.currentState!.save();
-      pageController.nextPage(
-        duration: const Duration(milliseconds: 300),
-        curve: Curves.easeIn,
-      );
+      pageController.nextPage(duration: kDefDuration, curve: Curves.easeIn);
     } else {
       autoValidateMode.value = AutovalidateMode.always;
     }
@@ -105,25 +103,26 @@ class _CheckoutViewBodyState extends State<CheckoutViewBody> {
   void _processPayment() {
     var orderEntity = context.read<OrderEntity>();
     var paypalPaymentEntity = PaypalPaymentEntity.fromEntity(orderEntity);
-    // if (orderEntity.payWithCash == null) {
-    //   showSnackBar(context, S.of(context).selectPaymentMethod);
-    // } else if (orderEntity.payWithCash == true) {
-    //             var orderEntity = context.read<OrderEntity>();
-    //             context.read<AddOrderCubit>().addOrder(orderEntity);
+    var addOrderCubit = context.read<AddOrderCubit>();
+    var sText = S.of(context);
     Navigator.of(context).push(
       MaterialPageRoute(
         builder:
             (BuildContext context) => PaypalCheckoutView(
               sandboxMode: true,
-              clientId: "",
-              secretKey: "",
+              clientId: kPaypalClientID,
+              secretKey: kPaypalClientSecret,
               transactions: [paypalPaymentEntity.toJson()],
-              note: "Contact us for any questions on your order.",
+              note: sText.contactUsForQuestions,
               onSuccess: (Map params) async {
-                // print("onSuccess: $params");
+                log('$kOnSuccess: $params');
+                showSnackBar(context, sText.orderAddedSuccessfully);
+                Navigator.pop(context);
+                await addOrderCubit.addOrder(orderEntity);
               },
               onError: (error) {
-                // print("onError: $error");
+                log('$kOnError: ${error.toString()}');
+                showSnackBar(context, error.toString());
                 Navigator.pop(context);
               },
               onCancel: () {
@@ -136,10 +135,11 @@ class _CheckoutViewBodyState extends State<CheckoutViewBody> {
 }
 
 List<String> getNextButtonTitle(BuildContext context) {
+  var sText = S.of(context);
   return [
-    S.of(context).next,
-    S.of(context).next,
-    '${S.of(context).payWith} ${S.of(context).payPal} ',
-    S.of(context).next,
+    sText.next,
+    sText.next,
+    '${sText.payWith} ${sText.payPal} ',
+    sText.next,
   ];
 }

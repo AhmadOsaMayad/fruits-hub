@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:fruit_hub/core/services/shared_preference_singleton.dart';
 import 'package:fruit_hub/core/utils/app_text_styles.dart';
 import 'package:fruit_hub/core/utils/constants.dart';
+import 'package:fruit_hub/core/widgets/svg_ats.dart';
 import 'package:fruit_hub/features/auth/presentation/views/login/login_view.dart';
 import 'package:fruit_hub/generated/l10n.dart';
-import 'package:svg_flutter/svg.dart';
 
 class PageViewItem extends StatelessWidget {
   const PageViewItem({
@@ -28,16 +28,14 @@ class PageViewItem extends StatelessWidget {
           height: MediaQuery.sizeOf(context).height * 0.5,
           child: Stack(
             children: [
-              Positioned.fill(
-                child: SvgPicture.asset(backgroundImage, fit: BoxFit.fill),
-              ),
+              Positioned.fill(child: SvgAts(backgroundImage, fit: BoxFit.fill)),
               Positioned(
                 bottom: 0,
                 left: 0,
                 right: 0,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: [SvgPicture.asset(image)],
+                  children: [SvgAts(image)],
                 ),
               ),
               Visibility(

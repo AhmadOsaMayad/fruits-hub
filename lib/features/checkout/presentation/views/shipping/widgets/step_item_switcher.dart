@@ -1,4 +1,5 @@
 import 'package:flutter/widgets.dart';
+import 'package:fruit_hub/core/utils/app_defs.dart';
 import 'package:fruit_hub/features/checkout/presentation/views/shipping/widgets/active_step_item.dart';
 
 class StepItemSwitcher extends StatelessWidget {
@@ -26,7 +27,7 @@ class StepItemSwitcher extends StatelessWidget {
       ),
       crossFadeState:
           isActive ? CrossFadeState.showSecond : CrossFadeState.showFirst,
-      duration: const Duration(milliseconds: 300),
+      duration: kDefDuration,
     );
   }
 }

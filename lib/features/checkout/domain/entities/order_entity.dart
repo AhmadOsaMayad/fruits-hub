@@ -13,7 +13,7 @@ class OrderEntity {
     this.payWithCash,
     // this.shippingAddress,
   });
-double calculateShippingCost() {
+  double calculateShippingCost() {
     if (payWithCash!) {
       return 30;
     } else {
@@ -35,9 +35,4 @@ double calculateShippingCost() {
   String toString() {
     return 'OrderEntity{uID: $uID, cartEntity: $cartEntity, payWithCash: $payWithCash, shippingAddressEntity: $shippingAddress}';
   }
-  // @override
-  // String toString() {
-
-  //   // return '${shippingAddress.fullName},${shippingAddress.email},${shippingAddress.phone},${shippingAddress.address},${shippingAddress.country},${shippingAddress.city},${shippingAddress.address},${shippingAddress.aptSuite}';
-  // }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/widgets.dart';
+import 'package:fruit_hub/core/utils/app_defs.dart';
 import 'package:fruit_hub/features/checkout/presentation/views/shipping/widgets/step_item_switcher.dart';
 import 'package:fruit_hub/generated/l10n.dart';
 
@@ -20,7 +21,7 @@ class CheckoutStepsList extends StatelessWidget {
             if (currentPageIndex >= index) {
               pageController.animateToPage(
                 index,
-                duration: const Duration(milliseconds: 300),
+                duration: kDefDuration,
                 curve: Curves.easeIn,
               );
             }

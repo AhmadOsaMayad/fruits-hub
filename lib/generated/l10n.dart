@@ -808,6 +808,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Contact us for any questions on your order.`
+  String get contactUsForQuestions {
+    return Intl.message(
+      'Contact us for any questions on your order.',
+      name: 'contactUsForQuestions',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Good Morning...!`
+  String get goodMorning {
+    return Intl.message(
+      'Good Morning...!',
+      name: 'goodMorning',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

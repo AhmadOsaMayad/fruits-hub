@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_hub/core/helpers/is_arabic.dart';
+import 'package:fruit_hub/core/utils/app_colors.dart';
 import 'package:fruit_hub/core/utils/app_text_styles.dart';
-import 'package:svg_flutter/svg.dart';
+import 'package:fruit_hub/core/widgets/svg_ats.dart';
 
 class ActiveNavBarItem extends StatelessWidget {
   const ActiveNavBarItem({super.key, required this.icon, required this.title});
@@ -27,19 +28,17 @@ class ActiveNavBarItem extends StatelessWidget {
               width: 35,
               height: 35,
               decoration: ShapeDecoration(
-                color: const Color(0xFF1B5E37),
+                color: AppCols.primary,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30),
                 ),
               ),
-              child: Center(child: SvgPicture.asset(icon)),
+              child: Center(child: SvgAts(icon)),
             ),
             const SizedBox(width: 4),
             Text(
               title,
-              style: AppTextStyles.semiBold11.copyWith(
-                color: const Color(0xFF1B5E37),
-              ),
+              style: AppTextStyles.semiBold11.copyWith(color: AppCols.primary),
             ),
             // const SizedBox(width: 16),
           ],

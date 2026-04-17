@@ -6,7 +6,7 @@ class AppDeco {
     color: Color(0x33D9D9D9),
     shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.all(Radius.circular(4)),
-      side: BorderSide(width: 1, color: AppColors.primary),
+      side: BorderSide(width: 1, color: AppCols.primary),
     ),
   );
 
@@ -18,12 +18,12 @@ class AppDeco {
   );
 
   static const activeDotShippingItem = ShapeDecoration(
-    shape: OvalBorder(side: BorderSide(width: 4, color: Colors.white)),
-    color: AppColors.primary,
+    shape: OvalBorder(side: BorderSide(width: 4, color: AppCols.white)),
+    color: AppCols.primary,
   );
 
   static const inActiveDotShippingItem = ShapeDecoration(
-    shape: OvalBorder(side: BorderSide(width: 1, color: Color(0xff949D9E))),
+    shape: OvalBorder(side: BorderSide(width: 1, color: AppCols.silverMist)),
   );
 
   static const greyBoxDeco = ShapeDecoration(

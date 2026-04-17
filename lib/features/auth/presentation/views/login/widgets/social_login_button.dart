@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fruit_hub/core/helpers/is_arabic.dart';
 import 'package:fruit_hub/core/utils/app_colors.dart';
 import 'package:fruit_hub/core/utils/app_text_styles.dart';
-import 'package:svg_flutter/svg_flutter.dart';
+import 'package:fruit_hub/core/widgets/svg_ats.dart';
 
 class SocialLoginButton extends StatelessWidget {
   const SocialLoginButton({
@@ -24,23 +24,22 @@ class SocialLoginButton extends StatelessWidget {
         style: TextButton.styleFrom(
           elevation: 0,
           padding: const EdgeInsets.symmetric(horizontal: 16),
-          overlayColor: AppColors.primary,
-          backgroundColor: Colors.white,
+          overlayColor: AppCols.primary,
+          backgroundColor: AppCols.white,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(16),
           ),
-          side: const BorderSide(color: Color(0xFFDCDEDE), width: 1),
+          side: const BorderSide(color: AppCols.cloudGrey, width: 1),
         ),
-        // icon: SvgPicture.asset(icon, height: 24, width: 24),
         child: ListTile(
           visualDensity: const VisualDensity(
             horizontal: VisualDensity.minimumDensity,
           ),
-          leading: SvgPicture.asset(icon, height: 24, width: 24),
+          leading: SvgAts(icon, height: 24, width: 24),
           title: Text(
             title,
             textAlign: TextAlign.center,
-            style: AppTextStyles.semiBold16.copyWith(color: const Color(0xFF0C0D0D)),
+            style: AppTextStyles.semiBold16.copyWith(color: AppCols.onyxBlack),
           ),
         ),
       ),
@@ -76,7 +75,7 @@ class SocialLoginButton1 extends StatelessWidget {
               child: Text(
                 title,
                 style: AppTextStyles.semiBold16.copyWith(
-                  color: const Color(0xFF0C0D0D),
+                  color: AppCols.onyxBlack,
                 ),
               ),
             ),
@@ -85,19 +84,19 @@ class SocialLoginButton1 extends StatelessWidget {
         style: TextButton.styleFrom(
           elevation: 0,
           padding: const EdgeInsets.symmetric(horizontal: 16),
-          overlayColor: AppColors.primary,
-          backgroundColor: Colors.white,
+          overlayColor: AppCols.primary,
+          backgroundColor: AppCols.white,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(16),
           ),
-          side: const BorderSide(color: Color(0xFFDCDEDE), width: 1),
+          side: const BorderSide(color: AppCols.cloudGrey, width: 1),
         ),
         icon: Padding(
           padding: EdgeInsets.only(
             right: isArabic() ? 16.0 : 0.0,
             left: isArabic() ? 0.0 : 16.0,
           ),
-          child: SvgPicture.asset(icon, height: 24, width: 24),
+          child: SvgAts(icon, height: 24, width: 24),
         ),
       ),
     );

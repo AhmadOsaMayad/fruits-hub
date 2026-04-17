@@ -10,6 +10,7 @@ import 'package:fruit_hub/core/services/firebase_auth_service.dart';
 import 'package:fruit_hub/core/services/shared_preference_singleton.dart';
 import 'package:fruit_hub/core/utils/back_end_points.dart';
 import 'package:fruit_hub/core/utils/constants.dart';
+import 'package:fruit_hub/core/utils/error_codes.dart';
 import 'package:fruit_hub/features/auth/data/models/user_model.dart';
 import 'package:fruit_hub/features/auth/domain/entities/user_entity.dart';
 import 'package:fruit_hub/features/auth/domain/repos/auth_repo.dart';
@@ -21,13 +22,14 @@ class AuthRepoImpl extends AuthRepo {
     required this.firebaseAuthService,
     required this.databaseService,
   });
-
+  final _kException1 = '$kExceptionIn $kAthRepoImple';
   @override
   Future<Either<Failure, UserEntity>> createUserWithEmailAndPassword({
     required String email,
     required String password,
     required String name,
   }) async {
+    const kFuncName = 'createUserWithEmailAndPassword';
     User? user;
     try {
       user = await firebaseAuthService.createUserWithEmailAndPassword(
@@ -42,9 +44,7 @@ class AuthRepoImpl extends AuthRepo {
       return left(ServerFailure(message: e.toString(), code: e.code));
     } catch (e) {
       await deleteUser(user);
-      log(
-        'Exception in AuthRepoImpl.createUserWithEmailAndPassword: ${e.toString()}',
-      );
+      log('$_kException1.$kFuncName \n $kEmsg ${e.toString()}');
       return left(
         ServerFailure(
           message: e.toString().isEmpty ? kUnexpectedError : e.toString(),
@@ -58,6 +58,7 @@ class AuthRepoImpl extends AuthRepo {
     required String email,
     required String password,
   }) async {
+    const kFuncName = 'loginWithEmailAndPassword';
     User? user;
     try {
       user = await firebaseAuthService.loginWithEmailAndPassword(
@@ -72,9 +73,7 @@ class AuthRepoImpl extends AuthRepo {
       return left(ServerFailure(message: e.toString(), code: e.code));
     } catch (e) {
       await deleteUser(user);
-      log(
-        'Exception in AuthRepoImpl.loginWithEmailAndPassword: ${e.toString()}',
-      );
+      log('$_kException1.$kFuncName \n $kEmsg ${e.toString()}');
       return left(
         ServerFailure(
           message: e.toString().isEmpty ? kUnexpectedError : e.toString(),
@@ -85,6 +84,7 @@ class AuthRepoImpl extends AuthRepo {
 
   @override
   Future<Either<Failure, UserEntity>> loginWithGoogle() async {
+    const kFuncName = 'loginWithGoogle';
     User? user;
     try {
       user = await firebaseAuthService.signInWithGoogle();
@@ -104,11 +104,11 @@ class AuthRepoImpl extends AuthRepo {
 
       return right(userEntity);
     } on CustomExceptions catch (e) {
-      log('Exception in AuthRepoImpl.signInWithGoogle: ${e.toString()}');
+      log('$_kException1.$kFuncName \n $kEmsg ${e.toString()}');
       return left(ServerFailure(message: e.message, code: e.code));
     } catch (e) {
       await deleteUser(user);
-      log('Exception in AuthRepoImpl.signInWithGoogle: ${e.toString()}');
+      log('$_kException1.$kFuncName \n $kEmsg ${e.toString()}');
       return left(
         ServerFailure(
           message: e.toString().isEmpty ? kUnexpectedError : e.toString(),
@@ -119,6 +119,7 @@ class AuthRepoImpl extends AuthRepo {
 
   @override
   Future<Either<Failure, UserEntity>> loginWithFacebook() async {
+    const kFuncName = 'loginWithFacebook';
     User? user;
     try {
       user = await firebaseAuthService.signInWithFacebook();
@@ -135,7 +136,7 @@ class AuthRepoImpl extends AuthRepo {
       return right(userEntity);
     } catch (e) {
       await deleteUser(user);
-      log('Exception in AuthRepoImpl.signInWithFacebook: ${e.toString()}');
+      log('$_kException1.$kFuncName \n $kEmsg ${e.toString()}');
       return left(
         ServerFailure(
           message: e.toString().isEmpty ? kUnexpectedError : e.toString(),

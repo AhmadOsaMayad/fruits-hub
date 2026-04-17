@@ -1,3 +1,4 @@
+import 'package:fruit_hub/core/constants/query_key_words.dart';
 import 'package:fruit_hub/core/helpers/get_currency.dart';
 import 'package:fruit_hub/features/checkout/domain/entities/order_entity.dart';
 
@@ -19,8 +20,8 @@ class Amount {
   }
 
   toJson() => {
-    'total': total,
-    'currency': currency,
-    'details': details!.toJson(),
+    QKWords.total: total,
+    QKWords.currency: currency,
+    QKWords.details: details!.toJson(),
   };
 }

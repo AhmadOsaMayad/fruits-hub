@@ -9,8 +9,8 @@ class CircleActionButton extends StatelessWidget {
     this.radius,
     this.size,
     this.icon = Icons.add,
-    this.backColor = AppColors.primary,
-    this.iconColor = Colors.white,
+    this.backColor = AppCols.primary,
+    this.iconColor = AppCols.white,
   });
   final VoidCallback? onTap;
   final double? radius, size;

@@ -44,6 +44,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "cart": MessageLookupByLibrary.simpleMessage("Cart"),
     "cashOnDelivery": MessageLookupByLibrary.simpleMessage("Cash on Delivery"),
     "city": MessageLookupByLibrary.simpleMessage("City"),
+    "contactUsForQuestions": MessageLookupByLibrary.simpleMessage(
+      "Contact us for any questions on your order.",
+    ),
     "country": MessageLookupByLibrary.simpleMessage("Country"),
     "createAccount": MessageLookupByLibrary.simpleMessage("Create Account"),
     "createNewAccount": MessageLookupByLibrary.simpleMessage(
@@ -71,6 +74,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "forgotPassword": MessageLookupByLibrary.simpleMessage("Forgot Password?"),
     "fullName": MessageLookupByLibrary.simpleMessage("Full Name"),
+    "goodMorning": MessageLookupByLibrary.simpleMessage("Good Morning...!"),
     "home": MessageLookupByLibrary.simpleMessage("Home"),
     "invalidActionCode": MessageLookupByLibrary.simpleMessage(
       "The action code is invalid or has already been used.",

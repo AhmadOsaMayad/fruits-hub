@@ -1,3 +1,4 @@
+import 'package:fruit_hub/core/constants/query_key_words.dart';
 import 'package:fruit_hub/features/main/domain/entities/cart_item_entity.dart';
 
 import 'item.dart';
@@ -12,6 +13,6 @@ class ItemList {
   }
 
   Map<String, dynamic> toJson() => {
-    'items': items?.map((e) => e.toJson()).toList(),
+    QKWords.items: items?.map((e) => e.toJson()).toList(),
   };
 }

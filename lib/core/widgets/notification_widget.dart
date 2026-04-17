@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_hub/core/utils/app_images.dart';
-import 'package:svg_flutter/svg.dart';
+import 'package:fruit_hub/core/widgets/svg_ats.dart';
 
 class NotificationWidget extends StatelessWidget {
   const NotificationWidget({super.key});
@@ -13,7 +13,7 @@ class NotificationWidget extends StatelessWidget {
         color: Color(0xFFEEF8ED),
         shape: OvalBorder(),
       ),
-      child: SvgPicture.asset(Assets.imagesNotificationActive),
+      child: const SvgAts(Assets.imagesNotificationActive),
     );
   }
 }

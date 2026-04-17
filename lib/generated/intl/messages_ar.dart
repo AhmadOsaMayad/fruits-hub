@@ -46,6 +46,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "الدفع عند الاستلام",
     ),
     "city": MessageLookupByLibrary.simpleMessage("المدينة"),
+    "contactUsForQuestions": MessageLookupByLibrary.simpleMessage(
+      "اتصل بنا لأي استفسارات حول طلبك.",
+    ),
     "country": MessageLookupByLibrary.simpleMessage("الدولة"),
     "createAccount": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
     "createNewAccount": MessageLookupByLibrary.simpleMessage("إنشاء حساب جديد"),
@@ -69,6 +72,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "forgotPassword": MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
     "fullName": MessageLookupByLibrary.simpleMessage("الاسم الكامل"),
+    "goodMorning": MessageLookupByLibrary.simpleMessage("صباح الخير ...!"),
     "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
     "invalidActionCode": MessageLookupByLibrary.simpleMessage(
       "رمز الإجراء غير صالح أو تم استخدامه بالفعل.",

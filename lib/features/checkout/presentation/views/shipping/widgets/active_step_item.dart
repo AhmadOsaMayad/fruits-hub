@@ -25,7 +25,7 @@ class ActiveStepItem extends StatelessWidget {
         const SizedBox(width: 4),
         Text(
           title,
-          style: AppTextStyles.bold13.copyWith(color: AppColors.primary),
+          style: AppTextStyles.bold13.copyWith(color: AppCols.primary),
         ),
       ],
     );
@@ -48,7 +48,7 @@ class InActiveStepItem extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       children: [
         CircleActionButton(
-          backColor: isActive ? AppColors.primary : const Color(0xFFF3F5F7),
+          backColor: isActive ? AppCols.primary : AppCols.iceWhite,
           onTap: () {},
           icon: Icons.check,
           radius: 9,
@@ -59,7 +59,7 @@ class InActiveStepItem extends StatelessWidget {
                   : Text(
                     stepNumber,
                     style: AppTextStyles.semiBold13.copyWith(
-                      color: Colors.black,
+                      color: AppCols.black,
                     ),
                   ),
         ),
@@ -67,7 +67,7 @@ class InActiveStepItem extends StatelessWidget {
         Text(
           title,
           style: AppTextStyles.bold13.copyWith(
-            color: isActive ? AppColors.primary : Colors.grey,
+            color: isActive ? AppCols.primary : Colors.grey,
           ),
         ),
       ],

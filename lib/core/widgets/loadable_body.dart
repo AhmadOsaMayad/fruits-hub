@@ -23,7 +23,7 @@ class LoadableBody extends StatelessWidget {
         if (isLoading)
           loadableChild ??
               const Center(
-                child: CircularProgressIndicator(color: AppColors.primary),
+                child: CircularProgressIndicator(color: AppCols.primary),
               ),
       ],
     );

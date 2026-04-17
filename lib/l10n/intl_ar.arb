@@ -92,5 +92,7 @@
     "edit":"تعديل",
     "country":"الدولة",
     "selectPaymentMethodMessage":"يرجى اختيار طريقة الدفع",
-    "orderAddedSuccessfully":"تم اضافة الطلب بنجاح"
+    "orderAddedSuccessfully":"تم اضافة الطلب بنجاح",
+    "contactUsForQuestions":"اتصل بنا لأي استفسارات حول طلبك.",
+    "goodMorning":"صباح الخير ...!"
 }

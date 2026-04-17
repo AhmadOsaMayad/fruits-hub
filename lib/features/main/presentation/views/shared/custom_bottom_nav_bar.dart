@@ -1,6 +1,5 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
+import 'package:fruit_hub/core/utils/app_colors.dart';
 import 'package:fruit_hub/features/main/domain/entities/nav_bar_item_entity.dart';
 import 'package:fruit_hub/features/main/presentation/views/shared/nav_bar_item.dart';
 
@@ -21,7 +20,7 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
       width: 375,
       height: 70,
       decoration: const ShapeDecoration(
-        color: Colors.white,
+        color: AppCols.white,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(30),
@@ -48,7 +47,6 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
                 child: GestureDetector(
                   onTap: () {
                     setState(() {
-                      log('tapped');
                       selectedIndex = index;
                       widget.onItemTapped(index);
                     });

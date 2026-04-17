@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fruit_hub/core/utils/app_colors.dart';
 import 'package:fruit_hub/core/utils/app_images.dart';
 import 'package:fruit_hub/core/utils/app_text_styles.dart';
 import 'package:fruit_hub/features/on_boarding/presenation/views/widgets/on_boarding1_title.dart';
@@ -11,6 +12,7 @@ class OnBoardingPageView extends StatelessWidget {
   final PageController pageController;
   @override
   Widget build(BuildContext context) {
+    var sText = S.of(context);
     return PageView(
       controller: pageController,
       children: [
@@ -18,17 +20,17 @@ class OnBoardingPageView extends StatelessWidget {
           isVisible: true,
           image: Assets.imagesPageViewItem1Image,
           backgroundImage: Assets.imagesPageViewItem1BackgroundImage,
-          subtitle: S.of(context).onBoarding1Subtitle,
+          subtitle: sText.onBoarding1Subtitle,
           title: const OnBoarding1Title(),
         ),
         PageViewItem(
           isVisible: false,
           image: Assets.imagesPageViewItem2Image,
           backgroundImage: Assets.imagesPageViewItem2BackgroundImage,
-          subtitle: S.of(context).onBoarding2Subtitle,
+          subtitle: sText.onBoarding2Subtitle,
           title: Text(
-            S.of(context).onBoarding2Title,
-            style: AppTextStyles.bold23.copyWith(color: const Color(0xFF0C0D0D)),
+            sText.onBoarding2Title,
+            style: AppTextStyles.bold23.copyWith(color: AppCols.onyxBlack),
           ),
         ),
       ],
